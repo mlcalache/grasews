@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Grasews.Web.ViewModels.ServiceDescription_MvcViewModel>
+
+@{
+    ViewBag.Title = string.Format(WebResource.ServiceDescriptionsCreatedBy, ViewBag.LoggedInUserFullName);
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>@ViewBag.Title</h3>
+<hr />
+@if (Model != null && Model.Count() > 0)
+{
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServiceName)
+                </td>
+                <td class="text-right">
+                    <a href="@Url.Action("Details", new { idServiceDescription = item.Id })" class="btn btn-sm btn-primary">
+                        <span class="fa fa-file-code-o" aria-hidden="true"></span>&nbsp;@WebResource.Details
+                    </a>
+                    <a href="@Url.Action("Delete", new { idServiceDescription = item.Id })" class="btn btn-sm btn-danger">
+                        <span class="fa fa-remove" aria-hidden="true"></span>&nbsp;@WebResource.Delete
+                    </a>
+                    <a href="@Url.Action("Index", "ServiceDescription_User", new { idServiceDescription = item.Id })" class="btn btn-sm btn-warning">
+                        <span class="fa fa-users" aria-hidden="true"></span>&nbsp;@WebResource.SharedUsers
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+<script>
+    $(function () {
+        $("#grasews-admin-navbar li").removeClass("active");
+        $("#nav-service-descriptions").addClass("active");
+    });
+</script>

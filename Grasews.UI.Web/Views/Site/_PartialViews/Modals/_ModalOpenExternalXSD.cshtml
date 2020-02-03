@@ -1,0 +1,41 @@
+﻿<script src="~/Content/js/modals/modal-open-xsd-script.js"></script>
+
+<div class="modal fade" id="modal-open-xsd" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Open external XSD</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>
+                        <input type="radio" name="radioOpenXsd" id="radioOpenXsdByURL" checked> Open a Xsd document by an URL
+                    </label>
+                    <label>
+                        <input type="radio" name="radioOpenXsd" id="radioOpenXsdByFile" disabled="disabled"> Open a Xsd document by a file location
+                    </label>
+                </div>
+                <div class="form-group" id="divOpenXsdByUrl">
+                    <!-- Content here to be writen by modal-open-service-description-script.js -->
+                </div>
+                <div class="form-group" id="divOpenXsdByFile">
+                    @using (Html.BeginForm("UploadXsdFile", "Upload", FormMethod.Post, new { enctype = "multipart/form-data", id = "formOpenXsdByFile" }))
+                    {
+                        <label>XSD file</label>
+                        <div class="form-group">
+                            <input type="file" id="fileOpenXsd" name="fileOpenXsd" accept=".wsdl" disabled="disabled">
+                            <p class="help-block">Only .xsd extension files are allowed.</p>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="lnkApplyOpenXsd" data-dismiss="modal">Apply</button>
+            </div>
+        </div>
+    </div>
+</div>

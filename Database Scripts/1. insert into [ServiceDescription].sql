@@ -1,0 +1,222 @@
+USE [Grasews2.0]
+GO
+
+INSERT INTO [dbo].[ServiceDescription]
+           ([IdOwnerUser]
+           ,[ServiceName]
+           ,[Xml]
+           ,[RegistrationDateTime])
+     VALUES
+           (1
+           ,'MicroAffyNormService'
+           ,'<?xml version="1.0" encoding="UTF-8"?>
+<wsdl2:description targetNamespace="http://dcm.ffclrp.usp.br/lssb/geas/wsdl/MicroAffyNormService.wsdl" xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wrpc="http://www.w3.org/ns/wsdl/rpc" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:ax23="http://classes/xsd" xmlns:ax21="http://io.java/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns="http://services" xmlns:ax24="http://util.java/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://dcm.ffclrp.usp.br/lssb/geas/wsdl/MicroAffyNormService.wsdl" xmlns:wsdl2="http://www.w3.org/ns/wsdl">
+	<wsdl2:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://classes/xsd" xmlns:ax25="http://util.java/xsd">
+			<xs:import namespace="http://util.java/xsd" />
+			<xs:complexType name="ListOfFiles">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="listOfFiles" nillable="true" type="ax25:Collection" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://util.java/xsd">
+			<xs:complexType name="Collection">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="empty" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://services" xmlns:ax22="http://io.java/xsd" xmlns:ax26="http://classes/xsd">
+			<xs:import namespace="http://io.java/xsd" />
+			<xs:import namespace="http://classes/xsd" />
+			<xs:element name="MicroAffyNormServiceException">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="MicroAffyNormServiceException" nillable="true" type="ns:Exception" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:complexType name="Exception">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="getStatus">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getStatusResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="generateID">
+				<xs:complexType>
+					<xs:sequence />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="generateIDResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="removeFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+						<xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="performAffyNorm">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getResult">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getResultResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="ax21:File" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="sendFile">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+						<xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+						<xs:element minOccurs="0" name="file" nillable="true" type="ax21:File" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="listFiles">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="listFilesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0" name="return" nillable="true" type="ax26:ListOfFiles" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://io.java/xsd">
+			<xs:complexType name="File">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="absolute" type="xs:boolean" />
+					<xs:element minOccurs="0" name="absoluteFile" nillable="true" type="ax21:File" />
+					<xs:element minOccurs="0" name="absolutePath" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="canonicalFile" nillable="true" type="ax21:File" />
+					<xs:element minOccurs="0" name="canonicalPath" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="directory" type="xs:boolean" />
+					<xs:element minOccurs="0" name="file" type="xs:boolean" />
+					<xs:element minOccurs="0" name="freeSpace" type="xs:long" />
+					<xs:element minOccurs="0" name="hidden" type="xs:boolean" />
+					<xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="parent" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="parentFile" nillable="true" type="ax21:File" />
+					<xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="totalSpace" type="xs:long" />
+					<xs:element minOccurs="0" name="usableSpace" type="xs:long" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+	</wsdl2:types>
+	<wsdl2:interface name="ServiceInterface">
+		<wsdl2:operation name="removeFile" pattern="http://www.w3.org/ns/wsdl/in-out">
+		  <wsdl2:input messageLabel="In" element="ns:removeFile" wsaw:Action="urn:removeFile">
+		</wsdl2:input>
+		  <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:removeFileResponse">
+		</wsdl2:output>
+		  <wsdl2:outfault messageLabel="Out" ref="tns:MicroAffyNormServiceException" wsaw:Action="urn:removeFileMicroAffyNormServiceException">
+		</wsdl2:outfault>
+		</wsdl2:operation>
+		<wsdl2:operation name="sendFile" pattern="http://www.w3.org/ns/wsdl/in-out">
+		  <wsdl2:input messageLabel="In" element="ns:sendFile" wsaw:Action="urn:sendFile">
+		</wsdl2:input>
+		  <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendFileResponse">
+		</wsdl2:output>
+		  <wsdl2:outfault messageLabel="Out" ref="tns:MicroAffyNormServiceException" wsaw:Action="urn:sendFileMicroAffyNormServiceException">
+		</wsdl2:outfault>
+		</wsdl2:operation>
+		<wsdl2:operation name="generateID" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc http://www.w3.org/ns/wsdl/style/iri http://www.w3.org/ns/wsdl/style/multipart" wrpc:signature="return #return ">
+		  <wsdl2:input messageLabel="In" element="ns:generateID" wsaw:Action="urn:generateID">
+		</wsdl2:input>
+		  <wsdl2:output messageLabel="Out" element="ns:generateIDResponse" wsaw:Action="urn:generateIDResponse">
+		</wsdl2:output>
+		</wsdl2:operation>
+		<wsdl2:operation name="getStatus" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+		  <wsdl2:input messageLabel="In" element="ns:getStatus" wsaw:Action="urn:getStatus">
+		</wsdl2:input>
+		  <wsdl2:output messageLabel="Out" element="ns:getStatusResponse" wsaw:Action="urn:getStatusResponse">
+		</wsdl2:output>
+		  <wsdl2:outfault messageLabel="Out" ref="tns:MicroAffyNormServiceException" wsaw:Action="urn:getStatusMicroAffyNormServiceException">
+		</wsdl2:outfault>
+		</wsdl2:operation>
+		<wsdl2:operation name="getResult" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+		  <wsdl2:input messageLabel="In" element="ns:getResult" wsaw:Action="urn:getResult">
+		</wsdl2:input>
+		  <wsdl2:output messageLabel="Out" element="ns:getResultResponse" wsaw:Action="urn:getResultResponse">
+		</wsdl2:output>
+		  <wsdl2:outfault messageLabel="Out" ref="tns:MicroAffyNormServiceException" wsaw:Action="urn:getResultMicroAffyNormServiceException">
+		</wsdl2:outfault>
+		</wsdl2:operation>
+		<wsdl2:operation name="performAffyNorm" pattern="http://www.w3.org/ns/wsdl/in-out">
+		  <wsdl2:input messageLabel="In" element="ns:performAffyNorm" wsaw:Action="urn:performAffyNorm">
+		</wsdl2:input>
+		  <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:performAffyNormResponse">
+		</wsdl2:output>
+		  <wsdl2:outfault messageLabel="Out" ref="tns:MicroAffyNormServiceException" wsaw:Action="urn:performAffyNormMicroAffyNormServiceException">
+		</wsdl2:outfault>
+		</wsdl2:operation>
+		<wsdl2:operation name="listFiles" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+		  <wsdl2:input messageLabel="In" element="ns:listFiles" wsaw:Action="urn:listFiles">
+		</wsdl2:input>
+		  <wsdl2:output messageLabel="Out" element="ns:listFilesResponse" wsaw:Action="urn:listFilesResponse">
+		</wsdl2:output>
+		  <wsdl2:outfault messageLabel="Out" ref="tns:MicroAffyNormServiceException" wsaw:Action="urn:listFilesMicroAffyNormServiceException">
+		</wsdl2:outfault>
+		</wsdl2:operation>
+		  <wsdl2:fault name="MicroAffyNormServiceException" element="ns:MicroAffyNormServiceException">
+		</wsdl2:fault>
+	</wsdl2:interface>
+	<wsdl2:binding name="MicroAffyNormServiceHttpBinding" interface="tns:ServiceInterface" type="http://www.w3.org/ns/wsdl/http" whttp:methodDefault="POST">
+		<wsdl2:operation ref="tns:removeFile" whttp:method="DELETE" whttp:location="microaffynormservice/removeFile/{identifier}/{filename}" />
+		<wsdl2:operation ref="tns:sendFile" whttp:method="POST" whttp:location="microaffynormservice/sendFile/{identifier}/{filename}" />
+		<wsdl2:operation ref="tns:generateID" whttp:method="GET" whttp:location="microaffynormservice/generateID" whttp:outputSerialization="text/plain" />
+		<wsdl2:operation ref="tns:getStatus" whttp:method="GET" whttp:location="microaffynormservice/getStatus/{identifier}" whttp:outputSerialization="text/plain" />
+		<wsdl2:operation ref="tns:getResult" whttp:method="GET" whttp:location="microaffynormservice/getResult/{identifier}" whttp:outputSerialization="text/plain" />
+		<wsdl2:operation ref="tns:performAffyNorm" whttp:method="POST" whttp:location="microaffynormservice/performAffyNorm" />
+		<wsdl2:operation ref="tns:listFiles" whttp:method="GET" whttp:location="microaffynormservice/listFiles/{identifier}" whttp:outputSerialization="application/xml" />
+		<wsdl2:fault ref="tns:MicroAffyNormServiceException" />
+	</wsdl2:binding>
+	<wsdl2:service name="MicroAffyNormService" interface="tns:ServiceInterface">
+		<wsdl2:endpoint name="MicroAffyNormServiceHttpEndpoint" binding="tns:MicroAffyNormServiceHttpBinding" address="http://kode.ffclrp.usp.br/lssb/geas/MicroAffyNormService/webresources/microaffynormservice">
+		</wsdl2:endpoint>
+	</wsdl2:service>
+</wsdl2:description>'
+           ,getdate())
+GO
+
+

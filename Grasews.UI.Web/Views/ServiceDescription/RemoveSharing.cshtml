@@ -1,0 +1,55 @@
+﻿@model Grasews.Web.ViewModels.ServiceDescription_RemoveSharing_MvcViewModel
+
+@{
+    ViewBag.Title = WebResource.RemoveSharing;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>@WebResource.AreYouSureYouWantToRemoveSharingFromUser</h3>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceName)
+        </dd>
+    </dl>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SharedUserEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SharedUserEmail)
+        </dd>
+    </dl>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.IdServiceDescription_User)
+        @Html.HiddenFor(model => model.IdServiceDescription)
+        @Html.HiddenFor(model => model.SharedUserEmail)
+
+        <div class="form-actions no-color">
+            <button type="submit" class="btn  btn-sm btn-danger">
+                <span class="fa fa-remove" aria-hidden="true"></span>&nbsp;@WebResource.RemoveSharing
+            </button>
+
+            <a href="@Url.Action("Index")" class="btn btn-sm btn-default">
+                <span class="fa fa-arrow-left" aria-hidden="true"></span>&nbsp;@WebResource.BackToList
+            </a>
+        </div>
+    }
+</div>
+
+<script>
+    $(function () {
+        $("#grasews-admin-navbar li").removeClass("active");
+        $("#nav-service-descriptions").addClass("active");
+    });
+</script>

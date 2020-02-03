@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://omdbapi.com/wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns:tns="http://omdbapi.com/schemas" targetNamespace="http://omdbapi.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GET_getId_InputMessage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="i" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>A valid IMDb ID (e.g. tt0000001)</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="plot" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Return short or full plot</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="r" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>The response type to return</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="callback" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>JSONP callback name</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GET_getId_OutputMessage" type="xs:anyType" />
+      <xs:element name="GET_getId_401" />
+      <xs:element name="GET_titleSearch_InputMessage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="s" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Title of movie or series</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="y" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Year of release</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="type" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Return movie or series</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="r" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>The response type to return</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="page" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Page number to return</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="callback" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>JSONP callback name</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GET_titleSearch_OutputMessage" type="xs:anyType" />
+      <xs:element name="GET_titleSearch_401" />
+      <xs:element name="GET_getTitle_InputMessage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="t" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Title of movie or series</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="y" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Year of release</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="type" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Return movie or series</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="plot" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Return short or full plot</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="r" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>The response type to return</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="callback" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>JSONP callback name</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GET_getTitle_OutputMessage" type="xs:anyType" />
+      <xs:element name="GET_getTitle_401" />
+    </xs:schema>
+  </types>
+  <message name="GET_getId_InputMessage">
+    <part name="GET_getId_InputMessage" xmlns:q1="http://omdbapi.com/schemas" element="q1:GET_getId_InputMessage" />
+  </message>
+  <message name="GET_getId_OutputMessage">
+    <part name="GET_getId_OutputMessage" xmlns:q2="http://omdbapi.com/schemas" element="q2:GET_getId_OutputMessage" />
+  </message>
+  <message name="GET_getId_401">
+    <part name="GET_getId_401" xmlns:q3="http://omdbapi.com/schemas" element="q3:GET_getId_401" />
+  </message>
+  <message name="GET_titleSearch_InputMessage">
+    <part name="GET_titleSearch_InputMessage" xmlns:q4="http://omdbapi.com/schemas" element="q4:GET_titleSearch_InputMessage" />
+  </message>
+  <message name="GET_titleSearch_OutputMessage">
+    <part name="GET_titleSearch_OutputMessage" xmlns:q5="http://omdbapi.com/schemas" element="q5:GET_titleSearch_OutputMessage" />
+  </message>
+  <message name="GET_titleSearch_401">
+    <part name="GET_titleSearch_401" xmlns:q6="http://omdbapi.com/schemas" element="q6:GET_titleSearch_401" />
+  </message>
+  <message name="GET_getTitle_InputMessage">
+    <part name="GET_getTitle_InputMessage" xmlns:q7="http://omdbapi.com/schemas" element="q7:GET_getTitle_InputMessage" />
+  </message>
+  <message name="GET_getTitle_OutputMessage">
+    <part name="GET_getTitle_OutputMessage" xmlns:q8="http://omdbapi.com/schemas" element="q8:GET_getTitle_OutputMessage" />
+  </message>
+  <message name="GET_getTitle_401">
+    <part name="GET_getTitle_401" xmlns:q9="http://omdbapi.com/schemas" element="q9:GET_getTitle_401" />
+  </message>
+  <portType name="OMDb_x0020_API_PortType">
+    <operation name="GET_getId">
+      <documentation>Returns a single result based on the ID provided</documentation>
+      <input xmlns:q10="http://omdbapi.com/wsdl" message="q10:GET_getId_InputMessage" />
+      <output xmlns:q11="http://omdbapi.com/wsdl" message="q11:GET_getId_OutputMessage">
+        <documentation />
+      </output>
+      <fault name="GET_getId_401" xmlns:q12="http://omdbapi.com/wsdl" message="q12:GET_getId_401">
+        <documentation />
+      </fault>
+    </operation>
+    <operation name="GET_titleSearch">
+      <documentation>Returns an array of results for a given title</documentation>
+      <input xmlns:q13="http://omdbapi.com/wsdl" message="q13:GET_titleSearch_InputMessage" />
+      <output xmlns:q14="http://omdbapi.com/wsdl" message="q14:GET_titleSearch_OutputMessage">
+        <documentation />
+      </output>
+      <fault name="GET_titleSearch_401" xmlns:q15="http://omdbapi.com/wsdl" message="q15:GET_titleSearch_401">
+        <documentation />
+      </fault>
+    </operation>
+    <operation name="GET_getTitle">
+      <documentation>Returns the most popular match for a given title</documentation>
+      <input xmlns:q16="http://omdbapi.com/wsdl" message="q16:GET_getTitle_InputMessage" />
+      <output xmlns:q17="http://omdbapi.com/wsdl" message="q17:GET_getTitle_OutputMessage">
+        <documentation />
+      </output>
+      <fault name="GET_getTitle_401" xmlns:q18="http://omdbapi.com/wsdl" message="q18:GET_getTitle_401">
+        <documentation />
+      </fault>
+    </operation>
+  </portType>
+  <binding name="OMDb_x0020_API_Binding" xmlns:q19="http://omdbapi.com/wsdl" type="q19:OMDb_x0020_API_PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="GET_getId">
+      <soap:operation soapAction="GET_getId" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+      <fault name="GET_getId_401">
+        <soap:fault use="literal" name="GET_getId_401" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </fault>
+    </operation>
+    <operation name="GET_titleSearch">
+      <soap:operation soapAction="GET_titleSearch" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+      <fault name="GET_titleSearch_401">
+        <soap:fault use="literal" name="GET_titleSearch_401" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </fault>
+    </operation>
+    <operation name="GET_getTitle">
+      <soap:operation soapAction="GET_getTitle" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+      <fault name="GET_getTitle_401">
+        <soap:fault use="literal" name="GET_getTitle_401" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="OMDb_x0020_API">
+    <documentation>This API requires authorization, you can get a free key here: [http://omdbapi.com/apikey.aspx](http://omdbapi.com/apikey.aspx)</documentation>
+    <port name="default_Port" xmlns:q20="http://omdbapi.com/wsdl" binding="q20:OMDb_x0020_API_Binding">
+      <soap:address location="http://omdbapi.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

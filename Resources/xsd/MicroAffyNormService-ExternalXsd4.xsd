@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://io.java/xsd">
+  <xs:complexType name="File">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="absolute" type="xs:boolean" />
+      <xs:element minOccurs="0" name="absoluteFile" nillable="true" type="ax21:File" />
+      <xs:element minOccurs="0" name="absolutePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="canonicalFile" nillable="true" type="ax21:File" />
+      <xs:element minOccurs="0" name="canonicalPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="directory" type="xs:boolean" />
+      <xs:element minOccurs="0" name="file" type="xs:boolean" />
+      <xs:element minOccurs="0" name="freeSpace" type="xs:long" />
+      <xs:element minOccurs="0" name="hidden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="parent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="parentFile" nillable="true" type="ax21:File" />
+      <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="totalSpace" type="xs:long" />
+      <xs:element minOccurs="0" name="usableSpace" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

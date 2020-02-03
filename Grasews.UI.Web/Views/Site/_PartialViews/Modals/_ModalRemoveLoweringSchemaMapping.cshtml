@@ -1,0 +1,32 @@
+﻿@model Grasews.API.Models.SawsdlLoweringSchemaMapping_ApiRequestViewModel
+@*<script src="~/Content/js/modals/modal-remove-lowering-schema-mapping-script.js"></script>*@
+
+<div class="modal fade" id="modal-remove-lowering-schema-mapping" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Remove Lowering Schema Mapping</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <span>Remove Lowering Schema Mapping from </span><label id="lblElementToRemoveLoweringSchemaMapping"></label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-link text-red"></i></span>
+                        <input type="text" class="form-control" id="txtLiftingSchemaMappingUrl" readonly="readonly" value="@Model.LoweringSchemaMappingUrl" />
+                    </div>
+                    <input type="hidden" id="id-service-description" value="@Model.IdServiceDescription" />
+                    <input type="hidden" id="id-wsdl-element" value="@Model.IdWsdlElement" />
+                    <input type="hidden" id="id-wsdl-element-type" value="@Model.IdWsdlElementType" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <input type="hidden" id="element-id-to-remove-lowering-schema-mapping" value="" />
+                <button type="button" class="btn btn-primary" id="lnkApplyRemoveLoweringSchemaMapping" data-dismiss="modal">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>

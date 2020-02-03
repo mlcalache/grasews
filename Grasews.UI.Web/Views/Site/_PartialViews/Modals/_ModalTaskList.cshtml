@@ -1,0 +1,184 @@
+﻿@model IEnumerable<Grasews.Web.ViewModels.Task_MvcViewModel>
+
+<div class="modal fade" id="modal-task-list" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="@WebResource.Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">@WebResource.Tasks</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <i class="fa fa-check-circle-o text-green"></i>&nbsp;@WebResource.TasksDone
+                </div>
+                <div>
+                    <i class="fa fa-exclamation-circle text-red"></i>&nbsp;@WebResource.TasksNotDoneWithNoComments
+                </div>
+                <div>
+                    <i class="fa fa-comments-o text-blue"></i>&nbsp;@WebResource.TasksNotDoneAndWithComments
+                </div>
+                <br />
+
+                @if (Model != null && Model.Any())
+                {
+                    <div class="box box-solid">
+                        <div class="box-body">
+                            <div class="box-group" id="accordion">
+                                @foreach (var task in Model)
+                                {
+                                    var panelClass = "box-danger";
+                                    var taskDoneIconHidden = "";
+                                    var taskCreatedIconHidden = "";
+                                    var taskWithCommentsIconHidden = "";
+                                    var taskHasComments = task.Comments != null && task.Comments.Any();
+
+                                    if (task.Done)
+                                    {
+                                        panelClass = "box-success";
+                                        taskCreatedIconHidden = "hidden";
+                                        taskWithCommentsIconHidden = "hidden";
+                                    }
+                                    else
+                                    {
+                                        taskDoneIconHidden = "hidden";
+                                        if (taskHasComments)
+                                        {
+                                            panelClass = "box-primary";
+                                            taskCreatedIconHidden = "hidden";
+                                        }
+                                        else
+                                        {
+                                            taskWithCommentsIconHidden = "hidden";
+                                        }
+                                    }
+
+                                    <!-- adding the .panel class so bootstrap.js collapse plugin detects it -->
+                                    <div class="panel box @panelClass" id="panel-box-@task.Id">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-@task.Id" aria-expanded="false" class="collapsed">
+                                            <div class="box-header with-border" data-toggle="collapse" data-parent="#accordion">
+                                                <h5 class="box-title">
+                                                    <b>@task.Title</b>
+                                                </h5>
+                                                <div style="float: right;" id="div-task-status-icon-@task.Id">
+                                                    <i class="fa fa-check-circle-o text-green task-done @taskDoneIconHidden"></i>
+                                                    <i class="fa fa-exclamation-circle text-red task-created @taskCreatedIconHidden"></i>
+                                                    <i class="fa fa-comments-o text-blue task-with-comments @taskWithCommentsIconHidden"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div id="collapse-@task.Id" class="panel-collapse collapse" aria-expanded="false" style="">
+                                            <div class="box-body">
+                                                <div id="div-task-details">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-4">
+                                                            <label>@WebResource.TaskDescription</label>
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            @task.Description
+                                                        </div>
+                                                        @*<div class="col-sm-4" style="text-align: right;">
+                                                            <button type="button" name="btn-delete-task" id="btn-delete-task-@task.Id" class="btn btn-sm btn-danger faa-parent animated-hover btn-create-task-comment" id-task="@task.Id">
+                                                                <i class="fa fa-plus faa-tada faa-fast"></i>&nbsp;&nbsp;@WebResource.RemoveTask
+                                                            </button>
+                                                        </div>*@
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-4">
+                                                            <label>@WebResource.MarkTaskAsDone</label>
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            <span class="button-checkbox">
+                                                                <button type="button" class="btn btn-sm btn-task-done" id="btn-task-done-@task.Id" data-color="success" id-task="@task.Id" task-has-comments="@taskHasComments">Done</button>
+                                                                <input type="checkbox" class="hidden" checked="@task.Done" />
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    @if (task.Done)
+                                                    {
+                                                        <div class="form-group row">
+                                                            <label for="txt-new-comment" class="col-sm-4">@WebResource.CreateANewComment</label>
+                                                            <div class="col-sm-5">
+                                                                <input class="form-control input-sm" type="text" id="txt-new-comment-@task.Id" placeholder="Enter here your new comment" readonly="readonly" disabled="disabled">
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <button type="button" name="btn-create-task-comment" id="btn-create-task-comment-@task.Id" readonly="readonly" disabled="disabled" class="btn btn-sm btn-primary faa-parent btn-create-task-comment" id-task="@task.Id">
+                                                                    <i class="fa fa-plus faa-tada faa-fast"></i>&nbsp;&nbsp;@WebResource.Create
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-4">
+                                                                <label for="txt-new-comment">@WebResource.CreateANewComment</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input class="form-control input-sm" type="text" id="txt-new-comment-@task.Id" placeholder="Enter here your new comment">
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <button type="button" name="btn-create-task-comment" id="btn-create-task-comment-@task.Id" class="btn btn-sm btn-primary faa-parent animated-hover btn-create-task-comment" id-task="@task.Id">
+                                                                    <i class="fa fa-plus faa-tada faa-fast"></i>&nbsp;&nbsp;@WebResource.Create
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    <div id="div-task-previous-comments-@task.Id" class="form-group @(task.Comments != null && task.Comments.Any() ? string.Empty : "hidden" ) ">
+                                                        <hr />
+                                                        <label>@WebResource.PreviousComments</label>
+                                                        <div id="div-task-comments-@task.Id" style="overflow-y: scroll; overflow-x:hidden; height:100px;">
+                                                            <table class="table table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="col-sm-4">
+                                                                            @WebResource.Username
+                                                                        </th>
+                                                                        <th class="col-sm-8">
+                                                                            @WebResource.Comment
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @if (task.Comments != null && task.Comments.Any())
+                                                                    {
+                                                                        foreach (var comment in task.Comments)
+                                                                        {
+                                                                            <tr>
+                                                                                <td>@comment.OwnerUserEmail</td>
+                                                                                <td>@comment.Comment</td>
+                                                                            </tr>
+                                                                        }
+                                                                    }
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="box box-solid">
+                        <div class="box-body">
+                            <div class="form-group col-md-12 text-red text-center">@WebResource.NoTasksHaveBeenFound</div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@WebResource.Close</button>
+            </div>
+        </div>
+    </div>
+</div>

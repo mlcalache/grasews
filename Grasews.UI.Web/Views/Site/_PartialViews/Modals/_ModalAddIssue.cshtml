@@ -1,0 +1,73 @@
+﻿@model Grasews.API.Models.ParseWsdl_ApiResponseViewModel
+
+<div class="modal fade" id="modal-issue" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="@WebResource.Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">@WebResource.CreateANewIssue</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel box box-primary">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse_what-is-a-issue" aria-expanded="true" class="">
+                        <div class="box-header with-border" data-toggle="collapse" data-parent="#accordion">
+                            <i class="fa fa-question-circle text-blue"></i>
+                            <h5 class="box-title">
+                                @WebResource.WhatIsAnIssue
+                            </h5>
+                        </div>
+                    </a>
+                    <div id="collapse_what-is-a-issue" class="panel-collapse collapse in" aria-expanded="true" style="">
+                        <div class="box-body">
+                            <div id="div-issue-explanation">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        @WebResource.IssueExplanation
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group" id="div-issue-title">
+                                <label>@WebResource.IssueTitle</label>
+                                <div class="input-group col-sm-12">
+                                    <input type="text" class="form-control" id="txt-issue-title" placeholder="@WebResource.EnterHereYourIssueTitle" autofocus />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group" id="div-issue-description">
+                                <label>@WebResource.IssueDescription</label>
+                                <div class="input-group col-sm-12">
+                                    <textarea class="form-control" rows="3" id="txt-issue-description" placeholder="@WebResource.EnterHereYourIssueDescription"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>@WebResource.ServiceDescriptionElements</label>
+                                <select id="ddl-add-issue-wsdl-element" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                    @Html.Partial("~/Views/Site/_PartialViews/_ServiceDescriptionElementsSelectOptions.cshtml", Model)
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@WebResource.Close</button>
+                <button type="button" class="btn btn-primary" id="lnk-add-issue" data-dismiss="modal">@WebResource.Create</button>
+            </div>
+        </div>
+    </div>
+</div>

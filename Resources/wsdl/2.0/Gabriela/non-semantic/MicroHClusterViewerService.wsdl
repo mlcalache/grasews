@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl2:description targetNamespace="http://dcm.ffclrp.usp.br/lssb/geas/wsdl/MicroHClusterViewerService.wsdl" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:wsdl2="http://www.w3.org/ns/wsdl" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://services" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wrpc="http://www.w3.org/ns/wsdl/rpc" xmlns:ax21="http://io.java/xsd" xmlns:tns="http://dcm.ffclrp.usp.br/lssb/geas/wsdl/MicroHClusterViewerService.wsdl" xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions">
+  <wsdl2:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://services" xmlns:ax22="http://io.java/xsd">
+      <xs:import namespace="http://io.java/xsd" />
+      <xs:element name="MicroHClusterViewerServiceException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="MicroHClusterViewerServiceException" nillable="true" type="ns:Exception" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateID">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateIDResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendGeneTreeFile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="file" nillable="true" type="ax22:File" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MicroHClusterViewerServiceIOException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="IOException" nillable="true" type="ax22:IOException" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getDendrogram">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getDendrogramResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendClusteredDataTable">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="file" nillable="true" type="ax22:File" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendArrayTreeFile">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="file" nillable="true" type="ax22:File" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateArrayDendrogram">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateGeneDendrogram">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateArrayGeneDendrogram">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://io.java/xsd">
+      <xs:complexType name="File">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="absolute" type="xs:boolean" />
+          <xs:element minOccurs="0" name="absoluteFile" nillable="true" type="ax21:File" />
+          <xs:element minOccurs="0" name="absolutePath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="canonicalFile" nillable="true" type="ax21:File" />
+          <xs:element minOccurs="0" name="canonicalPath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="directory" type="xs:boolean" />
+          <xs:element minOccurs="0" name="file" type="xs:boolean" />
+          <xs:element minOccurs="0" name="freeSpace" type="xs:long" />
+          <xs:element minOccurs="0" name="hidden" type="xs:boolean" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parentFile" nillable="true" type="ax21:File" />
+          <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="totalSpace" type="xs:long" />
+          <xs:element minOccurs="0" name="usableSpace" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="IOException">
+        <xs:sequence />
+      </xs:complexType>
+    </xs:schema>
+  </wsdl2:types>
+  <wsdl2:interface name="ServiceInterface">
+    <wsdl2:operation name="sendClusteredDataTable" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendClusteredDataTable" wsaw:Action="urn:sendClusteredDataTable">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendClusteredDataTableResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroHClusterViewerServiceException" wsaw:Action="urn:sendClusteredDataTableMicroHClusterViewerServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="sendGeneTreeFile" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendGeneTreeFile" wsaw:Action="urn:sendGeneTreeFile">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendGeneTreeFileResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroHClusterViewerServiceException" wsaw:Action="urn:sendGeneTreeFileMicroHClusterViewerServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="sendArrayTreeFile" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendArrayTreeFile" wsaw:Action="urn:sendArrayTreeFile">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendArrayTreeFileResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroHClusterViewerServiceException" wsaw:Action="urn:sendArrayTreeFileMicroHClusterViewerServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="getDendrogram" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:getDendrogram" wsaw:Action="urn:getDendrogram">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:getDendrogramResponse" wsaw:Action="urn:getDendrogramResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroHClusterViewerServiceIOException" wsaw:Action="urn:getDendrogramMicroHClusterViewerServiceIOException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="generateGeneDendrogram" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:generateGeneDendrogram" wsaw:Action="urn:generateGeneDendrogram">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:generateGeneDendrogramResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroHClusterViewerServiceException" wsaw:Action="urn:generateGeneDendrogramMicroHClusterViewerServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="generateID" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc http://www.w3.org/ns/wsdl/style/iri http://www.w3.org/ns/wsdl/style/multipart" wrpc:signature="return #return ">
+      <wsdl2:input messageLabel="In" element="ns:generateID" wsaw:Action="urn:generateID">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:generateIDResponse" wsaw:Action="urn:generateIDResponse">
+      </wsdl2:output>
+    </wsdl2:operation>
+    <wsdl2:operation name="generateArrayDendrogram" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:generateArrayDendrogram" wsaw:Action="urn:generateArrayDendrogram">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:generateArrayDendrogramResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroHClusterViewerServiceException" wsaw:Action="urn:generateArrayDendrogramMicroHClusterViewerServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="getStatus" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:getStatus" wsaw:Action="urn:getStatus">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:getStatusResponse" wsaw:Action="urn:getStatusResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroHClusterViewerServiceException" wsaw:Action="urn:getStatusMicroHClusterViewerServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="generateArrayGeneDendrogram" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:generateArrayGeneDendrogram" wsaw:Action="urn:generateArrayGeneDendrogram">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:generateArrayGeneDendrogramResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroHClusterViewerServiceException" wsaw:Action="urn:generateArrayGeneDendrogramMicroHClusterViewerServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:fault name="MicroHClusterViewerServiceException" element="ns:MicroHClusterViewerServiceException">
+    </wsdl2:fault>
+    <wsdl2:fault name="MicroHClusterViewerServiceIOException" element="ns:MicroHClusterViewerServiceIOException">
+    </wsdl2:fault>
+  </wsdl2:interface>
+  <wsdl2:binding name="MicroHClusterViewerServiceHttpBinding" interface="tns:ServiceInterface" type="http://www.w3.org/ns/wsdl/http" whttp:methodDefault="POST">
+    <wsdl2:operation ref="tns:sendClusteredDataTable" whttp:location="microhclusterviewerservice/sendClusteredDataTable/{identifier}/{filename}" whttp:method="POST" />
+    <wsdl2:operation ref="tns:sendGeneTreeFile" whttp:location="microhclusterviewerservice/sendGeneTreeFile/{identifier}/{filename}" whttp:method="POST" />
+    <wsdl2:operation ref="tns:sendArrayTreeFile" whttp:location="microhclusterviewerservice/sendArrayTreeFile/{identifier}/{filename}" whttp:method="POST" />
+    <wsdl2:operation ref="tns:getDendrogram" whttp:location="microhclusterviewerservice/getDendrogram/{identifier}" whttp:method="GET" />
+    <wsdl2:operation ref="tns:generateGeneDendrogram" whttp:location="microhclusterviewerservice/generateGeneDendrogram" whttp:method="POST" />
+    <wsdl2:operation ref="tns:generateID" whttp:location="microhclusterviewerservice/generateID" whttp:method="GET" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:generateArrayDendrogram" whttp:location="microhclusterviewerservice/generateArrayDendrogram" whttp:method="POST" />
+    <wsdl2:operation ref="tns:getStatus" whttp:location="microhclusterviewerservice/getStatus/{identifier}" whttp:method="GET" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:generateArrayGeneDendrogram" whttp:location="microhclusterviewerservice/generateArrayGeneDendrogram" whttp:method="POST" />
+    <wsdl2:fault ref="tns:MicroHClusterViewerServiceIOException" />
+    <wsdl2:fault ref="tns:MicroHClusterViewerServiceException" />
+  </wsdl2:binding>
+  <wsdl2:service name="MicroHClusterViewerService" interface="tns:ServiceInterface">
+    <wsdl2:endpoint name="MicroHClusterViewerServiceHttpEndpoint" binding="tns:MicroHClusterViewerServiceHttpBinding" address="http://kode.ffclrp.usp.br/lssb/geas/MicroHClusterViewerService/webresources/microhclusterviewerservice">
+    </wsdl2:endpoint>
+  </wsdl2:service>
+</wsdl2:description>

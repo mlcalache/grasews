@@ -1,0 +1,354 @@
+﻿@using Grasews.Web
+
+<header class="main-header">
+    <!-- Logo -->
+    <div class="logo logo-left" data-placement="right" title="@WebResource.ServiceDescriptions">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><i class="fa fa-files-o"></i></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg">@WebResource.ServiceDescriptions</span>
+    </div>
+
+    <div class="logo logo-right" data-placement="left" title="@WebResource.Ontologies">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><i class="fa fa-book"></i></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg">@WebResource.Ontologies</span>
+    </div>
+
+    <nav class="navbar navbar-static-top">
+        <div class="navbar-custom-menu navbar-custom-menu-left">
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown download-menu" data-toggle="tooltip" data-placement="bottom">
+                    <a href="#" class="dropdown-toggle faa-parent animated-hover" data-toggle="dropdown">
+                        <i class="fa fa-folder-open text-dark-orange faa-tada"></i>&nbsp;<span>@WebResource.Files</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li>
+                            <div class="slimScrollDiv">
+                                <ul class="menu">
+                                    <li data-toggle="tooltip" data-placement="bottom" title="@WebResource.OpenServiceDescription">
+                                        <a href="#" id="lnk-open-service-description" class="faa-parent animated-hover">
+                                            <i class="fa fa-file-code-o text-orange faa-tada"></i>&nbsp;@WebResource.OpenServiceDescription
+                                        </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="@WebResource.OpenOntology">
+                                        <a href="#" id="lnk-open-ontology" class="faa-parent animated-hover">
+                                            <i class="fa fa-file-text-o text-orange faa-tada"></i>&nbsp;@WebResource.OpenOntology
+                                        </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="@WebResource.ViewMyServiceDescriptions">
+                                        <a href="@Url.Action("Index", "ServiceDescription")" class="faa-parent animated-hover">
+                                            <i class="fa fa-file-code-o text-orange faa-tada"></i>&nbsp;&nbsp;@WebResource.ViewMyServiceDescriptions
+                                        </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="@WebResource.ViewMyOntologies">
+                                        <a href="@Url.Action("Index", "Ontology")" class="faa-parent animated-hover">
+                                            <i class="fa fa-file-text-o text-orange faa-tada"></i>&nbsp;&nbsp;@WebResource.ViewMyOntologies
+                                        </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="top" title="@WebResource.SaveWSDL">
+                                        <a href="#" id="lnk-save" class="faa-parent animated-hover">
+                                            <i class="fa fa-save text-orange faa-tada"></i>&nbsp;@WebResource.Save
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                @*<li class="dropdown download-menu" data-toggle="tooltip" data-placement="bottom">
+                    <a href="#" class="dropdown-toggle faa-parent animated-hover" data-toggle="dropdown">
+                        <i class="fa fa-download text-aqua faa-vertical"></i>&nbsp;<span>@WebResource.Download</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li>
+                            <div class="slimScrollDiv">
+                                <ul class="menu">
+
+                                    <li data-toggle="tooltip" data-placement="bottom" title="@WebResource.DownloadWSDL">
+                                        <a href="#" id="lnk-open-download" class="faa-parent animated-hover">
+                                            <i class="fa fa-download text-blue faa-vertical"></i>&nbsp;@WebResource.DownloadWSDL
+                                        </a>
+                                    </li>
+
+                                    <li data-toggle="tooltip" data-placement="top" title="@WebResource.ExportImage">
+                                        <a href="#" id="lnk-export-image" class="faa-parent animated-hover">
+                                            <i class="fa fa-file-image-o text-blue faa-vertical"></i>&nbsp;@WebResource.ExportImage
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>*@
+
+                <li class="dropdown collaborative-menu" data-toggle="tooltip" data-placement="bottom">
+                    <a href="#" class="dropdown-toggle faa-parent animated-hover" data-toggle="dropdown">
+                        <i class="fa fa-users text-lime faa-shake"></i>&nbsp;<span>@WebResource.Collaboration</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <div class="slimScrollDiv">
+                                <ul class="menu">
+
+                                    <li data-toggle="tooltip" data-placement="bottom" title="@WebResource.Share">
+                                        <a href="#" id="lnk-open-share" class="faa-parent animated-hover">
+                                            <i class="fa fa-share-alt text-green faa-shake"></i>&nbsp;&nbsp;@WebResource.Share
+                                        </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="@WebResource.CreateAnIssue">
+                                        <a href="#" id="lnk-open-create-issue" class="faa-parent animated-hover">
+                                            <i class="fa fa-commenting-o text-green faa-shake"></i>&nbsp;&nbsp;@WebResource.CreateAnIssue
+                                        </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="@WebResource.ViewIssueList">
+                                        <a href="#" id="lnk-open-issues-list" class="faa-parent animated-hover">
+                                            <i class="fa fa-comments-o text-green faa-shake"></i>&nbsp;&nbsp;@WebResource.ViewIssueList
+                                        </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="bottom" title="@WebResource.CreateATask">
+                                        <a href="#" id="lnk-open-create-task" class="faa-parent animated-hover">
+                                            <i class="fa fa-pencil-square-o text-green faa-shake"></i>&nbsp;&nbsp;@WebResource.CreateATask
+                                        </a>
+                                    </li>
+                                    <li data-toggle="tooltip" data-placement="top" title="@WebResource.ViewTaskList">
+                                        <a href="#" id="lnk-open-tasks-list" class="faa-parent animated-hover">
+                                            <i class="fa fa-list-ul text-green faa-shake"></i>&nbsp;&nbsp;@WebResource.ViewTaskList
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown" data-toggle="tooltip" data-placement="bottom" title="@WebResource.Refresh">
+                    <a href="#" id="lnk-refresh-service-description" class="faa-parent animated-hover">
+                        <i class="fa fa-refresh text-yellow faa-spin"></i>&nbsp;<span>@WebResource.Refresh</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-custom-menu navbar-custom-menu-right">
+            <ul class="nav navbar-nav">
+
+                @if (Grasews.Infra.CrossCutting.Helpers.ConfigurationManagerHelper.Html_ChangeSkins_Enabled)
+                {
+                    <li class="dropdown messages-menu" data-toggle="tooltip" data-placement="bottom" title="@WebResource.ChangeSkin">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                            <i class="fa fa-paint-brush"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="header">Skins</li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-blue" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 7px; background: #367fa9"></span>
+                                        <span class="bg-light-blue" style="display:block; width: 80%; float: left; height: 7px;"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin">@WebResource.Blue</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-black" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div style="box-shadow: 0 0 2px rgba(0,0,0,0.1)" class="clearfix">
+                                        <span style="display:block; width: 20%; float: left; height: 7px; background: #fefefe"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 7px; background: #fefefe"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #222"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin">@WebResource.Black</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-purple" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 7px;" class="bg-purple-active"></span>
+                                        <span class="bg-purple" style="display:block; width: 80%; float: left; height: 7px;"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin">@WebResource.Purple</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-green" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 7px;" class="bg-green-active"></span>
+                                        <span class="bg-green" style="display:block; width: 80%; float: left; height: 7px;"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin">@WebResource.Green</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-red" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 7px;" class="bg-red-active"></span>
+                                        <span class="bg-red" style="display:block; width: 80%; float: left; height: 7px;"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin">@WebResource.Red</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-yellow" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 7px;" class="bg-yellow-active"></span>
+                                        <span class="bg-yellow" style="display:block; width: 80%; float: left; height: 7px;"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin">@WebResource.Yellow</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-blue-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 7px; background: #367fa9"></span>
+                                        <span class="bg-light-blue" style="display:block; width: 80%; float: left; height: 7px;"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin" style="font-size: 12px">@WebResource.BlueLight</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-black-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div style="box-shadow: 0 0 2px rgba(0,0,0,0.1)" class="clearfix">
+                                        <span style="display:block; width: 20%; float: left; height: 7px; background: #fefefe"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 7px; background: #fefefe"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin" style="font-size: 12px">@WebResource.BlackLight</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-purple-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 7px;" class="bg-purple-active"></span>
+                                        <span class="bg-purple" style="display:block; width: 80%; float: left; height: 7px;"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin" style="font-size: 12px">@WebResource.PurpleLight</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-green-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 7px;" class="bg-green-active"></span>
+                                        <span class="bg-green" style="display:block; width: 80%; float: left; height: 7px;"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin" style="font-size: 12px">@WebResource.GreenLight</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-red-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 7px;" class="bg-red-active"></span>
+                                        <span class="bg-red" style="display:block; width: 80%; float: left; height: 7px;"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin" style="font-size: 12px">@WebResource.RedLight</p>
+                            </li>
+                            <li style="float:left; width: 33.33333%; padding: 5px;">
+                                <a href="javascript:void(0)" data-skin="skin-yellow-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 7px;" class="bg-yellow-active"></span>
+                                        <span class="bg-yellow" style="display:block; width: 80%; float: left; height: 7px;"></span>
+                                    </div>
+                                    <div>
+                                        <span style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span>
+                                        <span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                                    </div>
+                                </a>
+                                <p class="text-center no-margin" style="font-size: 12px">@WebResource.YellowLight</p>
+                            </li>
+                        </ul>
+                    </li>
+                }
+
+                <!-- User Account: style can be found in dropdown.less -->
+                <li class="dropdown user user-menu" data-toggle="tooltip" data-placement="bottom" title="@WebResource.MyAccount">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <i class="fa">
+                            <img src="~/Content/img/user-90x90.png" class="user-image" alt="@WebResource.UserImage">
+                        </i>
+                        <span class="hidden-xs">@ViewBag.UserName</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <!-- User image -->
+                        <li class="user-header">
+                            <img src="~/Content/img/user-90x90.png" class="img-circle" alt="@WebResource.UserImage">
+                            <p>
+                                @ViewBag.UserFullName
+                                <small>Member since @ViewBag.UserRegistrationDate</small>
+                            </p>
+                        </li>
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="@Url.Action("Index", "Admin")" class="btn btn-default faa-parent animated-hover">
+                                    <i class="fa fa-gear faa-spin"></i>&nbsp;@WebResource.MyAccount
+                                </a>
+                            </div>
+                            <div class="pull-right">
+                                @using (Html.BeginForm("Logout", "Account", FormMethod.Post))
+                                {
+                                    <button type="submit" name="logout-submit" id="logout-submit" class="btn btn-default faa-parent animated-hover">
+                                        <i class="fa fa-sign-out faa-horizontal"></i>&nbsp;@WebResource.Logout
+                                    </button>
+                                }
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Control Sidebar Toggle Button -->
+            </ul>
+        </div>
+    </nav>
+
+    @*<div class="right-side-menu-title">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="right-side-menu-title-mini">Ont</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="right-side-menu-title-lg">Ontologies</span>
+        </div>*@
+</header>

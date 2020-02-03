@@ -1,0 +1,58 @@
+﻿@model Grasews.API.Models.OntologyCollection_ApiResponseViewModel
+
+<div class="modal fade" id="modal-open-ontology" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Open an ontology</h4>
+            </div>
+
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab-open-new-ontology" data-toggle="tab" id="nav-tab-open-new-ontology">New</a></li>
+                    <li><a href="#tab-open-saved-ontology" data-toggle="tab" id="nav-tab-open-saved-ontology">Saved</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab-open-new-ontology">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Open a new ontology</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="file" id="fileOpenOwl" name="fileOpenOwl" accept=".owl" style="width: 100%">
+                                <p class="help-block">Only .owl extension files are allowed.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="lnkUploadOntology" data-dismiss="modal">Upload & Open</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-open-saved-ontology">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Open a saved ontology</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="ddl-saved-ontologies" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                    <option selected='selected' value='none'>Select...</option>
+                                    @foreach (var ontology in Model.OntologyViewModels)
+                                    {
+                                        <option id="opt-service-description-@ontology.Id" value="@ontology.Id">@ontology.OntologyName</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="lnkOpenSavedOntology" data-dismiss="modal">Open</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

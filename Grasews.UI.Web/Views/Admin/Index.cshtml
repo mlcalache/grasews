@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Grasews";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3" style="text-align: center; padding-top: 30px">
+        <div class="panel panel-login">
+
+            <img src="~/Content/img/grasews.png" />
+        </div>
+    </div>
+</div>
+
+<h2 style="text-align: center;">
+    Welcome to Grasews Admin, @ViewBag.LoggedInUserFullName.
+</h2>
+<hr />
+<p>
+    <a href="@Url.Action("Index", "Site")" class="btn btn-sm btn-warning">
+        <span class="fa fa-arrow-left" aria-hidden="true"></span>&nbsp;@WebResource.BackToTheSystem
+    </a>
+</p>

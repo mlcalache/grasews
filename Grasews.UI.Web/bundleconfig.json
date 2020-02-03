@@ -1,0 +1,475 @@
+[
+  {
+    "outputFileName": "Content/css/AdminLTE.min.min.css",
+    "inputFiles": [
+      "Content/css/AdminLTE.min.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/AdminLTE.min.css",
+    "inputFiles": [
+      "Content/css/AdminLTE.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/_all-skins.min.css",
+    "inputFiles": [
+      "Content/css/skins/_all-skins.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-black-light.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-black-light.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-black.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-black.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-blue-light.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-blue-light.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-blue.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-blue.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-green-light.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-green-light.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-green.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-green.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-purple-light.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-purple-light.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-purple.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-purple.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-red-light.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-red-light.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-red.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-red.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-yellow-light.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-yellow-light.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/skin-yellow.min.css",
+    "inputFiles": [
+      "Content/css/skins/skin-yellow.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/alt/AdminLTE-bootstrap-social.min.css",
+    "inputFiles": [
+      "Content/css/alt/AdminLTE-bootstrap-social.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/alt/AdminLTE-fullcalendar.min.css",
+    "inputFiles": [
+      "Content/css/alt/AdminLTE-fullcalendar.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/alt/AdminLTE-select2.min.css",
+    "inputFiles": [
+      "Content/css/alt/AdminLTE-select2.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/alt/AdminLTE-without-plugins.min.css",
+    "inputFiles": [
+      "Content/css/alt/AdminLTE-without-plugins.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/bootstrap/css/bootstrap-theme.min.css",
+    "inputFiles": [
+      "Content/bootstrap/css/bootstrap-theme.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/bootstrap/css/bootstrap.min.css",
+    "inputFiles": [
+      "Content/bootstrap/css/bootstrap.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css",
+    "inputFiles": [
+      "Content/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/select2/select2.full.min.js",
+    "inputFiles": [
+      "Content/plugins/select2/select2.full.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/select2/select2.min.js",
+    "inputFiles": [
+      "Content/plugins/select2/select2.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/select2/select2.min.css",
+    "inputFiles": [
+      "Content/plugins/select2/select2.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/jQueryUI/jquery-ui.min.js",
+    "inputFiles": [
+      "Content/plugins/jQueryUI/jquery-ui.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/cytoscape/cytoscape.min.js",
+    "inputFiles": [
+      "Content/plugins/cytoscape/cytoscape.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/cytoscape/dagre.min.js",
+    "inputFiles": [
+      "Content/plugins/cytoscape/dagre.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/cytoscape/cytoscape-dagre.min.js",
+    "inputFiles": [
+      "Content/plugins/cytoscape/cytoscape-dagre.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/cytoscape/cytoscape-cxtmenu.min.js",
+    "inputFiles": [
+      "Content/plugins/cytoscape/cytoscape-cxtmenu.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js",
+    "inputFiles": [
+      "Content/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/bootstrap-slider/bootstrap-slider.min.js",
+    "inputFiles": [
+      "Content/plugins/bootstrap-slider/bootstrap-slider.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/my-context-menu-scripts.min.js",
+    "inputFiles": [
+      "Content/js/my-context-menu-scripts.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/my-cytoscape-script.min.js",
+    "inputFiles": [
+      "Content/js/my-cytoscape-script.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/skins-manager.min.js",
+    "inputFiles": [
+      "Content/js/skins-manager.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/font-awesome/font-awesome.min.css",
+    "inputFiles": [
+      "Content/plugins/font-awesome/font-awesome.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/bootstrap/js/bootstrap.min.js",
+    "inputFiles": [
+      "Content/bootstrap/js/bootstrap.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/bootstrap/js/npm.min.js",
+    "inputFiles": [
+      "Content/bootstrap/js/npm.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/my-codemirror-scripts.min.js",
+    "inputFiles": [
+      "Content/js/my-codemirror-scripts.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/code-mirror/codemirror.min.css",
+    "inputFiles": [
+      "Content/plugins/code-mirror/codemirror.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/code-mirror/language/xml.min.js",
+    "inputFiles": [
+      "Content/plugins/code-mirror/language/xml.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/code-mirror/codemirror.min.js",
+    "inputFiles": [
+      "Content/plugins/code-mirror/codemirror.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/cytoscape/my-cytoscape-scripts.min.js",
+    "inputFiles": [
+      "Content/js/cytoscape/my-cytoscape-scripts.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/context-menus/my-context-menu-scripts.min.js",
+    "inputFiles": [
+      "Content/js/context-menus/my-context-menu-scripts.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/codemirror/my-codemirror-scripts.min.js",
+    "inputFiles": [
+      "Content/js/codemirror/my-codemirror-scripts.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/services/my-services-scripts.min.js",
+    "inputFiles": [
+      "Content/js/services/my-services-scripts.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/my-styles.min.css",
+    "inputFiles": [
+      "Content/css/my-styles.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/modals/modal-add-model-reference-script.min.js",
+    "inputFiles": [
+      "Content/js/modals/modal-add-model-reference-script.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/skins/_all-skins.css",
+    "inputFiles": [
+      "Content/css/skins/skin-black-light.css",
+      "Content/css/skins/skin-black.css",
+      "Content/css/skins/skin-blue-light.css",
+      "Content/css/skins/skin-blue.css",
+      "Content/css/skins/skin-green-light.css",
+      "Content/css/skins/skin-green.css",
+      "Content/css/skins/skin-purple-light.css",
+      "Content/css/skins/skin-purple.css",
+      "Content/css/skins/skin-red-light.css",
+      "Content/css/skins/skin-red.css",
+      "Content/css/skins/skin-yellow-light.css",
+      "Content/css/skins/skin-yellow.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/modals/modal-remove-model-reference-script.min.js",
+    "inputFiles": [
+      "Content/js/modals/modal-remove-model-reference-script.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/cytoscape/cytoscape-context-menus.min.js",
+    "inputFiles": [
+      "Content/plugins/cytoscape/cytoscape-context-menus.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/modals/modal-add-lifting-schema-mapping-script.min.js",
+    "inputFiles": [
+      "Content/js/modals/modal-add-lifting-schema-mapping-script.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/modals/modal-add-lowering-schema-mapping-script.min.js",
+    "inputFiles": [
+      "Content/js/modals/modal-add-lowering-schema-mapping-script.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/modals/modal-remove-lifting-schema-mapping-script.min.js",
+    "inputFiles": [
+      "Content/js/modals/modal-remove-lifting-schema-mapping-script.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/modals/modal-remove-lowering-schema-mapping-script.min.js",
+    "inputFiles": [
+      "Content/js/modals/modal-remove-lowering-schema-mapping-script.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/modals/modal-add-model-reference-from-ontology-script.min.js",
+    "inputFiles": [
+      "Content/js/modals/modal-add-model-reference-from-ontology-script.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/jQuery/jquery.validate.min.js",
+    "inputFiles": [
+      "Content/plugins/jQuery/jquery.validate.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/jQuery/jquery.validate.unobtrusive.min.js",
+    "inputFiles": [
+      "Content/plugins/jQuery/jquery.validate.unobtrusive.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/modals/modal-share.min.js",
+    "inputFiles": [
+      "Content/js/modals/modal-share.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/AdminLTE.min.js",
+    "inputFiles": [
+      "Content/js/AdminLTE.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/toastr.min.js",
+    "inputFiles": [
+      "Content/js/toastr.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/toastr.min.css",
+    "inputFiles": [
+      "Content/css/toastr.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/bootstrap-slider/slider.min.css",
+    "inputFiles": [
+      "Content/plugins/bootstrap-slider/slider.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/code-mirror/mark-selection.min.js",
+    "inputFiles": [
+      "Content/plugins/code-mirror/mark-selection.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/font-awesome/font-awesome-animation.min.css",
+    "inputFiles": [
+      "Content/plugins/font-awesome/font-awesome-animation.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/jQuery/jquery-2.2.3.min.js",
+    "inputFiles": [
+      "Content/plugins/jQuery/jquery-2.2.3.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/signalR/jquery.signalR-2.2.2.min.js",
+    "inputFiles": [
+      "Content/plugins/signalR/jquery.signalR-2.2.2.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/login.min.css",
+    "inputFiles": [
+      "Content/css/login.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/login.min.js",
+    "inputFiles": [
+      "Content/js/login.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/site.min.js",
+    "inputFiles": [
+      "Content/js/site.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/admin.min.js",
+    "inputFiles": [
+      "Content/js/admin.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/site.min.css",
+    "inputFiles": [
+      "Content/css/site.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/css/admin.min.css",
+    "inputFiles": [
+      "Content/css/admin.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/codemirror/grasews-codemirror.min.js",
+    "inputFiles": [
+      "Content/js/codemirror/grasews-codemirror.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/context-menus/grasews-context-menu.min.js",
+    "inputFiles": [
+      "Content/js/context-menus/grasews-context-menu.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/cytoscape/grasews-cytoscape.min.js",
+    "inputFiles": [
+      "Content/js/cytoscape/grasews-cytoscape.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/plugins/iCheck/icheck.min.js",
+    "inputFiles": [
+      "Content/plugins/iCheck/icheck.js"
+    ]
+  }
+]

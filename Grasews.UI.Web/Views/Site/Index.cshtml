@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@Html.Partial("~/Views/Site/_PartialViews/_HeaderBar.cshtml")
+
+<aside class="main-sidebar">
+    <div class="slimScrollDiv ">
+        <section class="sidebar" @*style="overflow-x: hidden; width: auto;"*@>
+            @*@Html.Partial("~/Views/Site/_PartialViews/TreeViews/_TreeViewSearchForm.cshtml")*@
+            <ul class="sidebar-menu" id="treeview-service-description"></ul>
+        </section>
+    </div>
+</aside>
+
+<aside class="main-sidebar" style="right: 0px;">
+    <div class="slimScrollDiv ">
+        <section class="sidebar" @*style="overflow-x: hidden; width: auto;"*@>
+            @*@Html.Partial("~/Views/Site/_PartialViews/TreeViews/_TreeViewSearchForm.cshtml")*@
+
+            <ul class="sidebar-menu" id="treeview-ontology"></ul>
+            @*@Html.Partial("~/Views/Site/_PartialViews/TreeViews/_OntologyTreeView.cshtml")*@
+        </section>
+    </div>
+</aside>
+
+<div class="content-wrapper" style="min-height: 611px;">
+
+    <div class="nav-tabs-custom">
+        <!-- NAV TABS : begin -->
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_design" data-toggle="tab" aria-expanded="true"><i class="fa fa-object-group" style="margin-right: 5px"></i>Design Tab</a>
+            </li>
+            <li class="">
+                <a href="#tab_code" data-toggle="tab" aria-expanded="false"><i class="fa fa-file-code-o" style="margin-right: 5px"></i>Code Tab</a>
+            </li>
+            <li class="" style="height: 43px; padding-top: 11px">
+                <div id="div-service-description-in-view" style="display: none;">
+                    <label id="lbl-service-description-name-in-view"></label>
+                    <div id="div-alert-you-need-to-refresh" style="display:none;" class="pull-right tooltip-no-wrap" data-toggle="tooltip" data-placement="right" title="You need to refresh the service description to continue editing it.">
+                        <i class="fa fa-warning text-red faa-flash animated faa-fast"></i>
+                    </div>
+                </div>
+            </li>
+            <li class="pull-right faa-parent animated-hover" data-toggle="tooltip" data-placement="left" title="Expand Graph">
+                <a href="#" class="sidebar-toggle fa fa-expand faa-pulse faa-fast" data-toggle="offcanvas" role="button"></a>
+            </li>
+            <li class="pull-right faa-parent animated-hover" data-toggle="tooltip" data-placement="left" title="Collapse Graph">
+                <a href="#" class="sidebar-toggle fa fa-compress faa-pulse faa-fast" data-toggle="offcanvas" role="button"></a>
+            </li>
+        </ul>
+        <!-- NAV TABS : end -->
+        <!-- TAB PANES : begin -->
+        <div class="tab-content">
+            <!-- Graph Tab : begin -->
+            <div class="tab-pane active" id="tab_design">
+                @Html.Partial("~/Views/Site/_PartialViews/_GraphViewer.cshtml")
+            </div>
+            <!-- Graph Tab : end -->
+            <!-- Code Tab : begin -->
+            <div class="tab-pane" id="tab_code">
+                @Html.Partial("~/Views/Site/_PartialViews/_CodeViewer.cshtml")
+            </div>
+            <!-- Code Tab : end -->
+        </div>
+        <!-- tab-content : end -->
+    </div>
+</div>
+
+<div id="place-holder-partial-views"></div>
+
+@Html.Partial("~/Views/Site/_PartialViews/_FooterBar.cshtml")
+
+@Html.Partial("~/Views/Site/_PartialViews/ContextMenus/_ContextMenuWebService.cshtml")
+@Html.Partial("~/Views/Site/_PartialViews/ContextMenus/_ContextMenuOntology.cshtml")
+@Html.Partial("~/Views/Site/_PartialViews/ContextMenus/_ContextMenuOntologyElement.cshtml")
+@Html.Partial("~/Views/Site/_PartialViews/ContextMenus/_ContextMenuWebServiceElement.cshtml")
+
+@Html.Partial("~/Views/Site/_PartialViews/Modals/_ModalReportBug.cshtml")
+@*@Html.Partial("~/Views/Site/_PartialViews/Modals/_ModalShare.cshtml")*@
+@Html.Partial("~/Views/Site/_PartialViews/Modals/_ModalViewImage.cshtml")
+
+@*
+    @Html.Partial("~/Views/Site/_PartialViews/Modals/_ModalRemoveModelReference.cshtml")
+    @Html.Partial("~/Views/Site/_PartialViews/Modals/_ModalOpenServiceDescription.cshtml")
+    @Html.Partial("~/Views/Site/_PartialViews/Modals/_ModalOpenExternalXSD.cshtml")
+    @Html.Partial("~/Views/Site/_PartialViews/Modals/_ModalOpenOntology.cshtml")
+    @Html.Partial("~/Views/Site/_PartialViews/Modals/_ModalAddModelReference.cshtml")
+*@

@@ -1,0 +1,25 @@
+﻿@model Grasews.Web.ViewModels.ChildrenXsdComplexTypeSelectOptionsViewModel
+
+@if (Model.ChildrenXsdComplexTypes != null && Model.ChildrenXsdComplexTypes.Any())
+{
+    foreach (var xsdComplexType in Model.ChildrenXsdComplexTypes)
+    {
+        <option id="opt-wsdl-element-@xsdComplexType.Id" class="option-level" level="@Model.Level" value="@xsdComplexType.Id" wsdl-element-type="@xsdComplexType.ElementType" id-wsdl-element-type="@xsdComplexType.IdElementType">
+            [c-t] @xsdComplexType.ToString()
+        </option>
+
+        @Html.Partial("~/Views/Site/_PartialViews/_ChildrenXsdComplexTypeSelectOptions.cshtml", new Grasews.Web.ViewModels.ChildrenXsdComplexTypeSelectOptionsViewModel { ChildrenXsdComplexTypes = xsdComplexType.ChildrenXsdComplexTypes, Level = Model.Level + 1 })
+
+        if (xsdComplexType.XsdSimpleTypes != null && xsdComplexType.XsdSimpleTypes.Any())
+        {
+            var optionLevel = Model.Level + 1;
+
+            foreach (var xsdSimpleType in xsdComplexType.XsdSimpleTypes)
+            {
+                <option id="opt-wsdl-element-@xsdSimpleType.Id" class="option-level" level="@optionLevel" value="@xsdSimpleType.Id" wsdl-element-type="@xsdSimpleType.ElementType" id-wsdl-element-type="@xsdSimpleType.IdElementType">
+                    [s-t] @xsdSimpleType.ToString()
+                </option>
+            }
+        }
+    }
+}

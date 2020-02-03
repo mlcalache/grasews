@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A97553C-1783-4521-BC41-F9A57FFE7825}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Grasews.API.Models</RootNamespace>
+    <AssemblyName>Grasews.API.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ResetPasswordRequest_ApiRequestCreateModel.cs" />
+    <Compile Include="ResetPassword_ApiRequestCreateModel.cs" />
+    <Compile Include="ResetPassword_ApiResponseModel.cs" />
+    <Compile Include="Token_ApiResponseCreateModel.cs" />
+    <Compile Include="ShareInvitationAccept_ApiRequestCreateModel.cs" />
+    <Compile Include="Account_ApiResponseViewModel.cs" />
+    <Compile Include="BaseApiModel.cs" />
+    <Compile Include="FindTerm_ApiResponseViewModel.cs" />
+    <Compile Include="GraphNodesLocationsByUser_ApiRequestViewModel.cs" />
+    <Compile Include="GraphJson_ApiRequestCreateModel.cs" />
+    <Compile Include="IssueAnswer_ApiRequestCreateModel.cs" />
+    <Compile Include="IssueAnswer_ApiRequestUpdateModel.cs" />
+    <Compile Include="IssueAnswer_ApiResponseViewModel.cs" />
+    <Compile Include="Issue_ApiRequestCreateModel.cs" />
+    <Compile Include="Issue_ApiRequestUpdateModel.cs" />
+    <Compile Include="Issue_ApiResponseViewModel.cs" />
+    <Compile Include="SawsdlLiftingSchemaMapping_ApiRequestRemoveModel.cs" />
+    <Compile Include="SawsdlLiftingSchemaMapping_ApiRequestUpdateModel.cs" />
+    <Compile Include="SawsdlLiftingSchemaMapping_ApiRequestViewModel.cs" />
+    <Compile Include="SawsdlLoweringSchemaMapping_ApiRequestRemoveModel.cs" />
+    <Compile Include="SawsdlLoweringSchemaMapping_ApiRequestUpdateModel.cs" />
+    <Compile Include="SawsdlLoweringSchemaMapping_ApiRequestViewModel.cs" />
+    <Compile Include="SawsdlModelReferenceCollection_ApiRequestViewModel.cs" />
+    <Compile Include="OntologyCollection_ApiResponseViewModel.cs" />
+    <Compile Include="Ontology_ApiRequestCreateModel.cs" />
+    <Compile Include="Ontology_ApiRequestUpdateModel.cs" />
+    <Compile Include="Ontology_ApiResponseViewModel.cs" />
+    <Compile Include="OntologyTermCollection_ApiResponseViewModel.cs" />
+    <Compile Include="OntologyTermFindPath_ApiResponseViewModel.cs" />
+    <Compile Include="ParseOwl_ApiRequestViewModel.cs" />
+    <Compile Include="ParseOwl_ApiResponseViewModel.cs" />
+    <Compile Include="ParseWsdl_ApiRequestViewModel.cs" />
+    <Compile Include="ParseWsdl_ApiResponseViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SawsdlLiftingSchemaMapping_ApiRequestCreateModel.cs" />
+    <Compile Include="SawsdlLoweringSchemaMapping_ApiRequestCreateModel.cs" />
+    <Compile Include="SawsdlModelReference_ApiRequestCreateModel.cs" />
+    <Compile Include="SawsdlModelReference_ApiRequestRemoveModel.cs" />
+    <Compile Include="ServiceDescriptionCollection_ApiResponseViewModel.cs" />
+    <Compile Include="ServiceDescription_ApiRequestCreateModel.cs" />
+    <Compile Include="ServiceDescription_ApiRequestUpdateModel.cs" />
+    <Compile Include="ServiceDescription_ApiResponseViewModel.cs" />
+    <Compile Include="ServiceDescription_Ontology_ApiRequestCreateModel.cs" />
+    <Compile Include="ServiceDescription_Ontology_ApiResponseViewModel.cs" />
+    <Compile Include="ServiceDescription_User_ApiRequestCreateModel.cs" />
+    <Compile Include="ServiceDescription_User_ApiRequestUpdateModel.cs" />
+    <Compile Include="ServiceDescription_User_ApiResponseViewModel.cs" />
+    <Compile Include="ShareInvitation_ApiRequestCreateModel.cs" />
+    <Compile Include="ShareInvitation_ApiRequestUpdateModel.cs" />
+    <Compile Include="ShareInvitation_ApiResponseViewModel.cs" />
+    <Compile Include="TaskComment_ApiRequestCreateModel.cs" />
+    <Compile Include="TaskComment_ApiRequestUpdateModel.cs" />
+    <Compile Include="TaskComment_ApiResponseViewModel.cs" />
+    <Compile Include="Task_ApiRequestCreateModel.cs" />
+    <Compile Include="Task_ApiRequestUpdateModel.cs" />
+    <Compile Include="Task_ApiResponseViewModel.cs" />
+    <Compile Include="TransferNodePositionsFromOntologyTermsToModelReferences_ApiRequestUpdateModel.cs" />
+    <Compile Include="UpdateGraphJson_ApiRequestUpdateModel.cs" />
+    <Compile Include="User_ApiRequestCreateModel.cs" />
+    <Compile Include="User_ApiRequestUpdateModel.cs" />
+    <Compile Include="User_ApiResponseViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Grasews.Domain\Grasews.Domain.csproj">
+      <Project>{E344B48F-258F-4317-A279-B98903AD49F4}</Project>
+      <Name>Grasews.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Grasews.Infra.CrossCutting.Helpers\Grasews.Infra.CrossCutting.Helpers.csproj">
+      <Project>{5907E20F-777D-4DDE-8688-7F1AF640EE97}</Project>
+      <Name>Grasews.Infra.CrossCutting.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

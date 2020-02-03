@@ -1,0 +1,44 @@
+﻿@model Grasews.API.Models.OntologyCollection_ApiResponseViewModel
+
+<div class="modal fade" id="modal-add-model-reference" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">@WebResource.AddModelReference</h4>
+            </div>
+            <div class="modal-body">
+                <span>Add a SAWSDL Model Reference for </span><label id="lblElementToAddModelReference"></label>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@WebResource.Ontologies</label>
+                                <select id="ddl-add-modal-reference-ontologies" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                    <option selected='selected' value='none'>@WebResource.Select</option>
+                                    @foreach (var ontology in Model.OntologyViewModels)
+                                    {
+                                        <option id="opt-ontology-@ontology.Id" value="@ontology.Id">@ontology.OntologyName</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>@WebResource.Terms</label>
+                                <select id="ddl-add-modal-reference-ontology-terms" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" disabled></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@WebResource.Close</button>
+                <input type="hidden" id="element-id-to-add-model-reference" value="" />
+                <button type="button" class="btn btn-primary" id="lnkApplyModelReference" data-dismiss="modal" disabled>@WebResource.Apply</button>
+            </div>
+        </div>
+    </div>
+</div>

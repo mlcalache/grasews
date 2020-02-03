@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl2:description targetNamespace="http://dcm.ffclrp.usp.br/lssb/geas/wsdl/AdaptationService1.wsdl" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ax22="http://util.java/xsd" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:tns="http://dcm.ffclrp.usp.br/lssb/geas/wsdl/AdaptationService1.wsdl" xmlns:wsdl2="http://www.w3.org/ns/wsdl" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://services" xmlns:ax21="http://classes/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wrpc="http://www.w3.org/ns/wsdl/rpc" xmlns:ax25="http://io.java/xsd" xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions">
+<wsdl2:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://classes/xsd" xmlns:ax23="http://util.java/xsd">
+            <xs:import namespace="http://util.java/xsd" />
+            <xs:complexType name="ListOfExperimentalConditions">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="listOfExperimentalConditions" nillable="true" type="ax23:Collection" />
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://util.java/xsd">
+            <xs:complexType name="Collection">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="empty" type="xs:boolean" />
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://services" xmlns:ax24="http://classes/xsd" xmlns:ax26="http://io.java/xsd">
+            <xs:import namespace="http://classes/xsd" />
+            <xs:import namespace="http://io.java/xsd" />
+            <xs:element name="AdaptationService1Exception">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AdaptationService1Exception" nillable="true" type="ns:Exception" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="Exception">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="getStatus">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getStatusResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="generateID">
+                <xs:complexType>
+                    <xs:sequence />
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="generateIDResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sendExperimentalConditions1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="list" nillable="true" type="ax24:ListOfExperimentalConditions" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sendExperimentalConditions2">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="list" nillable="true" type="ax24:ListOfExperimentalConditions" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listExperimentalConditions1">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listExperimentalConditions1Response">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax24:ListOfExperimentalConditions" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listExperimentalConditions2">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listExperimentalConditions2Response">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax24:ListOfExperimentalConditions" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCondition1File">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCondition1FileResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax26:File" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCondition2File">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCondition2FileResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax26:File" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sendFile">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="file" nillable="true" type="ax26:File" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="filterData">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://io.java/xsd">
+            <xs:complexType name="File">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="absolute" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="absoluteFile" nillable="true" type="ax25:File" />
+                    <xs:element minOccurs="0" name="absolutePath" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="canonicalFile" nillable="true" type="ax25:File" />
+                    <xs:element minOccurs="0" name="canonicalPath" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="directory" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="file" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="freeSpace" type="xs:long" />
+                    <xs:element minOccurs="0" name="hidden" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="parent" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="parentFile" nillable="true" type="ax25:File" />
+                    <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="totalSpace" type="xs:long" />
+                    <xs:element minOccurs="0" name="usableSpace" type="xs:long" />
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema></wsdl2:types>
+  <wsdl2:interface name="ServiceInterface">
+    <wsdl2:operation name="sendFile" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendFile" wsaw:Action="urn:sendFile">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendFileResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService1Exception" wsaw:Action="urn:sendFileAdaptationService1Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="listExperimentalConditions1" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:listExperimentalConditions1" wsaw:Action="urn:listExperimentalConditions1">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:listExperimentalConditions1Response" wsaw:Action="urn:listExperimentalConditions1Response">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService1Exception" wsaw:Action="urn:listExperimentalConditions1AdaptationService1Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="listExperimentalConditions2" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:listExperimentalConditions2" wsaw:Action="urn:listExperimentalConditions2">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:listExperimentalConditions2Response" wsaw:Action="urn:listExperimentalConditions2Response">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService1Exception" wsaw:Action="urn:listExperimentalConditions2AdaptationService1Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="filterData" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:filterData" wsaw:Action="urn:filterData">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:filterDataResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService1Exception" wsaw:Action="urn:filterDataAdaptationService1Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="getCondition2File" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:getCondition2File" wsaw:Action="urn:getCondition2File">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:getCondition2FileResponse" wsaw:Action="urn:getCondition2FileResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService1Exception" wsaw:Action="urn:getCondition2FileAdaptationService1Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="generateID" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc http://www.w3.org/ns/wsdl/style/iri http://www.w3.org/ns/wsdl/style/multipart" wrpc:signature="return #return ">
+      <wsdl2:input messageLabel="In" element="ns:generateID" wsaw:Action="urn:generateID">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:generateIDResponse" wsaw:Action="urn:generateIDResponse">
+    </wsdl2:output>
+    </wsdl2:operation>
+    <wsdl2:operation name="getCondition1File" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:getCondition1File" wsaw:Action="urn:getCondition1File">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:getCondition1FileResponse" wsaw:Action="urn:getCondition1FileResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService1Exception" wsaw:Action="urn:getCondition1FileAdaptationService1Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="getStatus" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:getStatus" wsaw:Action="urn:getStatus">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:getStatusResponse" wsaw:Action="urn:getStatusResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService1Exception" wsaw:Action="urn:getStatusAdaptationService1Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="sendExperimentalConditions2" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendExperimentalConditions2" wsaw:Action="urn:sendExperimentalConditions2">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendExperimentalConditions2Response">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService1Exception" wsaw:Action="urn:sendExperimentalConditions2AdaptationService1Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="sendExperimentalConditions1" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendExperimentalConditions1" wsaw:Action="urn:sendExperimentalConditions1">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendExperimentalConditions1Response">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService1Exception" wsaw:Action="urn:sendExperimentalConditions1AdaptationService1Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+      <wsdl2:fault name="AdaptationService1Exception" element="ns:AdaptationService1Exception">
+    </wsdl2:fault>
+  </wsdl2:interface>
+  <wsdl2:binding name="AdaptationService1HttpBinding" interface="tns:ServiceInterface" type="http://www.w3.org/ns/wsdl/http" whttp:methodDefault="POST">
+    <wsdl2:operation ref="tns:sendFile" whttp:location="adaptationservice1/sendFile/{identifier}/{filename}" whttp:method="POST" />
+    <wsdl2:operation ref="tns:listExperimentalConditions1" whttp:location="adaptationservice1/listExperimentalConditions1/{identifier}" whttp:method="GET" whttp:outputSerialization="application/xml" />
+    <wsdl2:operation ref="tns:listExperimentalConditions2" whttp:location="adaptationservice1/listExperimentalConditions2/{identifier}" whttp:method="GET" whttp:outputSerialization="application/xml" />
+    <wsdl2:operation ref="tns:filterData" whttp:location="adaptationservice1/filterData/{identifier}" whttp:method="POST" />
+    <wsdl2:operation ref="tns:getCondition2File" whttp:location="adaptationservice1/getCondition2File/{identifier}" whttp:method="GET" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:generateID" whttp:location="adaptationservice1/generateID" whttp:method="GET" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:getCondition1File" whttp:location="adaptationservice1/getCondition1File/{identifier}" whttp:method="GET" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:getStatus" whttp:location="adaptationservice1/getStatus/{identifier}" whttp:method="GET" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:sendExperimentalConditions2" whttp:location="adaptationservice1/sendExperimentalConditions2/{identifier}" whttp:method="POST" />
+    <wsdl2:operation ref="tns:sendExperimentalConditions1" whttp:location="adaptationservice1/sendExperimentalConditions1/{identifier}" whttp:method="POST" />
+    <wsdl2:fault ref="tns:AdaptationService1Exception" />
+  </wsdl2:binding>
+  <wsdl2:service name="AdaptationService1" interface="tns:ServiceInterface">
+    <wsdl2:endpoint name="AdaptationService1HttpEndpoint" binding="tns:AdaptationService1HttpBinding" address="http://kode.ffclrp.usp.br/lssb/geas/AdaptationService1/webresources/adaptationservice1">
+    </wsdl2:endpoint>
+    </wsdl2:service>
+</wsdl2:description>

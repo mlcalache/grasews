@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AnErrorHasHappened" xml:space="preserve">
+    <value>An internal error has happened. Please try again or contact a system administrator.</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Back to List</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="BlackLight" xml:space="preserve">
+    <value>BlackLight</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="BlueLight" xml:space="preserve">
+    <value>Blue Light</value>
+  </data>
+  <data name="ChangeSkin" xml:space="preserve">
+    <value>Change skin</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateNewServiceDescription" xml:space="preserve">
+    <value>Create a new service description</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="DownloadWSDL" xml:space="preserve">
+    <value>Download WSDL</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ExportImage" xml:space="preserve">
+    <value>Export image</value>
+  </data>
+  <data name="Grasews" xml:space="preserve">
+    <value>Grasews</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="GreenLight" xml:space="preserve">
+    <value>Green Light</value>
+  </data>
+  <data name="IssuesCreatedBy" xml:space="preserve">
+    <value>Issues created by {0}</value>
+  </data>
+  <data name="IssueInsertFail" xml:space="preserve">
+    <value>Issue failed on inserting.</value>
+  </data>
+  <data name="IssueInsertSuccess" xml:space="preserve">
+    <value>Issue inserted with success.</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>My account</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Ontologies" xml:space="preserve">
+    <value>Ontologies</value>
+  </data>
+  <data name="OpenOntology" xml:space="preserve">
+    <value>Open ontology</value>
+  </data>
+  <data name="OpenWSDL" xml:space="preserve">
+    <value>Open WSDL</value>
+  </data>
+  <data name="Purple" xml:space="preserve">
+    <value>Purple</value>
+  </data>
+  <data name="PurpleLight" xml:space="preserve">
+    <value>Purple Light</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="RedLight" xml:space="preserve">
+    <value>Red Light</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveWSDL" xml:space="preserve">
+    <value>Save WSDL</value>
+  </data>
+  <data name="ServiceDescriptionInsertFail" xml:space="preserve">
+    <value>An error has occured. Service description failed on inserting. Please try again or contact the system administrator.</value>
+  </data>
+  <data name="ServiceDescriptionInsertSuccess" xml:space="preserve">
+    <value>Service description inserted successfully.</value>
+  </data>
+  <data name="ServiceDescriptions" xml:space="preserve">
+    <value>Service descriptions</value>
+  </data>
+  <data name="ServiceName" xml:space="preserve">
+    <value>Service name</value>
+  </data>
+  <data name="ServiceDescriptionsCreatedBy" xml:space="preserve">
+    <value>Service descriptions created by {0}</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="ShareWSDL" xml:space="preserve">
+    <value>Share WSDL</value>
+  </data>
+  <data name="UserImage" xml:space="preserve">
+    <value>User image</value>
+  </data>
+  <data name="UsernameOrPasswordWrong" xml:space="preserve">
+    <value>Username or password might be wrong. Please, revise and try again. Otherwise, make a new register.</value>
+  </data>
+  <data name="ViewAnswers" xml:space="preserve">
+    <value>View answers</value>
+  </data>
+  <data name="Yellow" xml:space="preserve">
+    <value>Yellow</value>
+  </data>
+  <data name="YellowLight" xml:space="preserve">
+    <value>Yellow Light</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteThis" xml:space="preserve">
+    <value>Are you sure you want to delete this?</value>
+  </data>
+  <data name="ServiceDescriptionDeleteFail" xml:space="preserve">
+    <value>An error has occured. Service description failed on deleting. Please try again or contact the system administrator.</value>
+  </data>
+  <data name="ServiceDescriptionDeleteSuccess" xml:space="preserve">
+    <value>Service description deleted successfully.</value>
+  </data>
+  <data name="UserIsNotTheOwner" xml:space="preserve">
+    <value>The logged user is not the owner of the requested resource.</value>
+  </data>
+  <data name="NoServiceDescriptionInDatabase" xml:space="preserve">
+    <value>No service descriptions in the database for the current user.</value>
+  </data>
+  <data name="PasswordEmpty" xml:space="preserve">
+    <value>The password should not be empty.</value>
+  </data>
+  <data name="UsernameEmpty" xml:space="preserve">
+    <value>The username should not be empty.</value>
+  </data>
+  <data name="AnErrorHasOccuredServiceDescriptionNotFoundInDatabase" xml:space="preserve">
+    <value>An error has occured. Service descripttion not found in the database.</value>
+  </data>
+  <data name="ServiceDescriptionUpdateFail" xml:space="preserve">
+    <value>An error has occured. Service description failed on updating. Please try again or contact the system administrator.</value>
+  </data>
+  <data name="ServiceDescriptionUpdateSuccess" xml:space="preserve">
+    <value>Service description updated successfully.</value>
+  </data>
+  <data name="HasLiftingSchemaMappingAttribute" xml:space="preserve">
+    <value>Has SAWSDL Lifting  Schema Mapping Attribute</value>
+  </data>
+  <data name="HasLoweringSchemaMappingAttribute" xml:space="preserve">
+    <value>Has SAWSDL Lowering Schema Mapping Attribute</value>
+  </data>
+  <data name="HasModelReferenceAttribute" xml:space="preserve">
+    <value>Has SAWSDL Model Reference Attribute</value>
+  </data>
+  <data name="HasSchemaMappingAttribute" xml:space="preserve">
+    <value>Has SAWSDL Schema Mapping Attribute</value>
+  </data>
+  <data name="ModelReference" xml:space="preserve">
+    <value>Model Reference</value>
+  </data>
+  <data name="OwnerUser" xml:space="preserve">
+    <value>Owner user</value>
+  </data>
+  <data name="SchemaMapping" xml:space="preserve">
+    <value>Schema Mapping</value>
+  </data>
+  <data name="Wsdl" xml:space="preserve">
+    <value>Wsdl</value>
+  </data>
+  <data name="Collaboration" xml:space="preserve">
+    <value>Collaboration</value>
+  </data>
+  <data name="CytoscapeGraphJson" xml:space="preserve">
+    <value>Graph JSON</value>
+  </data>
+  <data name="OntologyName" xml:space="preserve">
+    <value>Ontology name</value>
+  </data>
+  <data name="XML" xml:space="preserve">
+    <value>XML</value>
+  </data>
+  <data name="AnErrorHasOccuredOntologyNotFoundInDatabase" xml:space="preserve">
+    <value>An error has occured. Ontology not found in the database.</value>
+  </data>
+  <data name="NoOntologyInDatabase" xml:space="preserve">
+    <value>No ontology in the database for the current user.</value>
+  </data>
+  <data name="OntologyDeleteFail" xml:space="preserve">
+    <value>An error has occured. Ontology failed on deleting. Please try again or contact the system administrator.</value>
+  </data>
+  <data name="OntologyDeleteSuccess" xml:space="preserve">
+    <value>Ontology deleted successfully.</value>
+  </data>
+  <data name="OntologyInsertFail" xml:space="preserve">
+    <value>An error has occured. Ontology failed on inserting. Please try again or contact the system administrator.</value>
+  </data>
+  <data name="OntologyInsertSuccess" xml:space="preserve">
+    <value>Ontology inserted successfully.</value>
+  </data>
+  <data name="OntologyUpdateFail" xml:space="preserve">
+    <value>An error has occured. Ontology failed on updating. Please try again or contact the system administrator.</value>
+  </data>
+  <data name="OntologyUpdateSuccess" xml:space="preserve">
+    <value>Ontology updated successfully.</value>
+  </data>
+  <data name="CreateNewOntology" xml:space="preserve">
+    <value>Create a new ontology</value>
+  </data>
+  <data name="NoServiceDescriptionSharedInDatabase" xml:space="preserve">
+    <value>No service descriptions shared in the database for the current user.</value>
+  </data>
+  <data name="ServiceDescriptionSharedFail" xml:space="preserve">
+    <value>An error has occured. Service description failed on sharing. Please try again or contact the system administrator.</value>
+  </data>
+  <data name="ServiceDescriptionSharedSuccess" xml:space="preserve">
+    <value>Service description shared successfully.</value>
+  </data>
+  <data name="ServiceDescriptionsSharedWith" xml:space="preserve">
+    <value>Service descriptions shared with {0}</value>
+  </data>
+  <data name="BackToTheSystem" xml:space="preserve">
+    <value>Back to the system</value>
+  </data>
+  <data name="OntologiesCreatedBy" xml:space="preserve">
+    <value>Ontologies created by {0}</value>
+  </data>
+  <data name="TasksCreatedBy" xml:space="preserve">
+    <value>Tasks created by {0}</value>
+  </data>
+  <data name="TaskInsertFail" xml:space="preserve">
+    <value>Task failed on inserting.</value>
+  </data>
+  <data name="TaskInsertSuccess" xml:space="preserve">
+    <value>Task inserted with success.</value>
+  </data>
+  <data name="ViewComments" xml:space="preserve">
+    <value>View comments</value>
+  </data>
+  <data name="Issues" xml:space="preserve">
+    <value>Issues</value>
+  </data>
+  <data name="IssuesSharedWithMe" xml:space="preserve">
+    <value>Issues shared with me</value>
+  </data>
+  <data name="MyIssues" xml:space="preserve">
+    <value>My issues</value>
+  </data>
+  <data name="MyOntologies" xml:space="preserve">
+    <value>My ontologies</value>
+  </data>
+  <data name="MyServiceDescriptions" xml:space="preserve">
+    <value>My service descriptions</value>
+  </data>
+  <data name="MyTasks" xml:space="preserve">
+    <value>My tasks</value>
+  </data>
+  <data name="NoIssueForTheServiceDescription" xml:space="preserve">
+    <value>No issue for the current service description.</value>
+  </data>
+  <data name="NoTaskForTheServiceDescription" xml:space="preserve">
+    <value>No task for the current service description.</value>
+  </data>
+  <data name="OntologiesSharedWithMe" xml:space="preserve">
+    <value>Ontologies shared with me</value>
+  </data>
+  <data name="ServiceDescriptionsSharedWithMe" xml:space="preserve">
+    <value>Service descriptions shared with me</value>
+  </data>
+  <data name="Tasks" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="TasksSharedWithMe" xml:space="preserve">
+    <value>Tasks shared with me</value>
+  </data>
+  <data name="BackToTheServiceDescriptions" xml:space="preserve">
+    <value>Back to the service descriptions</value>
+  </data>
+  <data name="EmailToShare" xml:space="preserve">
+    <value>E-mail to share</value>
+  </data>
+  <data name="SharedUsersForTheServiceDescription" xml:space="preserve">
+    <value>Shared users for the service description {0}</value>
+  </data>
+  <data name="ShareServiceDescriptionWithUsers" xml:space="preserve">
+    <value>Share the service description with users</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="AreYouSureYouWantToRemoveAllSharing" xml:space="preserve">
+    <value>Are you sure you want to remove all sharing from this service description?</value>
+  </data>
+  <data name="RemoveSharing" xml:space="preserve">
+    <value>Remove sharing</value>
+  </data>
+  <data name="SharedUsers" xml:space="preserve">
+    <value>Shared users</value>
+  </data>
+  <data name="RemoveAllSharing" xml:space="preserve">
+    <value>Remove all sharing</value>
+  </data>
+  <data name="AreYouSureYouWantToRemoveSharingFromUser" xml:space="preserve">
+    <value>Are you sure you want to remove this service description sharing from this user?</value>
+  </data>
+  <data name="ExistingUsers" xml:space="preserve">
+    <value>Existing users</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Discard" xml:space="preserve">
+    <value>Discard</value>
+  </data>
+  <data name="EmailsCommaSeparated" xml:space="preserve">
+    <value>You can set more than you e-mail by separating them with comma.</value>
+  </data>
+  <data name="EmailsToShare" xml:space="preserve">
+    <value>E-mails to share</value>
+  </data>
+  <data name="ThisServiceDescriptionIsSharedWithNoUsers" xml:space="preserve">
+    <value>This service description is shared with no users.</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="OpenOWL" xml:space="preserve">
+    <value>Open OWL</value>
+  </data>
+  <data name="OpenServiceDescription" xml:space="preserve">
+    <value>Open service description</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="GetLastVersionOfServiceDescription" xml:space="preserve">
+    <value>Get last version of service description</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="RefreshServiceDescription" xml:space="preserve">
+    <value>Refresh service description</value>
+  </data>
+  <data name="ViewMyOntologies" xml:space="preserve">
+    <value>View my ontologies</value>
+  </data>
+  <data name="ViewMyServiceDescriptions" xml:space="preserve">
+    <value>View my service descriptions</value>
+  </data>
+  <data name="CreateAnIssue" xml:space="preserve">
+    <value>Create an issue</value>
+  </data>
+  <data name="CreateATask" xml:space="preserve">
+    <value>Create a task</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ViewIssueList" xml:space="preserve">
+    <value>View the issue list</value>
+  </data>
+  <data name="ViewTaskList" xml:space="preserve">
+    <value>View the task list</value>
+  </data>
+  <data name="CreateANewIssue" xml:space="preserve">
+    <value>Create a new issue</value>
+  </data>
+  <data name="CreateANewTask" xml:space="preserve">
+    <value>Create a new task</value>
+  </data>
+  <data name="EnterHereYourIssueDescription" xml:space="preserve">
+    <value>Enter here your issue description</value>
+  </data>
+  <data name="EnterHereYourTaskDescription" xml:space="preserve">
+    <value>Enter here your task description</value>
+  </data>
+  <data name="IssueDescription" xml:space="preserve">
+    <value>Issue description</value>
+  </data>
+  <data name="TaskDescription" xml:space="preserve">
+    <value>Task description</value>
+  </data>
+  <data name="IssueExplanation" xml:space="preserve">
+    <value>An issue list is a group of questions related to the semantic annotation process of a service description. Every user with which a service description is shared can answer a question. However, only the user who created the issue (question) is able to mark it as solved.</value>
+  </data>
+  <data name="TaskExplanation" xml:space="preserve">
+    <value>A task list is a list of the remaining work for the semantic annotation process of a service description. Every user with which a service description is shared can make comments on a task and also they can accomplish a task by marking it as done.</value>
+  </data>
+  <data name="WhatIsAnIssue" xml:space="preserve">
+    <value>What is an issue?</value>
+  </data>
+  <data name="WhatIsATask" xml:space="preserve">
+    <value>What is a task?</value>
+  </data>
+  <data name="EnterHereYourIssueTitle" xml:space="preserve">
+    <value>Enter here your issue title</value>
+  </data>
+  <data name="EnterHereYourTaskTitle" xml:space="preserve">
+    <value>Enter here your task title</value>
+  </data>
+  <data name="IssueTitle" xml:space="preserve">
+    <value>Issue title</value>
+  </data>
+  <data name="TaskTitle" xml:space="preserve">
+    <value>Task title</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="CreateANewAnswer" xml:space="preserve">
+    <value>Create a new answer</value>
+  </data>
+  <data name="CreateANewComment" xml:space="preserve">
+    <value>Create a new comment</value>
+  </data>
+  <data name="MarkIssueAsSolved" xml:space="preserve">
+    <value>Mark issue as solved</value>
+  </data>
+  <data name="MarkTaskAsDone" xml:space="preserve">
+    <value>Mark task as done</value>
+  </data>
+  <data name="PreviousAnswers" xml:space="preserve">
+    <value>Previous answers</value>
+  </data>
+  <data name="PreviousComments" xml:space="preserve">
+    <value>Previous comments</value>
+  </data>
+  <data name="IssueAnswerCreatedSuccessfully" xml:space="preserve">
+    <value>Issue answer created successfuly</value>
+  </data>
+  <data name="IssueCreatedSuccessfuly" xml:space="preserve">
+    <value>Issue created successfuly</value>
+  </data>
+  <data name="TaskCommentCreatedSuccessfuly" xml:space="preserve">
+    <value>Task comment created successfuly</value>
+  </data>
+  <data name="TaskCreatedSuccessfuly" xml:space="preserve">
+    <value>Task created successfuly</value>
+  </data>
+  <data name="IssuesNotSolvedAndWithAnswers" xml:space="preserve">
+    <value>Tasks not solved and with answers</value>
+  </data>
+  <data name="TasksNotDoneAndWithComments" xml:space="preserve">
+    <value>Tasks not done and with comments</value>
+  </data>
+  <data name="IssuesSolved" xml:space="preserve">
+    <value>Issues solved</value>
+  </data>
+  <data name="TasksDone" xml:space="preserve">
+    <value>Tasks done</value>
+  </data>
+  <data name="IssuesNotSolvedWithNoAnswers" xml:space="preserve">
+    <value>Issues not solved and with no answers</value>
+  </data>
+  <data name="TasksNotDoneWithNoComments" xml:space="preserve">
+    <value>Tasks not done and with no comments</value>
+  </data>
+  <data name="NoIssuesHaveBeenFound" xml:space="preserve">
+    <value>No issues have been found</value>
+  </data>
+  <data name="NoTasksHaveBeenFound" xml:space="preserve">
+    <value>No tasks have been found</value>
+  </data>
+  <data name="RemoveIssue" xml:space="preserve">
+    <value>Remove issue</value>
+  </data>
+  <data name="RemoveTask" xml:space="preserve">
+    <value>Remove task</value>
+  </data>
+  <data name="AddModelReference" xml:space="preserve">
+    <value>Add Model Reference</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select...</value>
+  </data>
+  <data name="ServiceDescriptionElements" xml:space="preserve">
+    <value>Service description elements</value>
+  </data>
+  <data name="Terms" xml:space="preserve">
+    <value>Terms</value>
+  </data>
+  <data name="IssueUpdatedSuccessfully" xml:space="preserve">
+    <value>Issue updated successfully</value>
+  </data>
+  <data name="TaskUpdatedSuccessfully" xml:space="preserve">
+    <value>Task updated successfully</value>
+  </data>
+  <data name="ServiceDescriptionElement" xml:space="preserve">
+    <value>Service description element</value>
+  </data>
+  <data name="ServiceDescriptionElementType" xml:space="preserve">
+    <value>Service description element type</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="EmailNotFound" xml:space="preserve">
+    <value>E-mail not found</value>
+  </data>
+</root>

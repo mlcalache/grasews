@@ -1,0 +1,37 @@
+﻿@model Grasews.Web.ViewModels.Ontology_MvcViewModel
+
+@{
+    ViewBag.Title = WebResource.Details;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OntologyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OntologyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Xml)
+        </dt>
+
+        <dd>
+            @Html.DisplayTextFor(model => model.Xml)
+        </dd>
+    </dl>
+</div>
+<p>
+    @*<a href="@Url.Action("Index", new { idOntology = Model.Id })" class="btn btn-sm btn-warning">
+        <span class="fa fa-pencil" aria-hidden="true"></span>&nbsp;@WebResource.Edit
+    </a>*@
+
+    <a href="@Url.Action("Index")" class="btn btn-sm btn-default">
+        <span class="fa fa-arrow-left" aria-hidden="true"></span>&nbsp;@WebResource.BackToList
+    </a>
+</p>

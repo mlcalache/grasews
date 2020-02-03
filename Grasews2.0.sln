@@ -1,0 +1,178 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentation", "1. Presentation", "{C4E64AFF-0663-4AC8-A726-02BC42AB7121}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Distributed-Services", "2. Distributed-Services", "{C7178254-8F5F-44A7-B307-DC2F64838DF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Application", "3. Application", "{1E046462-0717-4AF0-A6A5-63FBF399F8F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Domain", "4. Domain", "{978BE63E-9C76-4E3A-A5EF-BA65543BD4D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Infra", "5. Infra", "{37E203DB-80D2-4A75-A3C2-645849D94133}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cross-Cutting", "Cross-Cutting", "{949DF4C5-6240-47F0-8E68-E1314FC8794E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data-Access", "Data-Access", "{D82F08D8-910D-4909-B20E-160B6EB4AC77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.Application", "Grasews.Application\Grasews.Application.csproj", "{2214DDC9-5916-44B1-9B44-AD899C485FA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.Domain", "Grasews.Domain\Grasews.Domain.csproj", "{E344B48F-258F-4317-A279-B98903AD49F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.Infra.CrossCutting.Helpers", "Grasews.Infra.CrossCutting.Helpers\Grasews.Infra.CrossCutting.Helpers.csproj", "{5907E20F-777D-4DDE-8688-7F1AF640EE97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.Infra.CrossCutting.IoC", "Grasews.Infra.CrossCutting.IoC\Grasews.Infra.CrossCutting.IoC.csproj", "{66CE5BB9-2218-4C6B-B9DA-CE65F00B1B5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.Infra.CrossCutting.Security", "Grasews.Infra.CrossCutting.Security\Grasews.Infra.CrossCutting.Security.csproj", "{C2071F5F-6DFC-4EAA-ACA7-CDD8CD1129BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.Infra.CrossCutting.Email", "Grasews.Infra.CrossCutting.Email\Grasews.Infra.CrossCutting.Email.csproj", "{F435003A-7CDC-49B6-8DA8-A1EB8641972A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.API", "Grasews.API\Grasews.API.csproj", "{71DB5CF3-14F2-4E42-9746-F666EB0E9F2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External-Services", "External-Services", "{CC6D3655-DF5D-4F6F-8261-40DD013038C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.Infra.ExternalService.Gmail", "Grasews.Infra.ExternalService.Gmail\Grasews.Infra.ExternalService.Gmail.csproj", "{153997CA-4520-4004-9C2D-FA3819692A61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wsdls", "Wsdls", "{C1D678CF-A591-4005-9999-4C0D94695610}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\wsdl\2.0\nao anotados\AdaptationService1.wsdl = Resources\wsdl\2.0\nao anotados\AdaptationService1.wsdl
+		Resources\wsdl\2.0\nao anotados\AdaptationService2.wsdl = Resources\wsdl\2.0\nao anotados\AdaptationService2.wsdl
+		Resources\wsdl\2.0\nao anotados\AdaptationService3.wsdl = Resources\wsdl\2.0\nao anotados\AdaptationService3.wsdl
+		Resources\wsdl\2.0\nao anotados\AdaptationService4.wsdl = Resources\wsdl\2.0\nao anotados\AdaptationService4.wsdl
+		Resources\wsdl\2.0\nao anotados\AdaptationService5.wsdl = Resources\wsdl\2.0\nao anotados\AdaptationService5.wsdl
+		Resources\wsdl\2.0\nao anotados\AdaptationService6.wsdl = Resources\wsdl\2.0\nao anotados\AdaptationService6.wsdl
+		Resources\wsdl\2.0\nao anotados\DAVID-RESTService.wsdl = Resources\wsdl\2.0\nao anotados\DAVID-RESTService.wsdl
+		Resources\wsdl\2.0\nao anotados\EnrichmentAnalysisService.wsdl = Resources\wsdl\2.0\nao anotados\EnrichmentAnalysisService.wsdl
+		Resources\wsdl\2.0\nao anotados\GeneSetEnrichmentAnalysisService.wsdl = Resources\wsdl\2.0\nao anotados\GeneSetEnrichmentAnalysisService.wsdl
+		Resources\wsdl\2.0\nao anotados\KeggPathwayViewerService.wsdl = Resources\wsdl\2.0\nao anotados\KeggPathwayViewerService.wsdl
+		Resources\wsdl\2.0\nao anotados\MicroAffyNormService.wsdl = Resources\wsdl\2.0\nao anotados\MicroAffyNormService.wsdl
+		Resources\wsdl\2.0\nao anotados\MicroAgilentNormService.wsdl = Resources\wsdl\2.0\nao anotados\MicroAgilentNormService.wsdl
+		Resources\wsdl\2.0\nao anotados\MicroGenepixNormService.wsdl = Resources\wsdl\2.0\nao anotados\MicroGenepixNormService.wsdl
+		Resources\wsdl\2.0\nao anotados\MicroHClusterService.wsdl = Resources\wsdl\2.0\nao anotados\MicroHClusterService.wsdl
+		Resources\wsdl\2.0\nao anotados\MicroHClusterViewerService.wsdl = Resources\wsdl\2.0\nao anotados\MicroHClusterViewerService.wsdl
+		Resources\wsdl\2.0\nao anotados\MicroKClusterService.wsdl = Resources\wsdl\2.0\nao anotados\MicroKClusterService.wsdl
+		Resources\wsdl\2.0\nao anotados\MicroOneDifferentialAnalysisService.wsdl = Resources\wsdl\2.0\nao anotados\MicroOneDifferentialAnalysisService.wsdl
+		Resources\wsdl\2.0\nao anotados\MicroTwoDifferentialAnalysisService.wsdl = Resources\wsdl\2.0\nao anotados\MicroTwoDifferentialAnalysisService.wsdl
+		Resources\wsdl\2.0\nao anotados\RnaSeqDifferentialAnalysisService.wsdl = Resources\wsdl\2.0\nao anotados\RnaSeqDifferentialAnalysisService.wsdl
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.Infra.ExternalService.Cytoscape", "Grasews.Infra.ExternalService.Cytoscape\Grasews.Infra.ExternalService.Cytoscape.csproj", "{FEBDA500-966F-4CB6-B6D6-7119A3817E57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Owls", "Owls", "{C018EE8B-CDCF-45ED-BC5A-3C206F499943}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\owl\GEXPASO.owl = Resources\owl\GEXPASO.owl
+		Resources\owl\GEXPO.owl = Resources\owl\GEXPO.owl
+		Resources\owl\pizza.owl = Resources\owl\pizza.owl
+		Resources\owl\wine.rdf = Resources\owl\wine.rdf
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.Web", "Grasews.UI.Web\Grasews.Web.csproj", "{21CF1E36-0057-48B8-876E-C0C669AFD675}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.API.Models", "Grasews.Models\Grasews.API.Models.csproj", "{1A97553C-1783-4521-BC41-F9A57FFE7825}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database scripts", "Database scripts", "{0F16E5B8-1CFE-4843-84AA-8D3DC65BD797}"
+	ProjectSection(SolutionItems) = preProject
+		Database Scripts\1. insert into [ServiceDescription].sql = Database Scripts\1. insert into [ServiceDescription].sql
+		Database Scripts\2. insert into [WsdlInterface].sql = Database Scripts\2. insert into [WsdlInterface].sql
+		Database Scripts\3. insert into [WsdlOperation].sql = Database Scripts\3. insert into [WsdlOperation].sql
+		Database Scripts\4. insert into [XsdDocument].sql = Database Scripts\4. insert into [XsdDocument].sql
+		Database Scripts\5. insert into [WsdlInput].sql = Database Scripts\5. insert into [WsdlInput].sql
+		Database Scripts\6. insert into [WsdlOutput].sql = Database Scripts\6. insert into [WsdlOutput].sql
+		Database Scripts\7. insert into [XsdComplexElement] for WsdlInputs.sql = Database Scripts\7. insert into [XsdComplexElement] for WsdlInputs.sql
+		Database Scripts\8. insert into [XsdComplexElement] for WsdlOutputs.sql = Database Scripts\8. insert into [XsdComplexElement] for WsdlOutputs.sql
+		Database Scripts\9. insert into [XsdSimpleElement] for XsdComplexTypes.sql = Database Scripts\9. insert into [XsdSimpleElement] for XsdComplexTypes.sql
+		Database Scripts\select model reference and ontology terms in the graph.sql = Database Scripts\select model reference and ontology terms in the graph.sql
+		Database Scripts\select sharings.sql = Database Scripts\select sharings.sql
+		Database Scripts\select.sql = Database Scripts\select.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.Infra.Data.EF.Postgres", "Grasews.Infra.Data.EF.Postgres\Grasews.Infra.Data.EF.Postgres.csproj", "{7455023F-4239-44BC-9436-37EEBD2BF8BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grasews.ConsoleApp", "Grasews.ConsoleApp\Grasews.ConsoleApp.csproj", "{764A5A19-D22E-4A28-A3DF-17C36CFE7C2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2214DDC9-5916-44B1-9B44-AD899C485FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2214DDC9-5916-44B1-9B44-AD899C485FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2214DDC9-5916-44B1-9B44-AD899C485FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2214DDC9-5916-44B1-9B44-AD899C485FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E344B48F-258F-4317-A279-B98903AD49F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E344B48F-258F-4317-A279-B98903AD49F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E344B48F-258F-4317-A279-B98903AD49F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E344B48F-258F-4317-A279-B98903AD49F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5907E20F-777D-4DDE-8688-7F1AF640EE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5907E20F-777D-4DDE-8688-7F1AF640EE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5907E20F-777D-4DDE-8688-7F1AF640EE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5907E20F-777D-4DDE-8688-7F1AF640EE97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66CE5BB9-2218-4C6B-B9DA-CE65F00B1B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CE5BB9-2218-4C6B-B9DA-CE65F00B1B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CE5BB9-2218-4C6B-B9DA-CE65F00B1B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CE5BB9-2218-4C6B-B9DA-CE65F00B1B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2071F5F-6DFC-4EAA-ACA7-CDD8CD1129BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2071F5F-6DFC-4EAA-ACA7-CDD8CD1129BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2071F5F-6DFC-4EAA-ACA7-CDD8CD1129BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2071F5F-6DFC-4EAA-ACA7-CDD8CD1129BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F435003A-7CDC-49B6-8DA8-A1EB8641972A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F435003A-7CDC-49B6-8DA8-A1EB8641972A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F435003A-7CDC-49B6-8DA8-A1EB8641972A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F435003A-7CDC-49B6-8DA8-A1EB8641972A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71DB5CF3-14F2-4E42-9746-F666EB0E9F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71DB5CF3-14F2-4E42-9746-F666EB0E9F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71DB5CF3-14F2-4E42-9746-F666EB0E9F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71DB5CF3-14F2-4E42-9746-F666EB0E9F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153997CA-4520-4004-9C2D-FA3819692A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153997CA-4520-4004-9C2D-FA3819692A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153997CA-4520-4004-9C2D-FA3819692A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153997CA-4520-4004-9C2D-FA3819692A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEBDA500-966F-4CB6-B6D6-7119A3817E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEBDA500-966F-4CB6-B6D6-7119A3817E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEBDA500-966F-4CB6-B6D6-7119A3817E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBDA500-966F-4CB6-B6D6-7119A3817E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21CF1E36-0057-48B8-876E-C0C669AFD675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21CF1E36-0057-48B8-876E-C0C669AFD675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21CF1E36-0057-48B8-876E-C0C669AFD675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21CF1E36-0057-48B8-876E-C0C669AFD675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A97553C-1783-4521-BC41-F9A57FFE7825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A97553C-1783-4521-BC41-F9A57FFE7825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A97553C-1783-4521-BC41-F9A57FFE7825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A97553C-1783-4521-BC41-F9A57FFE7825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7455023F-4239-44BC-9436-37EEBD2BF8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7455023F-4239-44BC-9436-37EEBD2BF8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7455023F-4239-44BC-9436-37EEBD2BF8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7455023F-4239-44BC-9436-37EEBD2BF8BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{764A5A19-D22E-4A28-A3DF-17C36CFE7C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{764A5A19-D22E-4A28-A3DF-17C36CFE7C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{764A5A19-D22E-4A28-A3DF-17C36CFE7C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{764A5A19-D22E-4A28-A3DF-17C36CFE7C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{949DF4C5-6240-47F0-8E68-E1314FC8794E} = {37E203DB-80D2-4A75-A3C2-645849D94133}
+		{D82F08D8-910D-4909-B20E-160B6EB4AC77} = {37E203DB-80D2-4A75-A3C2-645849D94133}
+		{2214DDC9-5916-44B1-9B44-AD899C485FA5} = {1E046462-0717-4AF0-A6A5-63FBF399F8F6}
+		{E344B48F-258F-4317-A279-B98903AD49F4} = {978BE63E-9C76-4E3A-A5EF-BA65543BD4D2}
+		{5907E20F-777D-4DDE-8688-7F1AF640EE97} = {949DF4C5-6240-47F0-8E68-E1314FC8794E}
+		{66CE5BB9-2218-4C6B-B9DA-CE65F00B1B5A} = {949DF4C5-6240-47F0-8E68-E1314FC8794E}
+		{C2071F5F-6DFC-4EAA-ACA7-CDD8CD1129BB} = {949DF4C5-6240-47F0-8E68-E1314FC8794E}
+		{F435003A-7CDC-49B6-8DA8-A1EB8641972A} = {949DF4C5-6240-47F0-8E68-E1314FC8794E}
+		{71DB5CF3-14F2-4E42-9746-F666EB0E9F2F} = {C7178254-8F5F-44A7-B307-DC2F64838DF0}
+		{CC6D3655-DF5D-4F6F-8261-40DD013038C8} = {37E203DB-80D2-4A75-A3C2-645849D94133}
+		{153997CA-4520-4004-9C2D-FA3819692A61} = {CC6D3655-DF5D-4F6F-8261-40DD013038C8}
+		{FEBDA500-966F-4CB6-B6D6-7119A3817E57} = {CC6D3655-DF5D-4F6F-8261-40DD013038C8}
+		{21CF1E36-0057-48B8-876E-C0C669AFD675} = {C4E64AFF-0663-4AC8-A726-02BC42AB7121}
+		{1A97553C-1783-4521-BC41-F9A57FFE7825} = {C7178254-8F5F-44A7-B307-DC2F64838DF0}
+		{7455023F-4239-44BC-9436-37EEBD2BF8BE} = {D82F08D8-910D-4909-B20E-160B6EB4AC77}
+		{764A5A19-D22E-4A28-A3DF-17C36CFE7C2F} = {C4E64AFF-0663-4AC8-A726-02BC42AB7121}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F01D62D-971F-4407-9BFE-E85F1704FABF}
+	EndGlobalSection
+EndGlobal

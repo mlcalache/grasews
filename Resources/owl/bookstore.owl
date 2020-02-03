@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#"
+     xml:base="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#hasInStock -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#hasInStock"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#isDrawnBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#isDrawnBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Comics"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Drawer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#isOwnedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#isOwnedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Bookstore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Owner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#isWrittenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#isWrittenBy">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Author"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#runs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#runs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#visits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#visits"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#ISBN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#ISBN">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#binding -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#binding">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#topic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#topic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Author">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Bookstore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Bookstore">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#hasInStock"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Client -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Client">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#visits"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Bookstore"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Comics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Comics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Drawer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Drawer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Essay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Essay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Human"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Novel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Novel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Owner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Owner">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#runs"/>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Bookstore"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tholz/ontologies/2014/1/bookstore#Human"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

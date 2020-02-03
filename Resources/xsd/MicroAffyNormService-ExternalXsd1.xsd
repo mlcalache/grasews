@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://classes/xsd" xmlns:ax25="http://util.java/xsd">
+  <xs:import namespace="http://util.java/xsd" />
+  <xs:complexType name="ListOfFiles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="listOfFiles" nillable="true" type="ax25:Collection" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

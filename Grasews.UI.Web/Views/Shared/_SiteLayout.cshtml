@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html style="height: auto;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grasews</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/img/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Content/img/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/img/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/img/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/img/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Content/img/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/img/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Content/img/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Content/img/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Content/img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Content/img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Content/img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/img/icon/favicon-16x16.png">
+    <link rel="manifest" href="~/Content/img/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/Content/img/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <script>
+        /******************************************************************************************/
+        // Base url for webservices
+        var url = '@Grasews.Infra.CrossCutting.Helpers.ConfigurationManagerHelper.ApiUrl';
+        /******************************************************************************************/
+    </script>
+
+    @Styles.Render("~/bundles/styles/bootstrap")
+    @Styles.Render("~/bundles/styles/site")
+    @Styles.Render("~/bundles/styles/select2")
+    @Styles.Render("~/bundles/styles/toastr")
+    @Styles.Render("~/bundles/styles/codemirror")
+    @Styles.Render("~/bundles/styles/icheck")
+    <link rel="stylesheet" href="~/Content/plugins/font-awesome/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/plugins/font-awesome/font-awesome-animation.min.css" />
+
+    <!-- Bootstrap 3.3.6 : Begin -->
+    @*<link rel="stylesheet" href="~/Content/plugins/bootstrap/css/bootstrap.min.css">*@
+    <!-- Bootstrap 3.3.6 : End -->
+    <!-- Font Awesome : Begin -->
+    @*<link rel="stylesheet" href="~/Content/plugins/font-awesome/font-awesome.min.css" />*@
+    @*<link rel="stylesheet" href="~/Content/plugins/font-awesome/font-awesome-animation.min.css" />*@
+    <!-- Font Awesome : End -->
+    <!-- Theme style : Begin -->
+    @*<link rel="stylesheet" href="~/Content/css/AdminLTE.css" />*@
+    <!-- Theme style : End -->
+    <!-- Skins : Begin -->
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    @*<link rel="stylesheet" href="~/Content/css/skins/_all-skins.min.css">*@
+    <!-- Skins : End -->
+    <!-- Select2 : Begin -->
+    @*<link rel="stylesheet" href="~/Content/plugins/select2/select2.min.css" />*@
+    <!-- Select2 : End -->
+    <!-- jQuery 2.2.3 : Begin -->
+    @*<script type="text/javascript" src="~/Content/plugins/jQuery/jquery-2.2.3.min.js"></script>*@
+    <!-- jQuery 2.2.3 : End -->
+    <!-- jQuery UI 1.11.4 : Begin -->
+    @*<script type="text/javascript" src="~/Content/plugins/jQueryUI/jquery-ui.min.js"></script>*@
+    <!-- jQuery UI 1.11.4 : End -->
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <!-- Bootstrap 3.3.6 : Begin -->
+    @*<script type="text/javascript" src="~/Content/plugins/bootstrap/js/bootstrap.min.js"></script>*@
+    <!-- Bootstrap 3.3.6 : End -->
+    <!-- CodeMirror : Begin -->
+    @*<link href="~/Content/plugins/code-mirror/codemirror.min.css" rel="stylesheet" />*@
+    <!-- CodeMirror : End -->
+    <!-- Toastr : Begin -->
+    @*<link href="~/Content/css/toastr.css" rel="stylesheet" />*@
+    <!-- Toastr : End -->
+    @*<link href="~/Content/css/site.min.css" rel="stylesheet" />*@
+</head>
+<body class="hold-transition skin-purple-light sidebar-mini" style="height: auto;" oncontextmenu="return false;">
+
+    <div class="loading-background">
+        <div class="loading-container">
+            <img src="~/Content/img/loading/loading.gif" style="width: 100px;" />
+        </div>
+    </div>
+
+    <div class="wrapper">
+        @RenderBody()
+
+        @Html.Partial("_ToastrBuilder")
+    </div>
+
+    @Scripts.Render("~/bundles/scripts/jquery")
+    @Scripts.Render("~/bundles/scripts/bootstrap")
+    @Scripts.Render("~/bundles/scripts/codemirror")
+    @Scripts.Render("~/bundles/scripts/select2")
+    @Scripts.Render("~/bundles/scripts/cytoscape")
+    @Scripts.Render("~/bundles/scripts/codemirror")
+    @Scripts.Render("~/bundles/scripts/toastr")
+    @Scripts.Render("~/bundles/scripts/icheck")
+    @Scripts.Render("~/bundles/scripts/signalr")
+    @Scripts.Render("~/bundles/scripts/site")
+
+    <!-- Select2 : Begin -->
+    @*<script type="text/javascript" src="~/Content/plugins/select2/select2.full.min.js"></script>*@
+    <!-- Select2 : Begin -->
+    <!-- App : Begin -->
+    @*<script type="text/javascript" src="~/Content/js/AdminLTE.js"></script>*@
+    <!-- App : End -->
+    <!-- Skins Manager : Begin -->
+    @*<script type="text/javascript" src="~/Content/js/skins-manager.min.js"></script>*@
+    <!-- Skins Manager : End -->
+    <!-- Cytoscape : Begin -->
+    @*<script type="text/javascript" src="~/Content/plugins/cytoscape/cytoscape.min.js"></script>*@
+    @*<script type="text/javascript" src="~/Content/plugins/cytoscape/dagre.min.js"></script>*@
+    @*<script type="text/javascript" src="~/Content/plugins/cytoscape/cytoscape-dagre.min.js"></script>*@
+    @*<script type="text/javascript" src="~/Content/plugins/cytoscape/cytoscape-cxtmenu.min.js"></script>*@
+    @*<script type="text/javascript" src="~/Content/js/cytoscape/my-cytoscape-scripts.js"></script>*@
+    <!-- Cytoscape : End -->
+    <!-- Context-Menu : Begin -->
+    @*<script type="text/javascript" src="~/Content/js/context-menus/my-context-menu-scripts.js"></script>*@
+    <!-- Context-Menu : End -->
+    <!-- CodeMirror : Begin -->
+    @*<script src="~/Content/plugins/code-mirror/codemirror.min.js"></script>*@
+    @*<script src="~/Content/plugins/code-mirror/language/xml.min.js"></script>*@
+    @*<script src="~/Content/plugins/code-mirror/mark-selection.min.js"></script>*@
+    @*<script src="~/Content/js/codemirror/my-codemirror-scripts.js"></script>*@
+    <!-- CodeMirror : End -->
+    <!-- Toastr : Begin -->
+    @*<script src="~/Content/js/toastr.js"></script>*@
+    <!-- SignalR : Begin -->
+    <!--Reference the SignalR library. -->
+    @*<script src="~/Content/plugins/signalR/jquery.signalR-2.2.2.min.js"></script>*@
+    <!--Reference the autogenerated SignalR hub script. -->
+    <script src="signalr/hubs"></script>
+    <!-- SignalR : End -->
+    <!-- Toastr : End -->
+    @*<script src="~/Content/js/site.js"></script>*@
+</body>
+</html>

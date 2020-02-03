@@ -1,0 +1,207 @@
+﻿@model IEnumerable<Grasews.Web.ViewModels.Issue_MvcViewModel>
+
+<div class="modal fade" id="modal-issue-list" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="@WebResource.Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">@WebResource.Issues</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <i class="fa fa-check-circle-o text-green"></i>&nbsp;@WebResource.IssuesSolved
+                </div>
+                <div>
+                    <i class="fa fa-exclamation-circle text-red"></i>&nbsp;@WebResource.IssuesNotSolvedWithNoAnswers
+                </div>
+                <div>
+                    <i class="fa fa-comments-o text-blue"></i>&nbsp;@WebResource.IssuesNotSolvedAndWithAnswers
+                </div>
+                <br />
+
+                @if (Model != null && Model.Any())
+                {
+                    <div class="box box-solid">
+                        <div class="box-body">
+                            <div class="box-group" id="accordion">
+                                @foreach (var issue in Model)
+                                {
+                                    var panelClass = "box-danger";
+                                    var issueSolvedIconHidden = "";
+                                    var issueCreatedIconHidden = "";
+                                    var issueWithAnswersIconHidden = "";
+                                    var issueHasAnswers = issue.Answers != null && issue.Answers.Any();
+
+                                    if (issue.Solved)
+                                    {
+                                        panelClass = "box-success";
+                                        issueCreatedIconHidden = "hidden";
+                                        issueWithAnswersIconHidden = "hidden";
+                                    }
+                                    else
+                                    {
+                                        issueSolvedIconHidden = "hidden";
+                                        if (issueHasAnswers)
+                                        {
+                                            panelClass = "box-primary";
+                                            issueCreatedIconHidden = "hidden";
+                                        }
+                                        else
+                                        {
+                                            issueWithAnswersIconHidden = "hidden";
+                                        }
+                                    }
+
+                                    <input type="hidden" id="hidden-issue-@issue.Id-id-service-description-element" value="@issue.IdServiceDescriptionElement" />
+                                    <input type="hidden" id="hidden-issue-@issue.Id-id-service-description-element-type" value="@issue.IdServiceDescriptionElementType" />
+
+                                    <!-- adding the .panel class so bootstrap.js collapse plugin detects it -->
+                                    <div class="panel box @panelClass" id="panel-box-@issue.Id">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-@issue.Id" aria-expanded="false" class="collapsed">
+                                            <div class="box-header with-border" data-toggle="collapse" data-parent="#accordion">
+                                                <h5 class="box-title">
+                                                    <b>@issue.Title</b>
+                                                </h5>
+                                                <div style="float: right;" id="div-issue-status-icon-@issue.Id">
+                                                    <i class="fa fa-check-circle-o text-green issue-solved @issueSolvedIconHidden"></i>
+                                                    <i class="fa fa-exclamation-circle text-red issue-created @issueCreatedIconHidden"></i>
+                                                    <i class="fa fa-comments-o text-blue issue-with-answers @issueWithAnswersIconHidden"></i>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div id="collapse-@issue.Id" class="panel-collapse collapse" aria-expanded="false" style="">
+                                            <div class="box-body">
+                                                <div id="div-issue-details">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-6">
+                                                            <label>@WebResource.IssueDescription</label>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            @issue.Description
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-6">
+                                                            <label>@WebResource.ServiceDescriptionElementType</label>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            @issue.ServiceDescriptionElementTypeLabel
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-6">
+                                                            <label>@WebResource.ServiceDescriptionElement</label>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            @issue.ServiceDescriptionElementLabel
+                                                        </div>
+                                                    </div>
+
+                                                    @if (issue.IdOwnerUser == ViewBag.IdUser)
+                                                    {
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-6">
+                                                                <label>@WebResource.MarkIssueAsSolved</label>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <span class="button-checkbox">
+                                                                    <button type="button" class="btn btn-sm btn-issue-done" id="btn-issue-done-@issue.Id" data-color="success" id-issue="@issue.Id" issue-has-answers="@issueHasAnswers">Solved</button>
+                                                                    <input type="checkbox" class="hidden" checked="@issue.Solved" />
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    }
+
+                                                    @if (issue.Solved)
+                                                    {
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-12">
+                                                                <label for="txt-new-answer-@issue.Id">@WebResource.CreateANewAnswer</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-9">
+                                                                <input class="form-control input-sm" type="text" id="txt-new-answer-@issue.Id" placeholder="Enter here your new answer" readonly="readonly" disabled="disabled">
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <button type="button" name="btn-create-issue-answer" id="btn-create-issue-answer-@issue.Id" readonly="readonly" disabled="disabled" class="btn btn-sm btn-primary faa-parent btn-create-issue-answer" id-issue="@issue.Id">
+                                                                    <i class="fa fa-plus faa-tada faa-fast"></i>&nbsp;&nbsp;@WebResource.Create
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-12">
+                                                                <label for="txt-new-answer-@issue.Id">@WebResource.CreateANewAnswer</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-9">
+                                                                <input class="form-control input-sm" type="text" id="txt-new-answer-@issue.Id" placeholder="Enter here your new answer">
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <button type="button" name="btn-create-issue-answer" id="btn-create-issue-answer-@issue.Id" class="btn btn-sm btn-primary faa-parent animated-hover btn-create-issue-answer" id-issue="@issue.Id">
+                                                                    <i class="fa fa-plus faa-tada faa-fast"></i>&nbsp;&nbsp;@WebResource.Create
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    <div id="div-issue-previous-answers-@issue.Id" class="form-group @(issue.Answers != null && issue.Answers.Any() ? string.Empty : "hidden" ) ">
+                                                        <hr />
+                                                        <label>@WebResource.PreviousAnswers</label>
+                                                        <div id="div-issue-answers-@issue.Id" style="overflow-y: scroll; overflow-x:hidden; height:100px;">
+                                                            <table class="table table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="col-sm-4">
+                                                                            @WebResource.Username
+                                                                        </th>
+                                                                        <th class="col-sm-8">
+                                                                            @WebResource.Answer
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @if (issue.Answers != null && issue.Answers.Any())
+                                                                    {
+                                                                        foreach (var answer in issue.Answers)
+                                                                        {
+                                                                            <tr>
+                                                                                <td>@answer.OwnerUserEmail</td>
+                                                                                <td>@answer.Answer</td>
+                                                                            </tr>
+                                                                        }
+                                                                    }
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="box box-solid">
+                        <div class="box-body">
+                            <div class="form-group col-md-12 text-red text-center">@WebResource.NoIssuesHaveBeenFound</div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">@WebResource.Close</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1387 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Grasews.API</name>
+    </assembly>
+    <members>
+        <member name="T:Grasews.API.SimpleInjectorWebApiInitializer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.SimpleInjectorWebApiInitializer.Initialize(Owin.IAppBuilder)">
+             <summary>
+            
+             </summary>
+             <param name="app"></param>
+        </member>
+        <member name="T:Grasews.API.App_Start.Startup">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Grasews.API.App_Start.Startup.OAuthBearerOptions">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.App_Start.Startup.Configuration(Owin.IAppBuilder)">
+             <summary>
+            
+             </summary>
+             <param name="app"></param>
+        </member>
+        <member name="M:Grasews.API.App_Start.Startup.ConfigureOAuth(Owin.IAppBuilder)">
+             <summary>
+            
+             </summary>
+             <param name="app"></param>
+        </member>
+        <member name="T:Grasews.API.SwaggerConfig">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.SwaggerConfig.Register">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.SwaggerConfig.GetXmlCommentsPath">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:Grasews.API.WebApiConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Grasews.API.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.AutoMapperConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.AutoMapperConfig.CreateMapperConfiguration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.IssueAnswerAutoMapperProfile">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.IssueAnswerAutoMapperProfile.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.IssueAutoMapperProfile">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.IssueAutoMapperProfile.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.IssueAutoMapperProfile.GetServiceDescriptionElementLabel(Grasews.Domain.Entities.Issue)">
+             <summary>
+            
+             </summary>
+             <param name="issue"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.OntologyAutoMapperProfile">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.OntologyAutoMapperProfile.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.SawsdlAutoMapperProfile">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.SawsdlAutoMapperProfile.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.ServiceDescription_OntologyAutoMapperProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.ServiceDescription_OntologyAutoMapperProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.ServiceDescriptionAutoMapperProfile">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.ServiceDescriptionAutoMapperProfile.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.ServiceDescription_UserAutoMapperProfile">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.ServiceDescription_UserAutoMapperProfile.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.ShareInvitationAutoMapperProfile">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.ShareInvitationAutoMapperProfile.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.TaskCommentAutoMapperProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.TaskCommentAutoMapperProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.TaskAutoMapperProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.TaskAutoMapperProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Grasews.API.AutoMapper.UserAutoMapperProfile">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.AutoMapper.UserAutoMapperProfile.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Grasews.API.Controllers.AccountApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.AccountApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.IUserIdentityService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="userIdentityService"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.AccountApiController.Get">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:Grasews.API.Controllers.BaseApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.BaseApiController._mapper">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.BaseApiController._userIdentityService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.BaseApiController._jsonSerializerSettings">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.BaseApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.IUserIdentityService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="userIdentityService"></param>
+        </member>
+        <member name="T:Grasews.API.Controllers.OntologiesApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.OntologiesApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.IOntologyService,Grasews.Domain.Interfaces.Services.IUserIdentityService,Grasews.Domain.Interfaces.Services.IOntology_UserService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="ontologyService"></param>
+             <param name="userIdentityService"></param>
+             <param name="ontology_UserService"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.OntologiesApiController.GetHtmlTreeViewMenu(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.OntologiesApiController.FindPathBetweenTerms(System.Int32,System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="termId1">todo: describe termId1 parameter on FindPathBetweenTerms</param>
+             <param name="termId2">todo: describe termId2 parameter on FindPathBetweenTerms</param>
+             <param name="id">todo: describe id parameter on FindPathBetweenTerms</param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.OntologiesApiController.FindTerm(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="termId">todo: describe termId parameter on GetHtmlTreeViewMenu</param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.OntologiesApiController.ParseXml(Grasews.API.Models.ParseOwl_ApiRequestViewModel)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.OntologiesApiController.DeleteOntology(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.OntologiesApiController.GetOntologies">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.OntologiesApiController.GetOntology(System.Int32,System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="complete"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.OntologiesApiController.PostOntology(Grasews.API.Models.Ontology_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="ontologyRequestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.OntologiesApiController.PutOntology(System.Int32,Grasews.API.Models.Ontology_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="ontologyRequestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Grasews.API.Controllers.SawsdlApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.SawsdlApiController._graphService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.SawsdlApiController._ontology_UserService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.SawsdlApiController._ontologyService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.SawsdlApiController._sawsdlService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.SawsdlApiController._serviceDescription_OntologyService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.SawsdlApiController._serviceDescription_UserService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.SawsdlApiController._serviceDescriptionService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.ISawsdlService,Grasews.Domain.Interfaces.Services.IOntologyService,Grasews.Domain.Interfaces.Services.IServiceDescriptionService,Grasews.Domain.Interfaces.Services.IGraphService,Grasews.Domain.Interfaces.Services.IUserIdentityService,Grasews.Domain.Interfaces.Services.IOntology_UserService,Grasews.Domain.Interfaces.Services.IServiceDescription_OntologyService,Grasews.Domain.Interfaces.Services.IServiceDescription_UserService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="sawsdlService"></param>
+             <param name="ontologyService"></param>
+             <param name="serviceDescriptionService"></param>
+             <param name="graphService"></param>
+             <param name="userIdentityService"></param>
+             <param name="ontology_UserService"></param>
+             <param name="serviceDescription_OntologyService"></param>
+             <param name="serviceDescription_UserService"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.GetLiftingSchemaMappingFromXsdComplexType(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idXsdComplexType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.GetLiftingSchemaMappingFromXsdSimpleType(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idXsdSimpleType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.GetLoweringSchemaMappingFromXsdComplexType(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idXsdComplexType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.GetLoweringSchemaMappingFromXsdSimpleType(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idXsdSimpleType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddLiftingSchemaMappingToXsdComplexType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLiftingSchemaMapping_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="requestModel">todo: describe requestModel parameter on AddLiftingSchemaMapping</param>
+             <param name="id">todo: describe id parameter on AddLiftingSchemaMapping</param>
+             <param name="idXsdComplexType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddLiftingSchemaMappingToXsdSimpleType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLiftingSchemaMapping_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="requestModel">todo: describe requestModel parameter on AddLiftingSchemaMapping</param>
+             <param name="id">todo: describe id parameter on AddLiftingSchemaMapping</param>
+             <param name="idXsdSimpleType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddLoweringSchemaMappingToXsdComplexType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLoweringSchemaMapping_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="requestModel">todo: describe requestModel parameter on AddLoweringSchemaMapping</param>
+             <param name="id">todo: describe id parameter on AddLoweringSchemaMapping</param>
+             <param name="idXsdComplexType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddLoweringSchemaMappingToXsdSimpleType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLoweringSchemaMapping_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="requestModel">todo: describe requestModel parameter on AddLoweringSchemaMapping</param>
+             <param name="id">todo: describe id parameter on AddLoweringSchemaMapping</param>
+             <param name="idXsdSimpleType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveLiftingSchemaMappingFromXsdComplexType(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddLiftingSchemaMapping</param>
+             <param name="idXsdComplexType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveLiftingSchemaMappingFromXsdSimpleType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLiftingSchemaMapping_ApiRequestRemoveModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idXsdSimpleType"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveLoweringSchemaMappingFromXsdComplexType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLoweringSchemaMapping_ApiRequestRemoveModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idXsdComplexType"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveLoweringSchemaMappingFromXsdSimpleType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLoweringSchemaMapping_ApiRequestRemoveModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idXsdSimpleType"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.UpdateLiftingSchemaMappingInXsdComplexType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLiftingSchemaMapping_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddLiftingSchemaMapping</param>
+             <param name="idXsdComplexType"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.UpdateLiftingSchemaMappingInXsdSimpleType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLiftingSchemaMapping_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddLiftingSchemaMapping</param>
+             <param name="idXsdSimpleType"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.UpdateLoweringSchemaMappingInXsdComplexType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLoweringSchemaMapping_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddLiftingSchemaMapping</param>
+             <param name="idXsdComplexType"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.UpdateLoweringSchemaMappingInXsdSimpleType(System.Int32,System.Int32,Grasews.API.Models.SawsdlLoweringSchemaMapping_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddLiftingSchemaMapping</param>
+             <param name="idXsdSimpleType"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.GetModelReferencesFromWsdlInterface(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idWsdlInterface"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.GetModelReferencesFromWsdlOperation(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idWsdlOperation"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.GetModelReferencesFromXsdComplexType(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idXsdComplexType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.GetModelReferencesFromxsdSimpleType(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idXsdSimpleType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddModelReferenceToWsdlFault(System.Int32,System.Int32,Grasews.API.Models.SawsdlModelReference_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idWsdlFault"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddModelReferenceToWsdlInterface(System.Int32,System.Int32,Grasews.API.Models.SawsdlModelReference_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddModelReference</param>
+             <param name="idWsdlInterface">todo: describe idOutput parameter on AddModelReferenceToWsdlOutput</param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddModelReferenceToWsdlOperation(System.Int32,System.Int32,Grasews.API.Models.SawsdlModelReference_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idWsdlOperation"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddModelReferenceToXsdComplexType(System.Int32,System.Int32,Grasews.API.Models.SawsdlModelReference_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddModelReference</param>
+             <param name="idXsdComplexType">todo: describe idOutput parameter on AddModelReferenceToWsdlOutput</param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddModelReferenceToXsdSimpleType(System.Int32,System.Int32,Grasews.API.Models.SawsdlModelReference_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddModelReference</param>
+             <param name="idXsdSimpleType">todo: describe idOutput parameter on AddModelReferenceToWsdlOutput</param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveModelReferenceFromWsdlFault(System.Int32,System.Int32,Grasews.API.Models.SawsdlModelReference_ApiRequestRemoveModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idWsdlFault"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveModelReferenceFromWsdlInterface(System.Int32,System.Int32,Grasews.API.Models.SawsdlModelReference_ApiRequestRemoveModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddModelReference</param>
+             <param name="idWsdlInterface">todo: describe idOutput parameter on RemoveModelReferenceFromWsdlOutput</param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveModelReferenceFromWsdlOperation(System.Int32,System.Int32,Grasews.API.Models.SawsdlModelReference_ApiRequestRemoveModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddModelReference</param>
+             <param name="idWsdlOperation">todo: describe idInput parameter on RemoveModelReferenceFromWsdlInput</param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveModelReferenceFromXsdComplexType(System.Int32,System.Int32,Grasews.API.Models.SawsdlModelReference_ApiRequestRemoveModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddModelReference</param>
+             <param name="idXsdComplexType"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveModelReferenceFromxsdSimpleType(System.Int32,System.Int32,Grasews.API.Models.SawsdlModelReference_ApiRequestRemoveModel)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on AddModelReference</param>
+             <param name="idXsdSimpleType">todo: describe idOutput parameter on RemoveModelReferenceFromWsdlOutput</param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddIntermediateOntologyTermsToGraph(Grasews.Infra.ExternalService.Cytoscape.Models.CytoscapeObject)">
+             <summary>
+            
+             </summary>
+             <param name="graphDataObject"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddOntologyLinkToServiceDescription(System.Int32,Grasews.Domain.Entities.ServiceDescription)">
+            <summary>
+            Add the ontology linked to the service description
+            </summary>
+            <param name="id"></param>
+            <param name="idOntology"></param>
+            <param name="serviceDescription"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.AddOntologyToSharedUsers(System.Int32,Grasews.Domain.Entities.ServiceDescription)">
+             <summary>
+            
+             </summary>
+             <param name="idOntology"></param>
+             <param name="serviceDescription"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveIntermediateOntologyTermsFromGraph(Grasews.Infra.ExternalService.Cytoscape.Models.CytoscapeObject)">
+             <summary>
+            
+             </summary>
+             <param name="graphDataObject"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveModelReferencesNodesFromWsdlInterface(System.Collections.Generic.IEnumerable{System.Int32},Grasews.Infra.ExternalService.Cytoscape.Models.CytoscapeObject,Grasews.Domain.Entities.WsdlInterface)">
+             <summary>
+            
+             </summary>
+             <param name="idOntologyTerms"></param>
+             <param name="graphDataObject"></param>
+             <param name="wsdlInterface"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveModelReferencesNodesFromWsdlOperation(System.Collections.Generic.IEnumerable{System.Int32},Grasews.Infra.ExternalService.Cytoscape.Models.CytoscapeObject,Grasews.Domain.Entities.WsdlOperation)">
+             <summary>
+            
+             </summary>
+             <param name="idOntologyTerms"></param>
+             <param name="graphDataObject"></param>
+             <param name="wsdlOperation"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveModelReferencesNodesFromXsdComplexType(System.Collections.Generic.IEnumerable{System.Int32},Grasews.Infra.ExternalService.Cytoscape.Models.CytoscapeObject,Grasews.Domain.Entities.XsdComplexType)">
+             <summary>
+            
+             </summary>
+             <param name="idOntologyTerms"></param>
+             <param name="graphDataObject"></param>
+             <param name="xsdComplexType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveModelReferencesNodesFromxsdSimpleType(System.Collections.Generic.IEnumerable{System.Int32},Grasews.Infra.ExternalService.Cytoscape.Models.CytoscapeObject,Grasews.Domain.Entities.XsdSimpleType)">
+             <summary>
+            
+             </summary>
+             <param name="idOntologyTerms"></param>
+             <param name="graphDataObject"></param>
+             <param name="xsdSimpleType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveOntologyLinkFromServiceDescription(Grasews.Domain.Entities.ServiceDescription)">
+             <summary>
+            
+             </summary>
+             <param name="serviceDescription"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.SawsdlApiController.RemoveUnusedGraphNodePositions(Grasews.Infra.ExternalService.Cytoscape.Models.CytoscapeObject)">
+             <summary>
+            
+             </summary>
+             <param name="graphDataObject"></param>
+        </member>
+        <member name="T:Grasews.API.Controllers.ServiceDescriptions_OntologiesApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptions_OntologiesApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.IServiceDescription_OntologyService,Grasews.Domain.Interfaces.Services.IUserIdentityService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="serviceDescription_OntologyService"></param>
+             <param name="userIdentityService"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptions_OntologiesApiController.GetServiceDescription_Ontologies">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptions_OntologiesApiController.GetServiceDescription_Ontology(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptions_OntologiesApiController.PostServiceDescription(Grasews.API.Models.ServiceDescription_Ontology_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="serviceDescription_OntologyRequestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptions_OntologiesApiController.DeleteServiceDescription(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Grasews.API.Controllers.IssuesApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.IssuesApiController._issueService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.IssuesApiController._issueAnswerService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.IssuesApiController._serviceDescriptionService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.IssuesApiController._graphService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.IIssueService,Grasews.Domain.Interfaces.Services.IIssueAnswerService,Grasews.Domain.Interfaces.Services.IUserIdentityService,Grasews.Domain.Interfaces.Services.IServiceDescriptionService,Grasews.Domain.Interfaces.Services.IGraphService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="issueService"></param>
+             <param name="issueAnswerService"></param>
+             <param name="userIdentityService"></param>
+             <param name="serviceDescriptionService"></param>
+             <param name="graphService"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.GetIssues">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.GetIssue(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.PutIssue(System.Int32,Grasews.API.Models.Issue_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="issueRequestUpdateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.PostIssue(Grasews.API.Models.Issue_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="issueRequestCreateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.DeleteIssue(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.GetIssueAnswers(System.Int32)">
+            <summary>
+            Retrieves a list of Answers according to the Issue
+            </summary>
+            <param name="idIssue">todo: describe idIssue parameter on GetIssueAnswers</param>
+            <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.GetIssueAnswer(System.Int32,System.Int32)">
+            <summary>
+            Retrieves an Answer according to its Id and the Issue
+            </summary>
+            <param name="idIssue"></param>
+            <param name="id">The Id of the Issue Answer</param>
+            <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.PutIssueAnswer(System.Int32,System.Int32,Grasews.API.Models.IssueAnswer_ApiRequestUpdateModel)">
+            <summary>
+            Updates an Answer from an Issue Task
+            </summary>
+            <param name="idIssue"></param>
+            <param name="id">The Id of the Issue Task Answer</param>
+            <param name="issueAnswerRequestModel">The Issue Answer object with update values</param>
+            <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.PostIssueAnswer(System.Int32,Grasews.API.Models.IssueAnswer_ApiRequestCreateModel)">
+            <summary>
+            Creates an Answer for an Issue
+            </summary>
+            <param name="idIssue"></param>
+            <param name="issueAnswerRequestModel">The Issue Answer object to be created</param>
+            <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.IssuesApiController.DeleteIssueAnswer(System.Int32,System.Int32)">
+            <summary>
+            Deletes an Answer from an Issue
+            </summary>
+            <param name="idIssue"></param>
+            <param name="id">The Id of the Issue Answer</param>
+            <returns></returns>
+        </member>
+        <member name="T:Grasews.API.Controllers.TasksApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.TasksApiController._taskService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.TasksApiController._taskCommentService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.ITaskService,Grasews.Domain.Interfaces.Services.ITaskCommentService,Grasews.Domain.Interfaces.Services.IUserIdentityService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="taskService"></param>
+             <param name="taskCommentService"></param>
+             <param name="userIdentityService"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.GetTasks">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.GetTask(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.PutTask(System.Int32,Grasews.API.Models.Task_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="taskRequestUpdateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.PostTask(Grasews.API.Models.Task_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="taskRequestCreateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.DeleteTask(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.GetTaskComments(System.Int32)">
+            <summary>
+            Retrieves a list of Comments according to the Task
+            </summary>
+            <param name="idTask">todo: describe idTask parameter on GetTaskComments</param>
+            <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.GetTaskComment(System.Int32,System.Int32)">
+            <summary>
+            Retrieves an Comment according to its Id and the Todo Task
+            </summary>
+            <param name="idTask"></param>
+            <param name="id">The Id of the Todo Task Comment</param>
+            <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.PutTaskComment(System.Int32,System.Int32,Grasews.API.Models.TaskComment_ApiRequestUpdateModel)">
+            <summary>
+            Updates an Comment from an Todo Task
+            </summary>
+            <param name="idTask"></param>
+            <param name="id">The Id of the Todo Task Comment</param>
+            <param name="taskCommentRequestModel">The Todo Task Comment object with update values</param>
+            <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.PostTaskComment(System.Int32,Grasews.API.Models.TaskComment_ApiRequestCreateModel)">
+            <summary>
+            Creates an Comment for an Todo Task
+            </summary>
+            <param name="idTask"></param>
+            <param name="taskCommentRequestModel">The Todo Task Comment object to be created</param>
+            <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.TasksApiController.DeleteTaskComment(System.Int32,System.Int32)">
+            <summary>
+            Deletes an Comment from an Todo Task
+            </summary>
+            <param name="idTask"></param>
+            <param name="id">The Id of the Todo Task Comment</param>
+            <returns></returns>
+        </member>
+        <member name="T:Grasews.API.Controllers.ServiceDescription_UsersApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescription_UsersApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.IServiceDescription_UserService,Grasews.Domain.Interfaces.Services.IUserIdentityService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="serviceDescription_UserService"></param>
+             <param name="userIdentityService"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescription_UsersApiController.GetServiceDescription_Users">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescription_UsersApiController.GetServiceDescription_User(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescription_UsersApiController.PutServiceDescription_User(System.Int32,Grasews.API.Models.ServiceDescription_User_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="serviceDescription_UserRequestUpdateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescription_UsersApiController.PostServiceDescription_User(Grasews.API.Models.ServiceDescription_User_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="serviceDescription_UserRequestCreateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescription_UsersApiController.DeleteServiceDescription_User(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Grasews.API.Controllers.ShareInvitationsApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.ShareInvitationsApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.IShareInvitationService,Grasews.Domain.Interfaces.Services.IUserService,Grasews.Domain.Interfaces.Services.IUserIdentityService,Grasews.Domain.Interfaces.Services.IOntologyService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="shareInvitationService"></param>
+             <param name="userService"></param>
+             <param name="userIdentityService"></param>
+             <param name="ontologyService"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.ShareInvitationsApiController.DeleteShareInvitation(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ShareInvitationsApiController.GetShareInvitation(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ShareInvitationsApiController.GetShareInvitations">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ShareInvitationsApiController.PostShareInvitation(Grasews.API.Models.ShareInvitation_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="shareInvitationRequestCreateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ShareInvitationsApiController.PutShareInvitation(System.Int32,Grasews.API.Models.ShareInvitation_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="shareInvitationRequestUpdateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ShareInvitationsApiController.AcceptShareInvitationForNewUser(System.Int32,Grasews.API.Models.ShareInvitationAccept_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="shareInvitationAcceptRequestCreateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ShareInvitationsApiController.AcceptShareInvitationForExistingUser(System.Int32,System.Int32,Grasews.API.Models.ShareInvitationAccept_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="idShareUser"></param>
+             <param name="shareInvitationAcceptRequestCreateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Grasews.API.Controllers.ServiceDescriptionsApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.ServiceDescriptionsApiController._graphService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.ServiceDescriptionsApiController._serviceDescriptionService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.ServiceDescriptionsApiController._shareInvitationService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.ServiceDescriptionsApiController._serviceDescription_UserService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.ServiceDescriptionsApiController._taskService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Controllers.ServiceDescriptionsApiController._issueService">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.IServiceDescriptionService,Grasews.Domain.Interfaces.Services.IGraphService,Grasews.Domain.Interfaces.Services.IUserIdentityService,Grasews.Domain.Interfaces.Services.IShareInvitationService,Grasews.Domain.Interfaces.Services.IServiceDescription_UserService,Grasews.Domain.Interfaces.Services.ITaskService,Grasews.Domain.Interfaces.Services.IIssueService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="serviceDescriptionService"></param>
+             <param name="graphService"></param>
+             <param name="userIdentityService"></param>
+             <param name="shareInvitationService"></param>
+             <param name="serviceDescription_UserService"></param>
+             <param name="taskService"></param>
+             <param name="issueService"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.CreateGraphJsonData(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.CreateGraphJsonStyles">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetServiceDescriptionGraphJson(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.UpdateJsonGraph(System.Int32,Grasews.API.Models.UpdateGraphJson_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.SetGraphNodesPositionsByUser(Grasews.API.Models.GraphNodesLocationsByUser_ApiRequestViewModel)">
+             <summary>
+            
+             </summary>
+             <param name="requestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.TransferNodePositionsFromOntologyTermsToModelReferences(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetHtmlTreeViewMenu(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetXmlFromServiceDescription(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetElementsFromXml(Grasews.API.Models.ParseWsdl_ApiRequestViewModel)">
+             <summary>
+            
+             </summary>
+             <param name="request"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetElementsFromServiceDescription(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on ParseXmlByServiceDescription</param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.DeleteServiceDescription(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetServiceDescription(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetServiceDescriptions">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.PostServiceDescription(Grasews.API.Models.ServiceDescription_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="serviceDescriptionRequestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.PutServiceDescription(System.Int32,Grasews.API.Models.ServiceDescription_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="serviceDescriptionRequestModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetShareInvitationsByServiceDescription(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetServiceDescriptionUsersByServiceDescription(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetTasks(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id">todo: describe id parameter on GetTasks</param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.ServiceDescriptionsApiController.GetIssues(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Grasews.API.Controllers.UsersApiController">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Controllers.UsersApiController.#ctor(AutoMapper.IMapper,Grasews.Domain.Interfaces.Services.IUserService,Grasews.Domain.Interfaces.Services.IUserIdentityService)">
+             <summary>
+            
+             </summary>
+             <param name="mapper"></param>
+             <param name="userService"></param>
+             <param name="userIdentityService"></param>
+        </member>
+        <member name="M:Grasews.API.Controllers.UsersApiController.GetUsers">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.UsersApiController.GetUser(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.UsersApiController.PutUser(System.Int32,Grasews.API.Models.User_ApiRequestUpdateModel)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <param name="userRequestUpdateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.UsersApiController.PostUser(Grasews.API.Models.User_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="userRequestCreateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.UsersApiController.DeleteUser(System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="id"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.UsersApiController.PostResetPasswordRequest(Grasews.API.Models.ResetPasswordRequest_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="resetPasswordRequestCreateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Controllers.UsersApiController.PostResetPassword(Grasews.API.Models.ResetPassword_ApiRequestCreateModel)">
+             <summary>
+            
+             </summary>
+             <param name="resetPasswordCreateModel"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Grasews.API.WebApiApplication">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.WebApiApplication.Application_Start">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Grasews.API.Providers.OAuthServerProvider">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Providers.OAuthServerProvider.GrantResourceOwnerCredentials(Microsoft.Owin.Security.OAuth.OAuthGrantResourceOwnerCredentialsContext)">
+             <summary>
+            
+             </summary>
+             <param name="context"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Providers.OAuthServerProvider.TokenEndpoint(Microsoft.Owin.Security.OAuth.OAuthTokenEndpointContext)">
+             <summary>
+            
+             </summary>
+             <param name="context"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Providers.OAuthServerProvider.ValidateClientAuthentication(Microsoft.Owin.Security.OAuth.OAuthValidateClientAuthenticationContext)">
+             <summary>
+            
+             </summary>
+             <param name="context"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Grasews.API.Providers.OAuthServerProvider.AddHttpStatusCodeToResponseHeader(Microsoft.Owin.Security.OAuth.OAuthGrantResourceOwnerCredentialsContext,System.Net.HttpStatusCode)">
+             <summary>
+            
+             </summary>
+             <param name="context"></param>
+             <param name="httpStatusCode"></param>
+        </member>
+        <member name="T:Grasews.API.Providers.ResponseStatusCodeMiddleware">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Grasews.API.Providers.ResponseStatusCodeMiddleware.OwinChallengeFlag">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:Grasews.API.Providers.ResponseStatusCodeMiddleware.#ctor(Microsoft.Owin.OwinMiddleware)">
+             <summary>
+            
+             </summary>
+             <param name="next"></param>
+        </member>
+        <member name="M:Grasews.API.Providers.ResponseStatusCodeMiddleware.Invoke(Microsoft.Owin.IOwinContext)">
+             <summary>
+            
+             </summary>
+             <param name="context"></param>
+             <returns></returns>
+        </member>
+    </members>
+</doc>

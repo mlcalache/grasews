@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Grasews.API.Models.User_ApiResponseViewModel>
+
+<div class="modal fade" id="modal-share" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Share WSDL</h4>
+            </div>
+            <div class="modal-body">
+                <label>Users to share</label>
+                <select id="ddl-select-users-to-share" class="form-control select2-multiple" style="width: 100%;" tabindex="-1" aria-hidden="true" multiple="multiple">
+                    @foreach (var user in Model)
+                    {
+                        <option id="opt-@user.Id" value="@user.Id">@user.Email</option>
+                    }
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="lnk-share">Share</button>
+            </div>
+        </div>
+    </div>
+</div>

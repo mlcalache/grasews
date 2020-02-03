@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7455023F-4239-44BC-9436-37EEBD2BF8BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Grasews.Infra.Data.EF.Postgres</RootNamespace>
+    <AssemblyName>Grasews.Infra.Data.EF.Postgres</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.2.2.7\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql.EntityFramework, Version=2.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.EntityFramework.2.2.7\lib\net45\Npgsql.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry, Version=1.2.0.0, Culture=neutral, PublicKeyToken=fba2ec45388e2af0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sentry.1.2.0\lib\net461\Sentry.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.PlatformAbstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fba2ec45388e2af0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sentry.PlatformAbstractions.1.0.0\lib\net45\Sentry.PlatformAbstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Sentry.Protocol, Version=1.0.6.0, Culture=neutral, PublicKeyToken=fba2ec45388e2af0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sentry.Protocol.1.0.6\lib\net46\Sentry.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contexts\GrasewsContext.cs" />
+    <Compile Include="Mappings\GraphNodePosition_OntologyTermEFMapping.cs" />
+    <Compile Include="Mappings\GraphNodePosition_SawsdlModelReferenceEFMapping.cs" />
+    <Compile Include="Mappings\GraphNodePosition_WsdlFaultEFMapping.cs" />
+    <Compile Include="Mappings\GraphNodePosition_WsdlInfaultEFMapping.cs" />
+    <Compile Include="Mappings\GraphNodePosition_WsdlInputEFMapping.cs" />
+    <Compile Include="Mappings\GraphNodePosition_WsdlInterfaceEFMapping.cs" />
+    <Compile Include="Mappings\GraphNodePosition_WsdlOperationEFMapping.cs" />
+    <Compile Include="Mappings\GraphNodePosition_WsdlOutfaultEFMapping.cs" />
+    <Compile Include="Mappings\GraphNodePosition_WsdlOutputEFMapping.cs" />
+    <Compile Include="Mappings\GraphNodePosition_XsdCompleTypeEFMapping.cs" />
+    <Compile Include="Mappings\GraphNodePosition_XsdSimpleTypeEFMapping.cs" />
+    <Compile Include="Mappings\IssueAnswerEFMapping.cs" />
+    <Compile Include="Mappings\IssueEFMapping.cs" />
+    <Compile Include="Mappings\OntologyEFMapping.cs" />
+    <Compile Include="Mappings\OntologyTermEFMapping.cs" />
+    <Compile Include="Mappings\Ontology_UserEFMapping.cs" />
+    <Compile Include="Mappings\ResetPasswordEFMapping.cs" />
+    <Compile Include="Mappings\SawsdlModelReferenceEFMapping.cs" />
+    <Compile Include="Mappings\ServiceDescriptionEFMapping.cs" />
+    <Compile Include="Mappings\ServiceDescription_OntologyEFMapping.cs" />
+    <Compile Include="Mappings\ServiceDescription_UserEFMapping.cs" />
+    <Compile Include="Mappings\ShareInvitationEFMapping.cs" />
+    <Compile Include="Mappings\ShareInvitation_OntologyEFMapping.cs" />
+    <Compile Include="Mappings\TaskCommentEFMapping.cs" />
+    <Compile Include="Mappings\TaskEFMapping.cs" />
+    <Compile Include="Mappings\UserEFMapping.cs" />
+    <Compile Include="Mappings\WsdlFaultEFMapping.cs" />
+    <Compile Include="Mappings\WsdlInfaultEFMapping.cs" />
+    <Compile Include="Mappings\WsdlInputEFMapping.cs" />
+    <Compile Include="Mappings\WsdlInterfaceEFMapping.cs" />
+    <Compile Include="Mappings\WsdlOperationEFMapping.cs" />
+    <Compile Include="Mappings\WsdlOutfaultEFMapping.cs" />
+    <Compile Include="Mappings\WsdlOutputEFMapping.cs" />
+    <Compile Include="Mappings\XsdComplexTypeEFMapping.cs" />
+    <Compile Include="Mappings\XsdDocumentEFMapping.cs" />
+    <Compile Include="Mappings\XsdSimpleTypeEFMapping.cs" />
+    <Compile Include="Migrations\202001201753135_Grasews.cs" />
+    <Compile Include="Migrations\202001201753135_Grasews.Designer.cs">
+      <DependentUpon>202001201753135_Grasews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BaseEntityRepository.cs" />
+    <Compile Include="Repositories\GraphNodePosition_OntologyTermRepository.cs" />
+    <Compile Include="Repositories\GraphNodePosition_SawsdlModelReferenceRepository.cs" />
+    <Compile Include="Repositories\IssueAnswerEntityRepository.cs" />
+    <Compile Include="Repositories\IssueEntityRepository.cs" />
+    <Compile Include="Repositories\OntologyEntityRepository.cs" />
+    <Compile Include="Repositories\OntologyTermEntityRepository.cs" />
+    <Compile Include="Repositories\Ontology_UserEntityRepository.cs" />
+    <Compile Include="Repositories\ResetPasswordEntityRepository.cs" />
+    <Compile Include="Repositories\SawsdlModelReferenceEntityRepository.cs" />
+    <Compile Include="Repositories\ServiceDescriptionEntityRepository.cs" />
+    <Compile Include="Repositories\ServiceDescription_OntologyEntityRepository.cs" />
+    <Compile Include="Repositories\ServiceDescription_UserEntityRepository.cs" />
+    <Compile Include="Repositories\ShareInvitationEntityRepository.cs" />
+    <Compile Include="Repositories\ShareInvitation_OntologyEntityRepository.cs" />
+    <Compile Include="Repositories\TaskCommentEntityRepository.cs" />
+    <Compile Include="Repositories\TaskEntityRepository.cs" />
+    <Compile Include="Repositories\UserEntityRepository.cs" />
+    <Compile Include="Repositories\WsdlInfaultRepository.cs" />
+    <Compile Include="Repositories\WsdlInputRepository.cs" />
+    <Compile Include="Repositories\WsdlInterfaceRepository.cs" />
+    <Compile Include="Repositories\WsdlOperationRepository.cs" />
+    <Compile Include="Repositories\WsdlOutfaultRepository.cs" />
+    <Compile Include="Repositories\WsdlOutputRepository.cs" />
+    <Compile Include="Repositories\XsdComplexElementRepository.cs" />
+    <Compile Include="Repositories\XsdSimpleElementRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Grasews.Domain\Grasews.Domain.csproj">
+      <Project>{E344B48F-258F-4317-A279-B98903AD49F4}</Project>
+      <Name>Grasews.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Grasews.Infra.CrossCutting.Helpers\Grasews.Infra.CrossCutting.Helpers.csproj">
+      <Project>{5907E20F-777D-4DDE-8688-7F1AF640EE97}</Project>
+      <Name>Grasews.Infra.CrossCutting.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202001201753135_Grasews.resx">
+      <DependentUpon>202001201753135_Grasews.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

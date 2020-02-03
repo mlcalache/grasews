@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl2:description targetNamespace="http://dcm.ffclrp.usp.br/lssb/geas/wsdl/MicroOneDifferentialAnalysisService.wsdl" xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wrpc="http://www.w3.org/ns/wsdl/rpc" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:ax21="http://classes/xsd" xmlns:ax25="http://io.java/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns="http://services" xmlns:tns="http://dcm.ffclrp.usp.br/lssb/geas/wsdl/MicroOneDifferentialAnalysisService.wsdl" xmlns:ax22="http://util.java/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdl2="http://www.w3.org/ns/wsdl">
+  <wsdl2:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://classes/xsd" xmlns:ax23="http://util.java/xsd">
+      <xs:import namespace="http://util.java/xsd" />
+      <xs:complexType name="ListOfCorrectionMethods">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="listOfCorrectionMethods" nillable="true" type="ax23:Collection" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://util.java/xsd">
+      <xs:complexType name="Collection">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="empty" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://services" xmlns:ax24="http://classes/xsd" xmlns:ax26="http://io.java/xsd">
+      <xs:import namespace="http://classes/xsd" />
+      <xs:import namespace="http://io.java/xsd" />
+      <xs:element name="MicroOneDifferentialAnalysisServiceException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="MicroOneDifferentialAnalysisServiceException" nillable="true" type="ns:Exception" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="getStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="performFoldChange">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="cutoff" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCorrectionMethods">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCorrectionMethodsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:ListOfCorrectionMethods" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateID">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateIDResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendCondition1File">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="file" nillable="true" type="ax25:File" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendCondition2File">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="file" nillable="true" type="ax25:File" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="performTTest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="significanceLevel" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="cutoff" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="correctionMethod" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getResult">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getResultResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax25:File" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://io.java/xsd">
+      <xs:complexType name="File">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="absolute" type="xs:boolean" />
+          <xs:element minOccurs="0" name="absoluteFile" nillable="true" type="ax25:File" />
+          <xs:element minOccurs="0" name="absolutePath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="canonicalFile" nillable="true" type="ax25:File" />
+          <xs:element minOccurs="0" name="canonicalPath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="directory" type="xs:boolean" />
+          <xs:element minOccurs="0" name="file" type="xs:boolean" />
+          <xs:element minOccurs="0" name="freeSpace" type="xs:long" />
+          <xs:element minOccurs="0" name="hidden" type="xs:boolean" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="parentFile" nillable="true" type="ax25:File" />
+          <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="totalSpace" type="xs:long" />
+          <xs:element minOccurs="0" name="usableSpace" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl2:types>
+  <wsdl2:interface name="ServiceInterface">
+    <wsdl2:operation name="performFoldChange" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:performFoldChange" wsaw:Action="urn:performFoldChange">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:performFoldChangeResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroOneDifferentialAnalysisServiceException" wsaw:Action="urn:performFoldChangeMicroOneDifferentialAnalysisServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="performTTest" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:performTTest" wsaw:Action="urn:performTTest">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:performTTestResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroOneDifferentialAnalysisServiceException" wsaw:Action="urn:performTTestMicroOneDifferentialAnalysisServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="generateID" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc http://www.w3.org/ns/wsdl/style/iri http://www.w3.org/ns/wsdl/style/multipart" wrpc:signature="return #return ">
+      <wsdl2:input messageLabel="In" element="ns:generateID" wsaw:Action="urn:generateID">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:generateIDResponse" wsaw:Action="urn:generateIDResponse">
+      </wsdl2:output>
+    </wsdl2:operation>
+    <wsdl2:operation name="sendCondition1File" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendCondition1File" wsaw:Action="urn:sendCondition1File">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendCondition1FileResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroOneDifferentialAnalysisServiceException" wsaw:Action="urn:sendCondition1FileMicroOneDifferentialAnalysisServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="getCorrectionMethods" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc http://www.w3.org/ns/wsdl/style/iri http://www.w3.org/ns/wsdl/style/multipart" wrpc:signature="return #return ">
+      <wsdl2:input messageLabel="In" element="ns:getCorrectionMethods" wsaw:Action="urn:getCorrectionMethods">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:getCorrectionMethodsResponse" wsaw:Action="urn:getCorrectionMethodsResponse">
+      </wsdl2:output>
+    </wsdl2:operation>
+    <wsdl2:operation name="getStatus" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:getStatus" wsaw:Action="urn:getStatus">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:getStatusResponse" wsaw:Action="urn:getStatusResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroOneDifferentialAnalysisServiceException" wsaw:Action="urn:getStatusMicroOneDifferentialAnalysisServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="sendCondition2File" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendCondition2File" wsaw:Action="urn:sendCondition2File">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendCondition2FileResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroOneDifferentialAnalysisServiceException" wsaw:Action="urn:sendCondition2FileMicroOneDifferentialAnalysisServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="getResult" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:getResult" wsaw:Action="urn:getResult">
+      </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:getResultResponse" wsaw:Action="urn:getResultResponse">
+      </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:MicroOneDifferentialAnalysisServiceException" wsaw:Action="urn:getResultMicroOneDifferentialAnalysisServiceException">
+      </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:fault name="MicroOneDifferentialAnalysisServiceException" element="ns:MicroOneDifferentialAnalysisServiceException">
+    </wsdl2:fault>
+  </wsdl2:interface>
+  <wsdl2:binding name="MicroOneDifferentialAnalysisServiceHttpBinding" interface="tns:ServiceInterface" type="http://www.w3.org/ns/wsdl/http" whttp:methodDefault="POST">
+    <wsdl2:operation ref="tns:performFoldChange" whttp:method="POST" whttp:location="microonedifferentialanalysisservice/performFoldChange/{identifier}/{cutoff}" />
+    <wsdl2:operation ref="tns:performTTest" whttp:method="POST" whttp:location="microonedifferentialanalysisservice/performTTest/{identifier}/{significanceLevel}/{cutoff}/{correctionMethod}" />
+    <wsdl2:operation ref="tns:generateID" whttp:method="GET" whttp:location="microonedifferentialanalysisservice/generateID" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:sendCondition1File" whttp:method="POST" whttp:location="microonedifferentialanalysisservice/sendCondition1File/{identifier}/{filename}" />
+    <wsdl2:operation ref="tns:getCorrectionMethods" whttp:method="GET" whttp:location="microonedifferentialanalysisservice/getCorrectionMethods" whttp:outputSerialization="application/xml" />
+    <wsdl2:operation ref="tns:getStatus" whttp:method="GET" whttp:location="microonedifferentialanalysisservice/getStatus/{identifier}" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:sendCondition2File" whttp:method="POST" whttp:location="microonedifferentialanalysisservice/sendCondition2File/{identifier}/{filename}" />
+    <wsdl2:operation ref="tns:getResult" whttp:method="GET" whttp:location="microonedifferentialanalysisservice/getResult/{identifier}" whttp:outputSerialization="text/plain" />
+    <wsdl2:fault ref="tns:MicroOneDifferentialAnalysisServiceException" />
+  </wsdl2:binding>
+  <wsdl2:service name="MicroOneDifferentialAnalysisService" interface="tns:ServiceInterface">
+    <wsdl2:endpoint name="MicroOneDifferentialAnalysisServiceHttpEndpoint" binding="tns:MicroOneDifferentialAnalysisServiceHttpBinding" address="http://kode.ffclrp.usp.br/lssb/geas/MicroOneDifferentialAnalysisService/webresources/microonedifferentialanalysisservice">
+    </wsdl2:endpoint>
+  </wsdl2:service>
+</wsdl2:description>

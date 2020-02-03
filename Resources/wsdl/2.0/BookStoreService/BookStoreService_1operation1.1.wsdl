@@ -1,0 +1,145 @@
+<wsdl:definitions
+	xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+	xmlns:tns="http://mybookstore.com/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:s="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://mybookstore.com/">
+	<wsdl:types>
+		<s:schema elementFormDefault="qualified" targetNamespace="http://mybookstore.com/">
+			<s:element name="GetAllBooks">
+				<s:complexType/>
+			</s:element>
+			<s:element name="GetAllBooksResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="GetAllBooksResult" type="tns:ArrayOfBook"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfBook">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Book" nillable="true" type="tns:Book"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Book">
+				<s:complexContent mixed="false">
+					<s:extension base="tns:BaseEntity">
+						<s:sequence>
+							<s:element minOccurs="0" maxOccurs="1" name="Author" type="tns:ArrayOfAuthor"/>
+							<s:element minOccurs="1" maxOccurs="1" name="BookType" type="tns:BookTypeEnum"/>
+							<s:element minOccurs="0" maxOccurs="1" name="Category" type="tns:Category"/>
+							<s:element minOccurs="1" maxOccurs="1" name="Edition" type="s:int"/>
+							<s:element minOccurs="1" maxOccurs="1" name="ISBN" type="s:int"/>
+							<s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string"/>
+							<s:element minOccurs="1" maxOccurs="1" name="Name" type="s:int"/>
+							<s:element minOccurs="0" maxOccurs="1" name="Publisher" type="tns:Publisher"/>
+							<s:element minOccurs="1" maxOccurs="1" name="Size" type="tns:SizeEnum"/>
+							<s:element minOccurs="1" maxOccurs="1" name="Year" type="s:int"/>
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="BaseEntity">
+				<s:sequence>
+					<s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Publisher">
+				<s:complexContent mixed="false">
+					<s:extension base="tns:BaseEntity">
+						<s:sequence>
+							<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"/>
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="Category">
+				<s:complexContent mixed="false">
+					<s:extension base="tns:BaseEntity">
+						<s:sequence>
+							<s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string"/>
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="Author">
+				<s:complexContent mixed="false">
+					<s:extension base="tns:BaseEntity">
+						<s:sequence>
+							<s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string"/>
+							<s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string"/>
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="ArrayOfAuthor">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="Author" nillable="true" type="tns:Author"/>
+				</s:sequence>
+			</s:complexType>
+			<s:simpleType name="BookTypeEnum">
+				<s:restriction base="s:string">
+					<s:enumeration value="HardCover"/>
+					<s:enumeration value="PaperBack"/>
+				</s:restriction>
+			</s:simpleType>
+			<s:simpleType name="SizeEnum">
+				<s:restriction base="s:string">
+					<s:enumeration value="VeryLarge"/>
+					<s:enumeration value="Large"/>
+					<s:enumeration value="Medium"/>
+					<s:enumeration value="Small"/>
+					<s:enumeration value="VerySmall"/>
+				</s:restriction>
+			</s:simpleType>
+		</s:schema>
+	</wsdl:types>
+	<wsdl:message name="GetAllBooksSoapIn">
+		<wsdl:part name="parameters" element="tns:GetAllBooks"/>
+	</wsdl:message>
+	<wsdl:message name="GetAllBooksSoapOut">
+		<wsdl:part name="parameters" element="tns:GetAllBooksResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="BookStoreService_1operationSoap">
+		<wsdl:operation name="GetAllBooks">
+			<wsdl:input message="tns:GetAllBooksSoapIn"/>
+			<wsdl:output message="tns:GetAllBooksSoapOut"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="BookStoreService_1operationSoap" type="tns:BookStoreService_1operationSoap">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="GetAllBooks">
+			<soap:operation soapAction="http://mybookstore.com/GetAllBooks" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="BookStoreService_1operationSoap12" type="tns:BookStoreService_1operationSoap">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="GetAllBooks">
+			<soap12:operation soapAction="http://mybookstore.com/GetAllBooks" style="document"/>
+			<wsdl:input>
+				<soap12:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="BookStoreService_1operation">
+		<wsdl:port name="BookStoreService_1operationSoap" binding="tns:BookStoreService_1operationSoap">
+			<soap:address location="https://localhost:44307/BookStoreService_1operation.asmx"/>
+		</wsdl:port>
+		<wsdl:port name="BookStoreService_1operationSoap12" binding="tns:BookStoreService_1operationSoap12">
+			<soap12:address location="https://localhost:44307/BookStoreService_1operation.asmx"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

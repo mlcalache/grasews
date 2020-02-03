@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E344B48F-258F-4317-A279-B98903AD49F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Grasews.Domain</RootNamespace>
+    <AssemblyName>Grasews.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\BaseGraphNodePosition.cs" />
+    <Compile Include="Entities\BaseWsdl.cs" />
+    <Compile Include="Entities\BaseXsd.cs" />
+    <Compile Include="Entities\GraphNodePosition_OntologyTerm.cs" />
+    <Compile Include="Entities\GraphNodePosition_SawsdlModelReference.cs" />
+    <Compile Include="Entities\GraphNodePosition_WsdlFault.cs" />
+    <Compile Include="Entities\OntologyTerm.cs" />
+    <Compile Include="Entities\Ontology_User.cs" />
+    <Compile Include="Entities\ResetPassword.cs" />
+    <Compile Include="Entities\SawsdlModelReference.cs" />
+    <Compile Include="Entities\GraphNodePosition_WsdlInfault.cs" />
+    <Compile Include="Entities\GraphNodePosition_WsdlInput.cs" />
+    <Compile Include="Entities\GraphNodePosition_WsdlInterface.cs" />
+    <Compile Include="Entities\GraphNodePosition_WsdlOperation.cs" />
+    <Compile Include="Entities\ShareInvitation_Ontology.cs" />
+    <Compile Include="Entities\WsdlFault.cs" />
+    <Compile Include="Entities\WsdlOutfault.cs" />
+    <Compile Include="Entities\WsdlInfault.cs" />
+    <Compile Include="Entities\WsdlInput.cs" />
+    <Compile Include="Entities\WsdlInterface.cs" />
+    <Compile Include="Entities\WsdlOperation.cs" />
+    <Compile Include="Entities\GraphNodePosition_WsdlOutfault.cs" />
+    <Compile Include="Entities\WsdlOutput.cs" />
+    <Compile Include="Entities\GraphNodePosition_WsdlOutput.cs" />
+    <Compile Include="Entities\XsdComplexType.cs" />
+    <Compile Include="Entities\GraphNodePosition_XsdComplexType.cs" />
+    <Compile Include="Entities\XsdSimpleType.cs" />
+    <Compile Include="Entities\GraphNodePosition_XsdSimpleType.cs" />
+    <Compile Include="Enums\GraphNodeTypeEnum.cs" />
+    <Compile Include="Enums\EnumExtension.cs" />
+    <Compile Include="Enums\ResetPasswordStatusEnum.cs" />
+    <Compile Include="Enums\ServiceDescriptionElementTypeEnum.cs" />
+    <Compile Include="Events\AddOntologyToSharedUsersEvent.cs" />
+    <Compile Include="Events\AddOntologyToSharedUsersHandler.cs" />
+    <Compile Include="Events\SendResetPasswordEmailHandler.cs" />
+    <Compile Include="Events\SendResetPasswordEmailEvent.cs" />
+    <Compile Include="Exceptions\ExternalXsdNotFoundException.cs" />
+    <Compile Include="Exceptions\IdNotFoundException.cs" />
+    <Compile Include="Exceptions\OntologyTermListEmptyToRemoveModelReferenceException.cs" />
+    <Compile Include="Exceptions\OntologyTermNotFoundException.cs" />
+    <Compile Include="Exceptions\SawsdlLiftingSchemaMappingAlreadyAddedException.cs" />
+    <Compile Include="Exceptions\SawsdlLiftingSchemaMappingDoesNotExistException.cs" />
+    <Compile Include="Exceptions\SawsdlLoweringSchemaMappingAlreadyAddedException.cs" />
+    <Compile Include="Exceptions\SawsdlLoweringSchemaMappingDoesNotExistException.cs" />
+    <Compile Include="Exceptions\SawsdlModelReferenceAlreadyAddedException.cs" />
+    <Compile Include="Exceptions\SawsdlModelReferenceDoesNotExistException.cs" />
+    <Compile Include="Exceptions\ServiceDescriptionNotSharedWithUserException.cs" />
+    <Compile Include="Exceptions\WsdlFaultNotFoundException.cs" />
+    <Compile Include="Exceptions\WsdlInFaultNotFoundException.cs" />
+    <Compile Include="Exceptions\WsdlInterfaceNotFoundException.cs" />
+    <Compile Include="Exceptions\WsdlOperationNotFoundException.cs" />
+    <Compile Include="Exceptions\WsdlOutFaultNotFoundException.cs" />
+    <Compile Include="Exceptions\XsdComplexTypeNotFoundException.cs" />
+    <Compile Include="Exceptions\UserNotAllowedException.cs" />
+    <Compile Include="Exceptions\XsdSimpleTypeNotFoundException.cs" />
+    <Compile Include="Interfaces\DTOs\IParseOwlRequestDTO.cs" />
+    <Compile Include="Interfaces\DTOs\IParseOwlResponseDTO.cs" />
+    <Compile Include="Interfaces\DTOs\IParseWsdlRequestDTO.cs" />
+    <Compile Include="Interfaces\DTOs\IParseWsdlResponseDTO.cs" />
+    <Compile Include="Interfaces\DTOs\ISawsdlLiftingSchemaMappingRequestCreateDTO.cs" />
+    <Compile Include="Interfaces\DTOs\ISawsdlLiftingSchemaMappingRequestRemoveDTO.cs" />
+    <Compile Include="Interfaces\DTOs\ISawsdlLiftingSchemaMappingRequestUpdateDTO.cs" />
+    <Compile Include="Interfaces\DTOs\ISawsdlLoweringSchemaMappingRequestCreateDTO.cs" />
+    <Compile Include="Interfaces\DTOs\ISawsdlLoweringSchemaMappingRequestRemoveDTO.cs" />
+    <Compile Include="Interfaces\DTOs\ISawsdlLoweringSchemaMappingRequestUpdateDTO.cs" />
+    <Compile Include="Interfaces\DTOs\ISawsdlModelReferenceRequestCreateDTO.cs" />
+    <Compile Include="Interfaces\DTOs\ISawsdlModelReferenceRequestRemoveDTO.cs" />
+    <Compile Include="Interfaces\DTOs\ISawsdlModelReferenceRequestViewDTO.cs" />
+    <Compile Include="Interfaces\DTOs\ISawsdlSchemaMappingRequestViewDTO.cs" />
+    <Compile Include="Interfaces\Entities\ICanBeAnnotatedWithModelReference.cs" />
+    <Compile Include="Interfaces\Entities\ICanBeAnnotatedWithSchemaMapping.cs" />
+    <Compile Include="Entities\Issue.cs" />
+    <Compile Include="Entities\IssueAnswer.cs" />
+    <Compile Include="Entities\Ontology.cs" />
+    <Compile Include="Entities\ServiceDescription.cs" />
+    <Compile Include="Entities\ServiceDescription_Ontology.cs" />
+    <Compile Include="Entities\ServiceDescription_User.cs" />
+    <Compile Include="Entities\ShareInvitation.cs" />
+    <Compile Include="Entities\Task.cs" />
+    <Compile Include="Entities\TaskComment.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\XsdDocument.cs" />
+    <Compile Include="Enums\InvitationStatusEnum.cs" />
+    <Compile Include="Events\EventDispatcher.cs" />
+    <Compile Include="Events\SendInvitationEmailEvent.cs" />
+    <Compile Include="Events\SendInvitationEmailHandler.cs" />
+    <Compile Include="Interfaces\Containers\IDomainContainer.cs" />
+    <Compile Include="Interfaces\Entities\ICanHaveIssues.cs" />
+    <Compile Include="Interfaces\Entities\IGraphEdge.cs" />
+    <Compile Include="Interfaces\Entities\IGraphEdgeData.cs" />
+    <Compile Include="Interfaces\Entities\IGraphNode.cs" />
+    <Compile Include="Interfaces\Entities\IGraphNodeData.cs" />
+    <Compile Include="Interfaces\Entities\IGraphDataObject.cs" />
+    <Compile Include="Interfaces\Entities\IGraphNodePosition.cs" />
+    <Compile Include="Interfaces\Entities\IGraphStyle.cs" />
+    <Compile Include="Interfaces\Entities\IGraphStyleObject.cs" />
+    <Compile Include="Interfaces\Events\IDomainEvent.cs" />
+    <Compile Include="Interfaces\Events\IEventDispatcher.cs" />
+    <Compile Include="Interfaces\Events\IEventHandler.cs" />
+    <Compile Include="Interfaces\Repositories\IGraphNodePosition_OntologyTermRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IGraphNodePosition_SawsdlModelReferenceRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IIssueAnswerEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IOntologyTermEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IOntology_UserEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IResetPasswordEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ISawsdlModelReferenceEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IServiceDescription_OntologyEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IShareInvitation_OntologyEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITaskCommentEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITaskEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IIssueEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IOntologyEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IServiceDescriptionEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IServiceDescription_UserEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IShareInvitationEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUserEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IWsdlFaultEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IWsdlInfaultEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IWsdlInputEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IWsdlInterfaceEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IWsdlOperationEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IWsdlOutfaultEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IWsdlOutputEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IXsdComplexTypeEntityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IXsdSimpleTypeEntityRepository.cs" />
+    <Compile Include="Interfaces\Services\IEmailMessageService.cs" />
+    <Compile Include="Interfaces\Services\IEmailSenderService.cs" />
+    <Compile Include="Interfaces\Services\IGraphService.cs" />
+    <Compile Include="Interfaces\Services\IIssueAnswerService.cs" />
+    <Compile Include="Interfaces\Services\IOntology_UserService.cs" />
+    <Compile Include="Interfaces\Services\ISawsdlService.cs" />
+    <Compile Include="Interfaces\Services\IServiceDescription_OntologyService.cs" />
+    <Compile Include="Interfaces\Services\ITaskCommentService.cs" />
+    <Compile Include="Interfaces\Services\ITaskService.cs" />
+    <Compile Include="Interfaces\Services\IIssueService.cs" />
+    <Compile Include="Interfaces\Services\IOntologyService.cs" />
+    <Compile Include="Interfaces\Services\IServiceDescriptionService.cs" />
+    <Compile Include="Interfaces\Services\IServiceDescription_UserService.cs" />
+    <Compile Include="Interfaces\Services\IShareInvitationService.cs" />
+    <Compile Include="Interfaces\Services\IUserService.cs" />
+    <Compile Include="Interfaces\Services\IUserIdentityService.cs" />
+    <Compile Include="Interfaces\Repositories\IBaseEntityRepository.cs" />
+    <Compile Include="Interfaces\Services\IBaseService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Grasews.Infra.CrossCutting.Helpers\Grasews.Infra.CrossCutting.Helpers.csproj">
+      <Project>{5907E20F-777D-4DDE-8688-7F1AF640EE97}</Project>
+      <Name>Grasews.Infra.CrossCutting.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

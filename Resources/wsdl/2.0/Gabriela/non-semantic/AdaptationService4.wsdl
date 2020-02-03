@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl2:description targetNamespace="http://dcm.ffclrp.usp.br/lssb/geas/wsdl/AdaptationService4.wsdl" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:tns="http://dcm.ffclrp.usp.br/lssb/geas/wsdl/AdaptationService4.wsdl" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:wsdl2="http://www.w3.org/ns/wsdl" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://services" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wrpc="http://www.w3.org/ns/wsdl/rpc" xmlns:ax21="http://io.java/xsd" xmlns:wsdlx="http://www.w3.org/ns/wsdl-extensions">
+<wsdl2:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://services" xmlns:ax22="http://io.java/xsd">
+            <xs:import namespace="http://io.java/xsd" />
+            <xs:element name="AdaptationService4Exception">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="AdaptationService4Exception" nillable="true" type="ns:Exception" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="Exception">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="getResult">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getResultResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:File" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getStatus">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getStatusResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="generateID">
+                <xs:complexType>
+                    <xs:sequence />
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="generateIDResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sendDiffDataFile">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="file" nillable="true" type="ax22:File" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="filterData">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="target" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sendNormalizedDataFile">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="file" nillable="true" type="ax22:File" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sendMappingDataFile">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="identifier" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+                        <xs:element minOccurs="0" name="file" nillable="true" type="ax22:File" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://io.java/xsd">
+            <xs:complexType name="File">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="absolute" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="absoluteFile" nillable="true" type="ax21:File" />
+                    <xs:element minOccurs="0" name="absolutePath" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="canonicalFile" nillable="true" type="ax21:File" />
+                    <xs:element minOccurs="0" name="canonicalPath" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="directory" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="file" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="freeSpace" type="xs:long" />
+                    <xs:element minOccurs="0" name="hidden" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="parent" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="parentFile" nillable="true" type="ax21:File" />
+                    <xs:element minOccurs="0" name="path" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="totalSpace" type="xs:long" />
+                    <xs:element minOccurs="0" name="usableSpace" type="xs:long" />
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema></wsdl2:types>
+  <wsdl2:interface name="ServiceInterface">
+    <wsdl2:operation name="sendNormalizedDataFile" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendNormalizedDataFile" wsaw:Action="urn:sendNormalizedDataFile">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendNormalizedDataFileResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService4Exception" wsaw:Action="urn:sendNormalizedDataFileAdaptationService4Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="sendMappingDataFile" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendMappingDataFile" wsaw:Action="urn:sendMappingDataFile">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendMappingDataFileResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService4Exception" wsaw:Action="urn:sendMappingDataFileAdaptationService4Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="filterData" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:filterData" wsaw:Action="urn:filterData">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:filterDataResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService4Exception" wsaw:Action="urn:filterDataAdaptationService4Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="getResult" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:getResult" wsaw:Action="urn:getResult">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:getResultResponse" wsaw:Action="urn:getResultResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService4Exception" wsaw:Action="urn:getResultAdaptationService4Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="generateID" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc http://www.w3.org/ns/wsdl/style/iri http://www.w3.org/ns/wsdl/style/multipart" wrpc:signature="return #return ">
+      <wsdl2:input messageLabel="In" element="ns:generateID" wsaw:Action="urn:generateID">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:generateIDResponse" wsaw:Action="urn:generateIDResponse">
+    </wsdl2:output>
+    </wsdl2:operation>
+    <wsdl2:operation name="getStatus" pattern="http://www.w3.org/ns/wsdl/in-out" style="http://www.w3.org/ns/wsdl/style/rpc" wrpc:signature="identifier #in return #return ">
+      <wsdl2:input messageLabel="In" element="ns:getStatus" wsaw:Action="urn:getStatus">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="ns:getStatusResponse" wsaw:Action="urn:getStatusResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService4Exception" wsaw:Action="urn:getStatusAdaptationService4Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+    <wsdl2:operation name="sendDiffDataFile" pattern="http://www.w3.org/ns/wsdl/in-out">
+      <wsdl2:input messageLabel="In" element="ns:sendDiffDataFile" wsaw:Action="urn:sendDiffDataFile">
+    </wsdl2:input>
+      <wsdl2:output messageLabel="Out" element="#none" wsaw:Action="urn:sendDiffDataFileResponse">
+    </wsdl2:output>
+      <wsdl2:outfault messageLabel="Out" ref="tns:AdaptationService4Exception" wsaw:Action="urn:sendDiffDataFileAdaptationService4Exception">
+    </wsdl2:outfault>
+    </wsdl2:operation>
+      <wsdl2:fault name="AdaptationService4Exception" element="ns:AdaptationService4Exception">
+    </wsdl2:fault>
+  </wsdl2:interface>
+  <wsdl2:binding name="AdaptationService4HttpBinding" interface="tns:ServiceInterface" type="http://www.w3.org/ns/wsdl/http" whttp:methodDefault="POST">
+    <wsdl2:operation ref="tns:sendNormalizedDataFile" whttp:location="adaptationservice4/sendNormalizedDataFile/{identifier}/{filename}" whttp:method="POST" />
+    <wsdl2:operation ref="tns:sendMappingDataFile" whttp:location="adaptationservice4/sendMappingDataFile/{identifier}/{filename}" whttp:method="POST" />
+    <wsdl2:operation ref="tns:filterData" whttp:location="adaptationservice4/filterData/{source}/{target}" whttp:method="POST" />
+    <wsdl2:operation ref="tns:getResult" whttp:location="adaptationservice4/getResult/{identifier}" whttp:method="GET" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:generateID" whttp:location="adaptationservice4/generateID" whttp:method="GET" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:getStatus" whttp:location="adaptationservice4/getStatus/{identifier}" whttp:method="GET" whttp:outputSerialization="text/plain" />
+    <wsdl2:operation ref="tns:sendDiffDataFile" whttp:location="adaptationservice4/sendDiffDataFile/{identifier}/{filename}" whttp:method="POST" />
+    <wsdl2:fault ref="tns:AdaptationService4Exception" />
+  </wsdl2:binding>
+  <wsdl2:service name="AdaptationService4" interface="tns:ServiceInterface">
+    <wsdl2:endpoint name="AdaptationService4HttpEndpoint" binding="tns:AdaptationService4HttpBinding" address="http://kode.ffclrp.usp.br/lssb/geas/AdaptationService4/webresources/adaptationservice4">
+    </wsdl2:endpoint>
+    </wsdl2:service>
+</wsdl2:description>

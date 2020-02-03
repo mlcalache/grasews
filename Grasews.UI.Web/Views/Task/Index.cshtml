@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Grasews.Web.ViewModels.Task_MvcViewModel>
+
+@{
+    ViewBag.Title = string.Format(WebResource.TasksCreatedBy, ViewBag.LoggedInUserFullName);
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<hr />
+<p>
+    <a href="@Url.Action("Index", "Site")" class="btn btn-sm btn-default">
+        <span class="fa fa-arrow-left" aria-hidden="true"></span>&nbsp;@WebResource.BackToTheSystem
+    </a>
+    <a href="@Url.Action("Create")" class="btn btn-sm btn-success">
+        <span class="fa fa-plus" aria-hidden="true"></span>&nbsp;@WebResource.CreateANewTask
+    </a>
+</p>
+<hr />
+@if (Model != null && Model.Count() > 0)
+{
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Done)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Done)
+                </td>
+                <td>
+                    @Html.ActionLink(WebResource.ViewComments, "Comments", new { idTask = item.Id })
+                    @Html.ActionLink(WebResource.Edit, "Edit", new { idTask = item.Id }) |
+                    @Html.ActionLink(WebResource.Details, "Details", new { idTask = item.Id }) |
+                    @Html.ActionLink(WebResource.Delete, "Delete", new { idTask = item.Id })
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+<script>
+    $(function () {
+        $("#grasews-admin-navbar li").removeClass("active");
+        $("#nav-tasks").addClass("active");
+    });
+</script>
+

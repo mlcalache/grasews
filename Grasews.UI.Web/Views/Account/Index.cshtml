@@ -1,0 +1,38 @@
+﻿@using Grasews.Web.ViewModels
+
+@{
+    ViewBag.Title = WebResource.Grasews;
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-login">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a href="#" class="active" id="login-form-link">@WebResource.Login</a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="#" id="register-form-link">@WebResource.Register</a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        @{ Html.RenderPartial("_PartialViews/_Login", new Login_MvcViewModel()); }
+
+                        @{ Html.RenderPartial("_PartialViews/_Create", new User_MvcCreateViewModel()); }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if(ViewBag.UserDoesNotExist != null)
+{
+
+}

@@ -1,0 +1,1308 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY GO "http://purl.org/obo/owl/GO#" >
+    <!ENTITY SO "http://purl.org/obo/owl/SO#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY GeneExpressionOntology "http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#" >
+    <!ENTITY Roche "http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#Roche/454" >
+]>
+
+
+<rdf:RDF xmlns="http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#"
+     xml:base="http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:GeneExpressionOntology="http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#"
+     
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SO="http://purl.org/obo/owl/SO#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:GO="http://purl.org/obo/owl/GO#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&GeneExpressionOntology;definition"/>
+    <owl:AnnotationProperty rdf:about="&GeneExpressionOntology;synonym"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000030 -->
+
+    <owl:ObjectProperty rdf:about="&GeneExpressionOntology;GEXPO_0000030">
+        <rdfs:label rdf:datatype="&xsd;string">OBO Relation Ontology relation</rdfs:label>
+        <definition rdf:datatype="&xsd;string">OBO Relation Ontology relation represents a relation defined in the OBO Relation Ontology.</definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000031 -->
+
+    <owl:ObjectProperty rdf:about="&GeneExpressionOntology;GEXPO_0000031">
+        <rdfs:label rdf:datatype="&xsd;string">affected by</rdfs:label>
+        <definition rdf:datatype="&xsd;string">affected by is a relation defined between an experimental process and an experimental condition that affects this process.</definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000032 -->
+
+    <owl:ObjectProperty rdf:about="&GeneExpressionOntology;GEXPO_0000032">
+        <rdfs:label rdf:datatype="&xsd;string">produced by</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Produced by is a relation defined between an entity and a process that produces it.</definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000033 -->
+
+    <owl:ObjectProperty rdf:about="&GeneExpressionOntology;GEXPO_0000033">
+        <rdfs:label rdf:datatype="&xsd;string">quantifies</rdfs:label>
+        <definition rdf:datatype="&xsd;string">quantifies is a relation between a biopolymer quantity and the biopolymer which it quantifies.</definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#derives_from -->
+
+    <owl:ObjectProperty rdf:about="&ro;derives_from">
+        <rdfs:label rdf:datatype="&xsd;string">derives from</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Derivation on the instance level (*derives_from*) holds between distinct material continuants when one succeeds the other across a temporal divide in such a way that at least a biologically significant portion of the matter of the earlier continuant is inherited by the later. We say that one class C derives_from class C&#39; if instances of C are connected to instances of C&#39; via some chain of instance-level derivation relations. Example: osteocyte derives_from osteoblast. Formally: C derives_immediately_from C&#39; if and only if: given any c and any t, if c instantiates C at time t, then there is some c&#39; and some t&#39;, such that c&#39; instantiates C&#39; at t&#39; and t&#39; earlier-than t and c *derives_from* c&#39;. C derives_from C&#39; if and only if: there is an chain of immediate derivation relations connecting C to C&#39;.&lt;/</definition>
+        <rdfs:subPropertyOf rdf:resource="&GeneExpressionOntology;GEXPO_0000030"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#has_agent -->
+
+    <owl:ObjectProperty rdf:about="&ro;has_agent">
+        <rdfs:label rdf:datatype="&xsd;string">has agent</rdfs:label>
+        <definition rdf:datatype="&xsd;string">P has agent C if and only if: given any process p that instantiates P there is some continuant c, and some time t, such that: c instantiates C at t, c participates in p at t and is responsible for its occurence.</definition>
+        <rdfs:subPropertyOf rdf:resource="&ro;has_participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#has_part -->
+
+    <owl:ObjectProperty rdf:about="&ro;has_part">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has part</rdfs:label>
+        <definition rdf:datatype="&xsd;string">The inverse of the part of relation.</definition>
+        <rdfs:subPropertyOf rdf:resource="&GeneExpressionOntology;GEXPO_0000030"/>
+        <owl:inverseOf rdf:resource="&ro;part_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#has_participant -->
+
+    <owl:ObjectProperty rdf:about="&ro;has_participant">
+        <rdfs:label rdf:datatype="&xsd;string">has participant</rdfs:label>
+        <definition rdf:datatype="&xsd;string">has participant is a relation between a process and a material entity that participates in it. 
+P has_participant C if and only if: given any process p that instantiates P there is some continuant c, and some time t, such that: c instantiates C at t and c participates in p at t</definition>
+        <rdfs:subPropertyOf rdf:resource="&GeneExpressionOntology;GEXPO_0000030"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#located_in -->
+
+    <owl:ObjectProperty rdf:about="&ro;located_in">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">located in</rdfs:label>
+        <definition rdf:datatype="&xsd;string">located in is a relation defined between continuants.
+
+C located_in C&#39; if and only if: given any c that instantiates C at a time t, there is some c&#39; such that: c&#39; instantiates C&#39; at time t and c *located_in* c&#39;. (Here *located_in* is the instance-level location relation.)</definition>
+        <rdfs:subPropertyOf rdf:resource="&GeneExpressionOntology;GEXPO_0000030"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#part_of -->
+
+    <owl:ObjectProperty rdf:about="&ro;part_of">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">part of</rdfs:label>
+        <definition rdf:datatype="&xsd;string">part of is a relation defined between continuants or processes.
+
+For continuants: C part_of C&#39; if and only if: given any c that instantiates C at a time t, there is some c&#39; such that c&#39; instantiates C&#39; at time t, and c *part_of* c&#39; at t. For processes: P part_of P&#39; if and only if: given any p that instantiates P at a time t, there is some p&#39; such that p&#39; instantiates P&#39; at time t, and p *part_of* p&#39; at t. (Here *part_of* is the instance-level part-relation.)</definition>
+        <rdfs:subPropertyOf rdf:resource="&GeneExpressionOntology;GEXPO_0000030"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#preceded_by -->
+
+    <owl:ObjectProperty rdf:about="&ro;preceded_by">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">preceded by</rdfs:label>
+        <definition rdf:datatype="&xsd;string">preceded by is a relation defined between processes to represent that the occurence of one process is preceded by the occurence of the another one.
+
+P preceded_by P&#39; if and only if: given any process p that instantiates P at a time t, there is some process p&#39; such that p&#39; instantiates P&#39; at time t&#39;, and t&#39; is earlier than t.</definition>
+        <rdfs:subPropertyOf rdf:resource="&GeneExpressionOntology;GEXPO_0000030"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000001 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000001">
+        <rdfs:label rdf:datatype="&xsd;string">biological experimental process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000028"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000031"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000018"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">A biological experimental process is a biological procedure carried out with biological material or inside a computer.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000002 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000002">
+        <rdfs:label rdf:datatype="&xsd;string">gene expression measurement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000019"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Gene expression measurement refers to quantifying the level at which a particular gene is expressed within a cell, tissue or organism, i.e., the quantity of functional gene products produced by the gene.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000003 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000003">
+        <rdfs:label rdf:datatype="&xsd;string">hybridization-based gene expression measurement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">hybridization-based gene expression measurement is a biological experimental process aiming at quantifying the amount of functional gene products present in a sample through hybridization. </definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000004 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000004">
+        <rdfs:label rdf:datatype="&xsd;string">DNA microarray experimental process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0001171"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">DNA microarray experimental process is a biological experimental process aiming at quantifying the amount of functional gene products present in a sample through a DNA microarray experiment. A DNA microarray is a collection of DNA spots containing specific DNA sequences (probes) attached to a solid surface. The probes are used to hybridize a cDNA or RNA sample (called target) under high-stringency conditions. Fluorescently labeled target sequences that bind to probe sequences generate signals that depend on the strength of the hybridization determined by the number of paired bases, the hybridization conditions (such as temperature), and washing after hybridization. The total strength of the signal from a spot (feature) depends on the amount of target sample binding to the probes present on that spot. Microarrays use relative quantization in which the intensity of a feature is compared to the intensity of the same feature under a different condition, and the identity of the feature is known by its position. The relative intensity determines abundance of functional gene products produced by genes in different conditions. DNA microarrays can be used to measure the expression levels of large numbers of genes simultaneously.  
+
+
+</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000005 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000005">
+        <rdfs:label rdf:datatype="&xsd;string">one-color microarray experimental process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">One-color microarray experimental process consists in the hybridization of a DNA microarray with cDNA prepared from a single sample which is labeled with a fluorophore. The labeled sample is hybridized to the microarray that is then scanned in a microarray scanner to visualize fluorescence of the fluorophore after excitation with a laser beam of a defined wavelength. It provides intensity data for each probe or probe set indicating a relative level of hybridization with the labeled target, i.e., it does not indicate the abundance level of a gene, but a relative abundance when compared to other samples or conditions when processed in the same experiment.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000006 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000006">
+        <rdfs:label rdf:datatype="&xsd;string">two-color microarray experimental process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Two-color microarray experiment consists in the hybridization of a DNA microarray with cDNA prepared from two samples to be compared, so that the samples are labeled with two different fluorophores. The two labeled cDNA samples are mixed and hybridized to a single microarray that is then scanned in a microarray scanner to visualize fluorescence of the two fluorophores after excitation with a laser beam of a defined wavelength. Relative intensities of each fluorophore may then be used in ratio-based analysis to identify up-regulated and down-regulated genes.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000007 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000007">
+        <rdfs:label rdf:datatype="&xsd;string">hybridization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000348"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Hybridization is the process of establishing a non-covalent, sequence-specific interaction between two or more complementary strands of nucleic acids into a single hybrid. Hybridization is strongly related to the property of complementary nucleic acid sequences: complementary nucleic acid sequences pair with each other by forming hydrogen bonds between complementary nucleotide base pairs.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000008 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000008">
+        <rdfs:label rdf:datatype="&xsd;string">gene expression profiling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000001"/>
+        <definition rdf:datatype="&xsd;string">Gene expression profiling is the measurement of the expression levels of many genes at once.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000009 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000009">
+        <rdfs:label rdf:datatype="&xsd;string">RNA extraction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000233"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">RNA extraction is the process by which RNA molecules of interest are extracted from a cell or biological tissue.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000010 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000010">
+        <rdfs:label rdf:datatype="&xsd;string">cDNA labeling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0001171"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000756"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">cDNA labeling is the process by which cDNA molecules are labeled with fluorescent dyes.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000011 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000011">
+        <rdfs:label rdf:datatype="&xsd;string">microarray manufacturing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000051"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Chip manufacturing refers to the process of producing a chip of microarray with DNA molecules (probes) of interest.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000012 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000012">
+        <rdfs:label rdf:datatype="&xsd;string">nucleotide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001411"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0001236"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">A nucleotide is a molecule containing a nitrogenous base, a five-carbon sugar (either ribose or 2&#39;-deoxyribose) and one phosphate group. It corresponds to a single unit of a nucleic acid.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000013 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000013">
+        <rdfs:label rdf:datatype="&xsd;string">biopolymer</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0001411"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">A biopolymer is a large molecule (macromolecule) composed of repeating structural units which was produced by a living organism.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000014 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000014">
+        <rdfs:label rdf:datatype="&xsd;string">biopolymer quantity</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000033"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Biopolymer quantity represents the quantity of some biopolymer.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000015 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000015">
+        <rdfs:label rdf:datatype="&xsd;string">gene expression value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000014"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000033"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000233"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Gene expression value refers to the quantity of functional gene products produced from a gene.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000016 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000016">
+        <rdfs:label rdf:datatype="&xsd;string">ratio intensity-based value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000029"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Ratio intensity-based value refers to the relationship between the relative levels of hybridization of DNA probes with two different labeled cDNA targets in a DNA microarray experiment.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000017 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000017">
+        <rdfs:label rdf:datatype="&xsd;string">absolute intensity-based value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000029"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Absolute intensity-based value refers to the absolute level of hybridization of probes (DNA) with the labeled target (cDNA) in a DNA microarray experiment.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000018 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000018">
+        <rdfs:label rdf:datatype="&xsd;string">experimental condition</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Experimental condition represents some condition by which an experiment is submitted and can be affected by.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000019 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000019">
+        <rdfs:label rdf:datatype="&xsd;string">gene expression measurement platform</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Gene expression measurement platform refers to a platform (hardware and software) that allows the manipulation and measurement of gene expression, generating gene expression data.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000020 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000020">
+        <rdfs:label rdf:datatype="&xsd;string">microarray platform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000019"/>
+        <definition rdf:datatype="&xsd;string">Microarray platform is a gene expression measurement platform that allows the manipulation and measurement of gene expression through microarrays technology.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000021 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000021">
+        <rdfs:label rdf:datatype="&xsd;string">one-color microarray platform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000020"/>
+        <definition rdf:datatype="&xsd;string">One-color microarray platform is a microarray platform that performs one-color microarrays experiments.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000022 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000022">
+        <rdfs:label rdf:datatype="&xsd;string">two-color microarray platform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000020"/>
+        <definition rdf:datatype="&xsd;string">Two-color microarray platform is a microarray platform that performs two-color microarrays experiments.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000023 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000023">
+        <rdfs:label rdf:datatype="&xsd;string">oligonucleotide chip manufacturing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000011"/>
+        <definition rdf:datatype="&xsd;string">Oligonucleotide chip manufacturing is a process of chip manufacturing in which the probes of interest are printed in the array, i.e., the probes are directly synthesized on the chip surface.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000024 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000024">
+        <rdfs:label rdf:datatype="&xsd;string">spotted chip manufacturing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000011"/>
+        <definition rdf:datatype="&xsd;string">Spotted chip manufacturing is a process of chip manufacturing in which the probes of interest are synthesized prior to deposition on the array surface and are then &quot;spotted&quot; onto chip.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000025 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000025">
+        <rdfs:label rdf:datatype="&xsd;string">microarray gene expression profiling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000008"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000026"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Microarray gene expression profiling refers to the process by which the image generated from microarray scanning is gridded with a template and the intensities of the features (pixels) are quantified.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000026 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000026">
+        <rdfs:label rdf:datatype="&xsd;string">microarray image acquisition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000756"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Microarray image acquisition refers to the process of exciting the dye of cDNA with a laser and scanning a microarray to measure its emission.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000027 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000027">
+        <rdfs:label rdf:datatype="&xsd;string">microarray washing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Microarray washing is the process of washing microarray in order to remove unhybridized cDNA molecules.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000028 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000028">
+        <rdfs:label rdf:datatype="&xsd;string">process</rdfs:label>
+        <definition rdf:datatype="&xsd;string">A process is a series of actions taken in order to achieve a result.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000029 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000029">
+        <rdfs:label rdf:datatype="&xsd;string">fluorescence intensity-based value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000033"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000756"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Fluorescence intensity-based value refers to the level of hybridization of DNA probes with fluorescently labeled cDNA targets in a DNA microarray experiment.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000034 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000034">
+        <rdfs:label rdf:datatype="&xsd;string">cDNA read</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;derives_from"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000756"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000057"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">cDNA read is a cDNA sequence obtained from a single sequencing experiment.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000043 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000043">
+        <rdfs:label rdf:datatype="&xsd;string">sequencing-based gene expression measurement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Sequencing-based gene expression measurement is a biological experimental process aiming at quantifying the amount of functional gene products present in a sample through sequencing. </definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000044 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000044">
+        <rdfs:label rdf:datatype="&xsd;string">RNA-Seq experimental process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000043"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000057"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000052"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000062"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0001171"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">RNA Sequencing (RNA-Seq) experimental process is a biological experimental process aiming at quantifying the amount of functional gene products present in a sample through a RNA-Seq experiment. RNA-Seq refers to a technique that utilizes next-generation sequencing (NGS) technologies to quantify the expression of transcripts.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000052 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000052">
+        <rdfs:label rdf:datatype="&xsd;string">cDNA library with adaptors preparation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000756"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0001171"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">cDNA library with adaptors preparation refers to the process of converting a population of RNA molecules (total or fractionated) to a library of cDNA fragments with adaptors attached to one (single-end cDNAs) or both ends (pair-end cDNAs).</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000057 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000057">
+        <rdfs:label rdf:datatype="&xsd;string">cDNA next-generation sequencing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000058"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000063"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000756"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">cDNA next-generation sequencing refers to the sequencing of cDNA molecules using next-generation sequencing technologies.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000058 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000058">
+        <rdfs:label rdf:datatype="&xsd;string">next-generation sequencing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000059"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000062"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Next-generation sequencing refers to a non Sanger-based approach that allows the high-throughput sequencing of nucleic acids molecules by parallelizing the sequencing process.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000059 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000059">
+        <rdfs:label rdf:datatype="&xsd;string">sequencing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_agent"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000060"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Sequencing is the process of &quot;reading&quot; the information in a nucleic acid molecule in order to determine the order of nucleotide bases (adenine, guanine, cytosine, and thymine) of this molecule. Sequencing results in a symbolic linear representation, called &quot;sequence&quot;, which summarizes the primary structure of the sequenced molecule.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000060 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000060">
+        <rdfs:label rdf:datatype="&xsd;string">sequencing platform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000019"/>
+        <definition rdf:datatype="&xsd;string">Sequencing platform is a platform (hardware and/or software) that allows the sequencing of nucleic acids molecules.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000062 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000062">
+        <rdfs:label rdf:datatype="&xsd;string">next-generation sequencing platform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000060"/>
+        <definition rdf:datatype="&xsd;string">Next-generation sequencing platform is a platform (hardware and/or software) that allows the high-throughput sequencing of nucleic acids molecules.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#GEXPO_0000063 -->
+
+    <owl:Class rdf:about="&GeneExpressionOntology;GEXPO_0000063">
+        <rdfs:label rdf:datatype="&xsd;string">cDNA amplification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000756"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">cDNA amplification refers to the process of amplifying a cDNA molecule in order to produce copies of this cDNA molecule.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0001171 -->
+
+    <owl:Class rdf:about="&GO;GO_0001171">
+        <rdfs:label rdf:datatype="&xsd;string">reverse transcription</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000233"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">A DNA synthesis process that uses RNA as the initial template for synthesis of DNA, but which also includes an RNase activity to remove the RNA strand of an RNA-DNA heteroduplex produced by the RNA-dependent synthesis step and use of the initial DNA strand as a template for DNA synthesis. [GO:0001171]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0006351 -->
+
+    <owl:Class rdf:about="&GO;GO_0006351">
+        <rdfs:label rdf:datatype="&xsd;string">transcription</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000704"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0010467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Transcription refers to the cellular synthesis of RNA on a template of DNA. [GO:0006351]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0006396 -->
+
+    <owl:Class rdf:about="&GO;GO_0006396">
+        <rdfs:label rdf:datatype="&xsd;string">RNA processing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0006351"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0010467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000185"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">RNA processing represents any process involved in the conversion of one or more primary RNA transcripts into one or more mature RNA molecules. [GO:0006396]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0006412 -->
+
+    <owl:Class rdf:about="&GO;GO_0006412">
+        <rdfs:label rdf:datatype="&xsd;string">translation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0010467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000234"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0006396"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Translation refers to the cellular metabolic process in which a protein is formed, using the sequence of a mature mRNA molecule to specify the sequence of amino acids in a polypeptide chain. Translation is mediated by the ribosome, and begins with the formation of a ternary complex between aminoacylated initiator methionine tRNA, GTP, and initiation factor 2, which subsequently associates with the small subunit of the ribosome and an mRNA. Translation ends with the release of a polypeptide chain from the ribosome. [GO:0006412]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0008150 -->
+
+    <owl:Class rdf:about="&GO;GO_0008150">
+        <rdfs:label rdf:datatype="&xsd;string">biological process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000028"/>
+        <definition rdf:datatype="&xsd;string">Biological process is any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end. [GO:0008150]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0010467 -->
+
+    <owl:Class rdf:about="&GO;GO_0010467">
+        <rdfs:label rdf:datatype="&xsd;string">gene expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <definition rdf:datatype="&xsd;string">Gene expression refers to the process in which a gene&#39;s sequence is converted into a mature gene product or products (proteins or RNA). This includes the production of an RNA transcript as well as any processing to produce a mature RNA product or an mRNA (for protein-coding genes) and the translation of that mRNA into protein. Some protein processing events may be included when they are required to form an active form of a product from an inactive precursor form. [GO:0010467]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/GO#GO_0051604 -->
+
+    <owl:Class rdf:about="&GO;GO_0051604">
+        <rdfs:label rdf:datatype="&xsd;string">protein maturation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GO;GO_0008150"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000104"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;preceded_by"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0006412"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0010467"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Protein maturation represents any process leading to the attainment of the full functional capacity of a protein. [GO:0051604]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000051 -->
+
+    <owl:Class rdf:about="&SO;SO_0000051">
+        <rdfs:label rdf:datatype="&xsd;string">probe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000013"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;derives_from"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000352"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">A probe is a DNA sequence used experimentally to detect the presence or absence of a complementary nucleic acid. [SO:0000051]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000104 -->
+
+    <owl:Class rdf:about="&SO;SO_0000104">
+        <rdfs:label rdf:datatype="&xsd;string">protein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000013"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0006412"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0001237"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Protein is a sequence of amino acids linked by peptide bonds which may lack appreciable tertiary structure and may not be liable to irreversible denaturation. [SO:0000104]</definition>
+        <synonym rdf:datatype="&xsd;string">polypeptide</synonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000150 -->
+
+    <owl:Class rdf:about="&SO;SO_0000150">
+        <rdfs:label rdf:datatype="&xsd;string">read</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000013"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Read is a sequence obtained from a single sequencing experiment. [SO:0000150]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000185 -->
+
+    <owl:Class rdf:about="&SO;SO_0000185">
+        <rdfs:label rdf:datatype="&xsd;string">primary transcript</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000673"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0006351"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Primary transcript is a RNA molecule synthesized on a DNA or RNA template by a RNA polymerase that in its initial state requires modification to be functional. [SO:0000185]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000233 -->
+
+    <owl:Class rdf:about="&SO;SO_0000233">
+        <rdfs:label rdf:datatype="&xsd;string">mature transcript</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000673"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0006396"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">A mature transcript  is a RNA molecule synthesized on a DNA or RNA template by a RNA polymerase which has undergone the necessary modifications, if any, for its function. In eukaryotes this includes, for example, processing of introns, cleavage, base modification, and modifications to the 5&#39; and/or the 3&#39; ends, other than addition of bases. In bacteria functional mRNAs are usually not modified. [SO:0000233]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000234 -->
+
+    <owl:Class rdf:about="&SO;SO_0000234">
+        <rdfs:label rdf:datatype="&xsd;string">mRNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000233"/>
+        <definition rdf:datatype="&xsd;string">Messenger RNA (mRNA) is the intermediate molecule between DNA and protein. It includes UTR and coding sequences. It does not contain introns. [SO:0000234]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000348 -->
+
+    <owl:Class rdf:about="&SO;SO_0000348">
+        <rdfs:label rdf:datatype="&xsd;string">nucleic acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&GeneExpressionOntology;GEXPO_0000013"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&GeneExpressionOntology;GEXPO_0000012"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Nucleic acid is a sequence consisting of nucleobases bound to repeating units. The forms found in nature are deoxyribonucleic acid (DNA), where the repeating units are 2-deoxy-D-ribose rings connected to a phosphate backbone, and ribonucleic acid (RNA), where the repeating units are D-ribose rings connected to a phosphate backbone. [SO:0000348]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000352 -->
+
+    <owl:Class rdf:about="&SO;SO_0000352">
+        <rdfs:label rdf:datatype="&xsd;string">DNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000348"/>
+        <definition rdf:datatype="&xsd;string">DNA is a sequence consisting of nucleobases bound to a repeating unit made of a 2-deoxy-D-ribose ring connected to a phosphate backbone. [SO:0000352]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000356 -->
+
+    <owl:Class rdf:about="&SO;SO_0000356">
+        <rdfs:label rdf:datatype="&xsd;string">RNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000348"/>
+        <definition rdf:datatype="&xsd;string">RNA is a sequence consisting of nucleobases bound to a repeating unit made of a D-ribose ring connected to a phosphate backbone. [SO:0000356]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000655 -->
+
+    <owl:Class rdf:about="&SO;SO_0000655">
+        <rdfs:label rdf:datatype="&xsd;string">ncRNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000233"/>
+        <definition rdf:datatype="&xsd;string">Non-coding RNA (ncRNA) is a RNA transcript that does not encode for a protein. [SO:0000655]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000673 -->
+
+    <owl:Class rdf:about="&SO;SO_0000673">
+        <rdfs:label rdf:datatype="&xsd;string">transcript</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000356"/>
+        <definition rdf:datatype="&xsd;string">Transcript is a RNA synthesized on a DNA or RNA template by a RNA polymerase. [SO:0000673]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000704 -->
+
+    <owl:Class rdf:about="&SO;SO_0000704">
+        <rdfs:label rdf:datatype="&xsd;string">gene</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001411"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;located_in"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000352"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">Gene is a region (or regions) that includes all of the sequence elements necessary to encode a functional transcript. A gene may include regulatory regions, transcribed regions and/or other functional sequence regions. [SO:0000704]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0000756 -->
+
+    <owl:Class rdf:about="&SO;SO_0000756">
+        <rdfs:label rdf:datatype="&xsd;string">cDNA</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0000352"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;derives_from"/>
+                <owl:someValuesFrom rdf:resource="&SO;SO_0000233"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&GeneExpressionOntology;GEXPO_0000032"/>
+                <owl:someValuesFrom rdf:resource="&GO;GO_0001171"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition rdf:datatype="&xsd;string">cDNA is a DNA synthesized by reverse transcriptase using a RNA as template. [SO:0000756]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0001236 -->
+
+    <owl:Class rdf:about="&SO;SO_0001236">
+        <rdfs:label rdf:datatype="&xsd;string">base</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001411"/>
+        <definition rdf:datatype="&xsd;string">Nitrogenous base is a nitrogen-containing molecule having the chemical properties of a base. It corresponds to a single unit of a nucleotide polymer. [SO:0001236]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0001237 -->
+
+    <owl:Class rdf:about="&SO;SO_0001237">
+        <rdfs:label rdf:datatype="&xsd;string">amino acid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&SO;SO_0001411"/>
+        <definition rdf:datatype="&xsd;string">Amino acid is a molecule containing an amine group, a carboxylic acid group and a side-chain that is specific to each amino acid. It corresponds to a single amino acid residue in a polypeptide. [SO:0001237]</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/obo/owl/SO#SO_0001411 -->
+
+    <owl:Class rdf:about="&SO;SO_0001411">
+        <rdfs:label rdf:datatype="&xsd;string">biological region</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Biological region is a region defined by its disposition to be involved in a biological process. [SO:0001411]</definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#Affymetrix -->
+
+    <owl:NamedIndividual rdf:about="&GeneExpressionOntology;Affymetrix">
+        <rdf:type rdf:resource="&GeneExpressionOntology;GEXPO_0000021"/>
+        <rdfs:label rdf:datatype="&xsd;string">Affymetrix</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Affymetrix is an one-color microarray platform produced by the Affymetrix Company. This platform includes chips (GeneChips) for analysis of one-color DNA microarray and the Affymetrix GeneChip Operating Software for managing produced Affymetrix microarray data.</definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#Agilent -->
+
+    <owl:NamedIndividual rdf:about="&GeneExpressionOntology;Agilent">
+        <rdf:type rdf:resource="&GeneExpressionOntology;GEXPO_0000021"/>
+        <rdf:type rdf:resource="&GeneExpressionOntology;GEXPO_0000022"/>
+        <rdfs:label rdf:datatype="&xsd;string">Agilent</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Agilent is a microarray platform that enables analysis of one-color and two-color microarrays.</definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#Applied_Biosystems_SOLiD -->
+
+    <owl:NamedIndividual rdf:about="&GeneExpressionOntology;Applied_Biosystems_SOLiD">
+        <rdf:type rdf:resource="&GeneExpressionOntology;GEXPO_0000062"/>
+        <rdfs:label rdf:datatype="&xsd;string">Applied Biosystems SOLiD</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Applied Biosystems SOLiDis a massively parallel next-generation sequencing platform that enables highly accurate sequencing and support a wide range of research applications such as exome sequencing and RNA-Seq on a pay-per-lane basis. It offers platform-optimized sample preparation, individually configurable sequencing lanes, superior sequencing chemistry, and biologist-friendly data analysis solutions.</definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#Illumina -->
+
+    <owl:NamedIndividual rdf:about="&GeneExpressionOntology;Illumina">
+        <rdf:type rdf:resource="&GeneExpressionOntology;GEXPO_0000021"/>
+        <rdfs:label rdf:datatype="&xsd;string">Illumina</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Illumina is an one-color microarray platform.</definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#Illumina_Genome_Analyzer -->
+
+    <owl:NamedIndividual rdf:about="&GeneExpressionOntology;Illumina_Genome_Analyzer">
+        <rdf:type rdf:resource="&GeneExpressionOntology;GEXPO_0000062"/>
+        <rdfs:label rdf:datatype="&xsd;string">Illumina Genome Analyzer</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Illumina Genome Analyzer is a next-generation sequencing platform that performs sequencing by synthesis (SBS). TruSeq technology supports massively parallel sequencing using a proprietary reversible terminator-based method that enables detection of single bases as they are incorporated into growing DNA strands. A fluorescently-labeled terminator is imaged as each dNTP is added and then cleaved to allow incorporation of the next base. Since all four reversible terminator-bound dNTPs are present during each sequencing cycle, natural competition minimizes incorporation bias. The end result is true base-by-base sequencing that enables the industry’s most accurate data for a broad range of applications.</definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dcm.ffclrp.usp.br/lssb/geas/ontologies/GEXPO.owl#Roche/454FLX -->
+
+    <owl:NamedIndividual rdf:about="&GeneExpressionOntology;Roche/454FLX">
+        <rdf:type rdf:resource="&GeneExpressionOntology;GEXPO_0000062"/>
+        <rdfs:label rdf:datatype="&xsd;string">Roche/454FLX</rdfs:label>
+        <definition rdf:datatype="&xsd;string">Roche/454FLX is a next-generation sequencing platform produced by the Roche Company that get comprehensive genome coverage with long 400 bp sequencing reads and quickly proceed from DNA to discovery with fast sequencing runs and straightforward data analysis on the attendant computer.</definition>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

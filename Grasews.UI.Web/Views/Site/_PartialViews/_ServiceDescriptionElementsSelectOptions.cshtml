@@ -1,0 +1,129 @@
+﻿@model Grasews.API.Models.ParseWsdl_ApiResponseViewModel
+
+<option id="opt-wsdl-element-select" value="none">@WebResource.Select</option>
+
+@if (Model.WsdlInterfaces != null && Model.WsdlInterfaces.Any())
+{
+    var optionLevel = 0;
+
+    foreach (var wsdlInterface in Model.WsdlInterfaces)
+    {
+        <option id="opt-wsdl-element-@wsdlInterface.Id" class="option-level" level="@optionLevel" value="@wsdlInterface.Id" wsdl-element-type="@wsdlInterface.ElementType" id-wsdl-element-type="@wsdlInterface.IdElementType">
+            [i] @wsdlInterface.ToString()
+        </option>
+
+        if (wsdlInterface.WsdlOperations != null && wsdlInterface.WsdlOperations.Any())
+        {
+            optionLevel = 1;
+
+            foreach (var wsdlOperation in wsdlInterface.WsdlOperations)
+            {
+                <option id="opt-wsdl-element-@wsdlOperation.Id" class="option-level" level="@optionLevel" value="@wsdlOperation.Id" wsdl-element-type="@wsdlOperation.ElementType" id-wsdl-element-type="@wsdlOperation.IdElementType">
+                    [op] @wsdlOperation.ToString()
+                </option>
+
+                if (wsdlOperation.WsdlInputs != null && wsdlOperation.WsdlInputs.Any())
+                {
+                    optionLevel = 2;
+
+                    foreach (var wsdlInput in wsdlOperation.WsdlInputs)
+                    {
+                        <option id="opt-wsdl-element-@wsdlInput.Id" class="option-level" level="@optionLevel" value="@wsdlInput.Id" wsdl-element-type="@wsdlInput.ElementType" id-wsdl-element-type="@wsdlInput.IdElementType" disabled="disabled">
+                            [in] @wsdlInput.ToString()
+                        </option>
+
+                        if (wsdlInput.XsdComplexType != null)
+                        {
+                            optionLevel = 3;
+
+                            <option id="opt-wsdl-element-@wsdlInput.XsdComplexType.Id" class="option-level" level="@optionLevel" value="@wsdlInput.XsdComplexType.Id" wsdl-element-type="@wsdlInput.XsdComplexType.ElementType" id-wsdl-element-type="@wsdlInput.XsdComplexType.IdElementType">
+                                [c-t] @wsdlInput.XsdComplexType.ToString()
+                            </option>
+
+                            if (wsdlInput.XsdComplexType.XsdSimpleTypes != null && wsdlInput.XsdComplexType.XsdSimpleTypes.Any())
+                            {
+                                optionLevel = 4;
+
+                                foreach (var xsdSimpleType in wsdlInput.XsdComplexType.XsdSimpleTypes)
+                                {
+                                    <option id="opt-wsdl-element-@xsdSimpleType.Id" class="option-level" level="@optionLevel" value="@xsdSimpleType.Id" wsdl-element-type="@xsdSimpleType.ElementType" id-wsdl-element-type="@xsdSimpleType.IdElementType">
+                                        [s-t] @xsdSimpleType.ToString()
+                                    </option>
+                                }
+                            }
+                        }
+
+                        if (wsdlInput.XsdSimpleType != null)
+                        {
+                            <option id="opt-wsdl-element-@wsdlInput.XsdSimpleType.Id" class="option-level" level="@optionLevel" value="@wsdlInput.XsdSimpleType.Id" wsdl-element-type="@wsdlInput.XsdSimpleType.ElementType" id-wsdl-element-type="@wsdlInput.XsdSimpleType.IdElementType">
+                                [s-t] @wsdlInput.XsdSimpleType.ToString()
+                            </option>
+                        }
+                    }
+                }
+
+                if (wsdlOperation.WsdlOutputs != null && wsdlOperation.WsdlOutputs.Any())
+                {
+                    optionLevel = 2;
+
+                    foreach (var wsdlOutput in wsdlOperation.WsdlOutputs)
+                    {
+                        <option id="opt-wsdl-element-@wsdlOutput.Id" class="option-level" level="@optionLevel" value="@wsdlOutput.Id" wsdl-element-type="@wsdlOutput.ElementType" id-wsdl-element-type="@wsdlOutput.IdElementType" disabled="disabled">
+                            [out] @wsdlOutput.ToString()
+                        </option>
+
+                        if (wsdlOutput.XsdComplexType != null)
+                        {
+                            optionLevel = 3;
+
+                            <option id="opt-wsdl-element-@wsdlOutput.XsdComplexType.Id" class="option-level" level="@optionLevel" value="@wsdlOutput.XsdComplexType.Id" wsdl-element-type="@wsdlOutput.XsdComplexType.ElementType" id-wsdl-element-type="@wsdlOutput.XsdComplexType.IdElementType">
+                            [c-t] @wsdlOutput.XsdComplexType.ToString()
+                            </option>
+
+                            @Html.Partial("~/Views/Site/_PartialViews/_ChildrenXsdComplexTypeSelectOptions.cshtml", new Grasews.Web.ViewModels.ChildrenXsdComplexTypeSelectOptionsViewModel { ChildrenXsdComplexTypes = wsdlOutput.XsdComplexType.ChildrenXsdComplexTypes, Level = optionLevel + 1 })
+
+                            if (wsdlOutput.XsdComplexType.XsdSimpleTypes != null && wsdlOutput.XsdComplexType.XsdSimpleTypes.Any())
+                            {
+                                optionLevel = 4;
+
+                                foreach (var xsdSimpleType in wsdlOutput.XsdComplexType.XsdSimpleTypes)
+                                {
+                                    <option id="opt-wsdl-element-@xsdSimpleType.Id" class="option-level" level="@optionLevel" value="@xsdSimpleType.Id" wsdl-element-type="@xsdSimpleType.ElementType" id-wsdl-element-type="@xsdSimpleType.IdElementType">
+                                        [s-t] @xsdSimpleType.ToString()
+                                    </option>
+                                }
+                            }
+                        }
+
+                        if (wsdlOutput.XsdSimpleType != null)
+                        {
+                            optionLevel = 3;
+
+                            <option id="opt-wsdl-element-@wsdlOutput.XsdSimpleType.Id" class="option-level" level="@optionLevel" value="@wsdlOutput.XsdSimpleType.Id" wsdl-element-type="@wsdlOutput.XsdSimpleType.ElementType" id-wsdl-element-type="@wsdlOutput.XsdSimpleType.Id">
+                                [s-t] @wsdlOutput.XsdSimpleType.ToString()
+                            </option>
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+<script>
+    $(document).ready(
+        function () {
+            $('.option-level').each(
+                function () {
+                    var level = parseInt($(this).attr('level'));
+                    var newValue = '';
+
+                    for (var i = 0; i < level * 5; i++) {
+                        newValue = newValue + '&nbsp;';
+                    }
+                    $(this).text(newValue + $(this).text());
+                }
+            );
+        }
+    );
+</script>

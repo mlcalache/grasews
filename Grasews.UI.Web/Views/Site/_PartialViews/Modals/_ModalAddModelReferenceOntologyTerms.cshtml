@@ -1,0 +1,7 @@
+﻿@model IEnumerable<Grasews.API.Models.Ontology_ApiResponseViewModel.OntologyTermResponseViewModel>
+
+<option id="opt-ontology-select" value="none">Select...</option>
+@foreach (var ontologyTerm in Model)
+{
+    <option id="opt-ontology-@ontologyTerm.Id" value="@ontologyTerm.Id">@ontologyTerm.TermName</option>
+}

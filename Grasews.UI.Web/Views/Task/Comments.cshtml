@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Grasews.Web.ViewModels.Task_Comment_MvcViewModel>
+
+@{
+    ViewBag.Title = $"Comments for {ViewBag.IdTask}";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "TaskComment")
+</p>
+<table class="table">
+    <tr>
+        <th colspan="2">@ViewBag.TaskDescription</th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", "TaskComment", new { idTaskComment = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", "TaskComment", new { idTaskComment = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script>
+    $(function () {
+        $("#grasews-admin-navbar li").removeClass("active");
+        $("#nav-tasks").addClass("active");
+    });
+</script>

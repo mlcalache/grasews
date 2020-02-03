@@ -1,0 +1,41 @@
+﻿@using Grasews.Web.ViewModels
+
+@section scripts
+{
+    @helper ShowToastMessages(Toastr toastr)
+    {
+        if (toastr != null)
+        {
+            <script>
+                $(document)
+                    .ready(function() {
+                        toastr.options.closeButton = '@toastr.ShowCloseButton';
+                        toastr.options.newestOnTop = '@toastr.ShowNewestOnTop';
+                        toastr.options.escapeHtml = false;
+                        toastr.options.showMethod = 'slideDown';
+                        toastr.options.preventDuplicates = true;
+
+                        @foreach (ToastMessage_MvcResponseViewModel message in toastr.ToastMessages)
+                        {
+                            string toastTypeValue = message.ToastType.ToString("F").ToLower();
+                            /* options here */
+                            @: var optionsOverride = { "closeButton": true, "newestOnTop": true, "timeOut": "@toastr.Timeout" };
+
+                            if (message.IsSticky)
+                            {
+                                @:optionsOverride.timeOut = 0;
+                                @:optionsOverride.extendTimeOut = 0;
+                            }
+                            @: toastr['@toastTypeValue']('@message.Message', '@message.Title', optionsOverride);
+                        }
+                    });
+            </script>
+        }
+    }
+}
+@if (TempData.ContainsKey("Toastr"))
+{
+    Toastr toastr = TempData["Toastr"] as Toastr;
+    @ShowToastMessages(toastr)
+    ;
+}

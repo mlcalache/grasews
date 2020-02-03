@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Grasews.UI.WebServiceSamples.ColorService" CodeBehind="ColorService.svc.cs" %>

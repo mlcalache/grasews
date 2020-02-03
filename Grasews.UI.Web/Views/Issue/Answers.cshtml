@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Grasews.Web.ViewModels.IssueAnswer_MvcViewModel>
+
+@{
+    ViewBag.Title = $"Answers for {ViewBag.IdIssue}";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "IssueAnswer")
+</p>
+<table class="table">
+    <tr>
+        <th colspan="2">@ViewBag.IssueDescription</th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Answer)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", "IssueAnswer", new { idIssueAnswer = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", "IssueAnswer", new { idIssueAnswer = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script>
+    $(function () {
+        $("#grasews-admin-navbar li").removeClass("active");
+        $("#nav-tasks").addClass("active");
+    });
+</script>

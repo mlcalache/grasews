@@ -1,0 +1,80 @@
+﻿@model Grasews.Web.ViewModels.SharedServiceDescription_MvcViewModel
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>@ViewBag.Title</h3>
+<hr />
+<p>
+    <a href="@Url.Action("Index", "ServiceDescription")" class="btn btn-sm btn-default">
+        <span class="fa fa-arrow-left" aria-hidden="true"></span>&nbsp;@WebResource.BackToList
+    </a>
+    @if (Model.ServiceDescription_UserViewModels != null && Model.ServiceDescription_UserViewModels.Count() > 0)
+    {
+        <a href="@Url.Action("RemoveAllSharing", "ServiceDescription", new { idServiceDescription = Model.IdServiceDescription })" class="btn btn-sm btn-danger">
+            <span class="fa fa-remove" aria-hidden="true"></span>&nbsp;@WebResource.RemoveAllSharing
+        </a>
+    }
+</p>
+
+<hr />
+@if (Model.ServiceDescription_UserViewModels != null && Model.ServiceDescription_UserViewModels.Count() > 0)
+{
+    var first = @Model.ServiceDescription_UserViewModels.FirstOrDefault();
+
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => first.ServiceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => first.SharedUserUsername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => first.SharedUserEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => first.SharedUserFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => first.SharedUserLastName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.ServiceDescription_UserViewModels)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServiceName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SharedUserUsername)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SharedUserEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SharedUserFirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SharedUserLastName)
+                </td>
+                <td class="text-right">
+                    <a href="@Url.Action("RemoveSharing", "ServiceDescription", new { idServiceDescription = item.IdServiceDescription, idSharedUser = item.IdSharedUser })" class="btn btn-sm btn-danger">
+                        <span class="fa fa-remove" aria-hidden="true"></span>&nbsp;@WebResource.RemoveSharing
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+<script>
+    $(function () {
+        $("#grasews-admin-navbar li").removeClass("active");
+        $("#nav-service-descriptions").addClass("active");
+    });
+</script>

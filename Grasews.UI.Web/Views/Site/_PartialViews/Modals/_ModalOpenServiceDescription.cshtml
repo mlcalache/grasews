@@ -1,0 +1,58 @@
+﻿@model Grasews.API.Models.ServiceDescriptionCollection_ApiResponseViewModel
+
+<div class="modal fade" id="modal-open-service-description" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Open a service description</h4>
+            </div>
+
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab-open-new-service-description" data-toggle="tab" id="nav-tab-open-new-service-description">New</a></li>
+                    <li><a href="#tab-open-saved-service-description" data-toggle="tab" id="nav-tab-open-saved-service-description">Saved</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab-open-new-service-description">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Open a new service description</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="file" id="fileOpenWsdl" name="fileOpenWsdl" accept=".wsdl" style="width: 100%">
+                                <p class="help-block">Only .wsdl extension files are allowed.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="lnkUploadServiceDescription" data-dismiss="modal">Upload & Open</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-open-saved-service-description">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Open a saved service description</label>
+                            </div>
+                            <div class="form-group">
+                                <select id="ddl-saved-services-descriptions" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                    <option selected='selected' value='none'>Select...</option>
+                                    @foreach (var serviceDescription in Model.ServiceDescriptionViewModels)
+                                    {
+                                        <option id="opt-service-description-@serviceDescription.Id" value="@serviceDescription.Id">@serviceDescription.ServiceName</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="lnkOpenSavedServiceDescription" data-dismiss="modal">Open</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
