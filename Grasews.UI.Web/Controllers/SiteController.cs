@@ -579,6 +579,8 @@ namespace Grasews.Web.Controllers
 
             #endregion Get the comment list for every task
 
+            ViewBag.IdUser = IdUser;
+
             return PartialView("~/Views/Site/_PartialViews/Modals/_ModalTaskList.cshtml", tasksViewModel);
         }
 

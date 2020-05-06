@@ -14,7 +14,7 @@ namespace Grasews.Web.ViewModels
         /// </summary>
         [JsonProperty(PropertyName = "email")]
         [Required]
-        [EmailAddress(ErrorMessage = "Invalid e-mail address")]
+        [EmailAddress(ErrorMessage = "Invalid e-mail address.")]
         public string Email { get; set; }
 
         /// <summary>
@@ -53,6 +53,7 @@ namespace Grasews.Web.ViewModels
         ///
         /// </summary>
         [Required]
+        //[EmailAddress(ErrorMessage = "The username consists of a valid e-mail address.")]
         [JsonProperty(PropertyName = "username", NullValueHandling = NullValueHandling.Ignore)]
         public string Username { get; set; }
     }

@@ -169,7 +169,7 @@ $(function () {
     // SignalR events : End
 
     $(window).bind('keydown', function (event) {
-        console.log('--> ' + String.fromCharCode(event.which).toLowerCase());
+        //console.log('--> ' + String.fromCharCode(event.which).toLowerCase());
         if (event.ctrlKey || event.metaKey) {
             switch (String.fromCharCode(event.which).toLowerCase()) {
                 case 's':
@@ -1382,9 +1382,11 @@ function addLiftingSchemaMapping(idWsdlElement, idWsdlElementType, idServiceDesc
 
                 hideAllServiceDescriptionsButThis(addLiftingSchemaMappingResponse.ServiceDescription.Id);
 
-                console.log(addLiftingSchemaMappingResponse.Message);
+                var message = "SAWSDL Lifting Schema Mapping added successfuly to the service description '" + addLiftingSchemaMappingResponse.serviceDescription.ServiceName + "'.";
 
-                addToastMessage(addLiftingSchemaMappingResponse.Message, "success");
+                console.log(message);
+
+                addToastMessage(message, "success");
 
                 window.dispatchEvent(notifyServiceDescriptionUpdateEvent);
             }

@@ -136,12 +136,18 @@ namespace Grasews.Application.Services
 
                 foreach (var idOntology in ontologiesUsedByServiceDescription.Select(x => x.IdOntology).ToList())
                 {
-                    newUser.Ontology_Users.Add(new Ontology_User { IdOntology = idOntology });
+                    if (!newUser.Ontology_Users.Any(x => x.IdOntology == idOntology))
+                    {
+                        newUser.Ontology_Users.Add(new Ontology_User { IdOntology = idOntology });
+                    }
                 }
 
                 foreach (var idOntology in ontologiesSharedByOpenedInProject.Select(x => x.IdOntology).ToList())
                 {
-                    newUser.Ontology_Users.Add(new Ontology_User { IdOntology = idOntology });
+                    if (!newUser.Ontology_Users.Any(x => x.IdOntology == idOntology))
+                    {
+                        newUser.Ontology_Users.Add(new Ontology_User { IdOntology = idOntology });
+                    }
                 }
             }
 

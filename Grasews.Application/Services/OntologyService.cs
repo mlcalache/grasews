@@ -268,11 +268,11 @@ namespace Grasews.Application.Services
         {
             var ontology = _ontologyRepository.Get(idOntology);
 
-            ParseXml(ontology);
+            //ParseXml(ontology);
 
-            var levels = ontology.OntologyTerms.ToList().Max(x => x.Depth.Count());
+            //var levels = ontology.OntologyTerms.ToList().Max(x => x.Depth.Count());
 
-            ontology = _ontologyRepository.GetComplete(idOntology, levels);
+            //ontology = _ontologyRepository.GetComplete(idOntology, levels);
 
             return ontology;
         }

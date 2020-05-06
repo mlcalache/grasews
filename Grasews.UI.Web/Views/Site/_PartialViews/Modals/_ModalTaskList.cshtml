@@ -80,23 +80,26 @@
                                                             @task.Description
                                                         </div>
                                                         @*<div class="col-sm-4" style="text-align: right;">
-                                                            <button type="button" name="btn-delete-task" id="btn-delete-task-@task.Id" class="btn btn-sm btn-danger faa-parent animated-hover btn-create-task-comment" id-task="@task.Id">
-                                                                <i class="fa fa-plus faa-tada faa-fast"></i>&nbsp;&nbsp;@WebResource.RemoveTask
-                                                            </button>
-                                                        </div>*@
+                                                                <button type="button" name="btn-delete-task" id="btn-delete-task-@task.Id" class="btn btn-sm btn-danger faa-parent animated-hover btn-create-task-comment" id-task="@task.Id">
+                                                                    <i class="fa fa-plus faa-tada faa-fast"></i>&nbsp;&nbsp;@WebResource.RemoveTask
+                                                                </button>
+                                                            </div>*@
                                                     </div>
 
-                                                    <div class="form-group row">
-                                                        <div class="col-sm-4">
-                                                            <label>@WebResource.MarkTaskAsDone</label>
+                                                    @if (task.IdOwnerUser == ViewBag.IdUser)
+                                                    {
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-4">
+                                                                <label>@WebResource.MarkTaskAsDone</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <span class="button-checkbox">
+                                                                    <button type="button" class="btn btn-sm btn-task-done" id="btn-task-done-@task.Id" data-color="success" id-task="@task.Id" task-has-comments="@taskHasComments">Done</button>
+                                                                    <input type="checkbox" class="hidden" checked="@task.Done" />
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                        <div class="col-sm-8">
-                                                            <span class="button-checkbox">
-                                                                <button type="button" class="btn btn-sm btn-task-done" id="btn-task-done-@task.Id" data-color="success" id-task="@task.Id" task-has-comments="@taskHasComments">Done</button>
-                                                                <input type="checkbox" class="hidden" checked="@task.Done" />
-                                                            </span>
-                                                        </div>
-                                                    </div>
+                                                    }
 
                                                     @if (task.Done)
                                                     {

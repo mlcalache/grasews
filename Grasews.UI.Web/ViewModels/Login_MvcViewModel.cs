@@ -8,6 +8,8 @@ namespace Grasews.Web.ViewModels
     {
         [DisplayName("Username")]
         //[RegularExpression("^[a-zA-Z]+(?:[a-zA-Z0-9])*$", ErrorMessage = "The username can consist of alphanumeric characters, both lowercase and capitals. It should not start with a number.")]
+        //[RegularExpression(@"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$", ErrorMessage = "The username consists of a valid e-mail address.")]
+        //[EmailAddress(ErrorMessage = "The username consists of a valid e-mail address.")]
         [Required]
         [JsonProperty("username", NullValueHandling = NullValueHandling.Ignore)]
         public string Username { get; set; }
